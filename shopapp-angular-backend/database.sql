@@ -16,6 +16,15 @@ CREATE TABLE users(
 );
 ALTER TABLE users ADD COLUMN role_id INT;
 
+CREATE TABLE product_images(
+id INT PRIMARY KEY AUTO_INCREMENT,
+product_id INT,
+FOREIGN KEY (product_id) REFERENCES products (id) ON DELETE CASCADE
+CONSTRAINT fk_product_images_product_id 
+FOREIGN KEY (product_id) REFERENCES products (id) ON DELETE CASCADE
+image_url VARCHAR(300)
+); 
+
 CREATE TABLE roles(
     id INT PRIMARY KEY,
     name VARCHAR(20) NOT NULL 
