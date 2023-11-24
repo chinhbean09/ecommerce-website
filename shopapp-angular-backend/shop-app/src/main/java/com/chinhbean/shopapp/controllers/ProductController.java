@@ -38,27 +38,27 @@ public class ProductController {
                         .toList();
                 return ResponseEntity.badRequest().body(errorMessages);
             }
-            List<MultipartFile> files = productDTO.getFiles();
-            files = files == null ? new ArrayList<MultipartFile>() : files;
-            for (MultipartFile file : files) {
-                if(file.getSize() == 0) {
-                    continue;
-                }
-                // Kiểm tra kích thước file và định dạng
-                if(file.getSize() > 10 * 1024 * 1024) { // Kích thước > 10MB
-                    return ResponseEntity.status(HttpStatus.PAYLOAD_TOO_LARGE)
-                            .body("File is too large! Maximum size is 10MB");
-                }
-                String contentType = file.getContentType();
-                if(contentType == null || !contentType.startsWith("image/")) {
-                    return ResponseEntity.status(HttpStatus.UNSUPPORTED_MEDIA_TYPE)
-                            .body("File must be an image");
-                }
-                // Lưu file và cập nhật thumbnail trong DTO
-                String filename = storeFile(file); // Thay thế hàm này với code của bạn để lưu file
-                //lưu vào đối tượng product trong DB => sẽ làm sau
-                //lưu vào bảng product_images
-            }
+//            List<MultipartFile> files = productDTO.getFiles();
+//            files = files == null ? new ArrayList<MultipartFile>() : files;
+//            for (MultipartFile file : files) {
+//                if(file.getSize() == 0) {
+//                    continue;
+//                }
+//                // Kiểm tra kích thước file và định dạng
+//                if(file.getSize() > 10 * 1024 * 1024) { // Kích thước > 10MB
+//                    return ResponseEntity.status(HttpStatus.PAYLOAD_TOO_LARGE)
+//                            .body("File is too large! Maximum size is 10MB");
+//                }
+//                String contentType = file.getContentType();
+//                if(contentType == null || !contentType.startsWith("image/")) {
+//                    return ResponseEntity.status(HttpStatus.UNSUPPORTED_MEDIA_TYPE)
+//                            .body("File must be an image");
+//                }
+//                // Lưu file và cập nhật thumbnail trong DTO
+//                String filename = storeFile(file); // Thay thế hàm này với code của bạn để lưu file
+//                //lưu vào đối tượng product trong DB => sẽ làm sau
+//                //lưu vào bảng product_images
+//            }
             return ResponseEntity.ok("Product created successfully");
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
