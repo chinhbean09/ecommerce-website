@@ -30,7 +30,9 @@ public class UserController {
                         .toList();
                 return ResponseEntity.badRequest().body(errorMessages);
             }
-            
+            if(!userDTO.getPassword().equals(userDTO.getRetypePassword())){
+                return ResponseEntity.badRequest().body("Password does not match");
+            }
             return ResponseEntity.ok("Register successfully");
         }  catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
