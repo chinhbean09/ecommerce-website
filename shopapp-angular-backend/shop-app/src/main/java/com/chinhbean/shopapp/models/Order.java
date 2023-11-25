@@ -62,6 +62,6 @@ public class Order {
     private String paymentMethod;
 
     @Column(name = "active")
-    private Boolean active;//thuộc về admin
+    private Boolean active; //thuộc về admin
 
 }
