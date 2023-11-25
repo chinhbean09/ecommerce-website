@@ -8,13 +8,11 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-
-@RestController
 @RequestMapping("${api.prefix}/orders")
 public class OrderController {
     @PostMapping("")
     public ResponseEntity<?> createOrder(
-            @Valid @RequestBody OrderDTO orderDTO,
+
             BindingResult result
     ) {
         try {
@@ -31,7 +29,7 @@ public class OrderController {
         }
     }
     @GetMapping("/{user_id}") // Thêm biến đường dẫn "user_id"
-
+    //GET http://localhost:8088/api/v1/orders/4
     public ResponseEntity<?> getOrders(@Valid @PathVariable("user_id") Long userId) {
         try {
             return ResponseEntity.ok("Lấy ra danh sách order từ user_id");
@@ -40,8 +38,8 @@ public class OrderController {
         }
     }
     @PutMapping("/{id}")
-
-    //admin
+    //PUT http://localhost:8088/api/v1/orders/2
+    //công việc của admin
     public ResponseEntity<?> updateOrder(
             @Valid @PathVariable long id,
             @Valid @RequestBody OrderDTO orderDTO) {
