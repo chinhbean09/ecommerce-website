@@ -1,8 +1,11 @@
 package com.chinhbean.shopapp.controllers;
 
 import com.chinhbean.shopapp.dtos.CategoryDTO;
+import com.chinhbean.shopapp.models.Category;
+import com.chinhbean.shopapp.services.CategoryService;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -15,19 +18,14 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("api/v1/categories")
 //@Validated
+//Dependency Inj
+@RequiredArgsConstructor
 
 public class CategoryController {
-    //Hiện tất cả các categories
-    @GetMapping("") //http://localhost:8080/api/v1/categories?page=1&limit=10
-    public ResponseEntity<String> getAllCategories(
-            @RequestParam("page")     int page,
-            @RequestParam("limit")    int limit
-    ) {
-        return ResponseEntity.ok(String.format("getAllCategories, page = %d, limit = %d", page, limit));
-    }
-    @PostMapping("")
-    //Nếu tham số truyền vào là 1 object thì sao ? => Data Transfer Object = Request Object
-    public ResponseEntity<?> insertCategory(
+    //Dependency Inj
+    private final CategoryService categoryService;
+
+    public ResponseEntity<?> createCategory(
             //data nằm trong reqbody
             @Valid @RequestBody CategoryDTO categoryDTO,
             BindingResult result)
@@ -42,15 +40,34 @@ public class CategoryController {
                     .toList();
             return ResponseEntity.badRequest().body(errorMessages);
         }
-        return ResponseEntity.ok("This is insertCategory"+ categoryDTO);
+        categoryService.createCategory(categoryDTO);
+
+        return ResponseEntity.ok("Insert category successfully");
 
     }
+    //Hiện tất cả các categories
+    @GetMapping("") //http://localhost:8080/api/v1/categories?page=1&limit=10
+    public ResponseEntity<List<Category>> getAllCategories(
+            @RequestParam("page")     int page,
+            @RequestParam("limit")    int limit
+    ) {
+
+        List<Category> categories = categoryService.getAllCategories();
+        return ResponseEntity.ok(categories);
+    }
+    @PostMapping("")
+    //Nếu tham số truyền vào là 1 object thì sao ? => Data Transfer Object = Request Object
+
     @PutMapping("/{id}")
-    public ResponseEntity<String> updateCategory(@PathVariable Long id) {
-        return ResponseEntity.ok("insertCategory with id = "+id);
+    public ResponseEntity<String> updateCategory(@PathVariable Long id,
+                                                 @Valid
+                                                 @RequestBody CategoryDTO categoryDTO) {
+        categoryService.updateCategory(id, categoryDTO);
+        return ResponseEntity.ok("Update category successfully");
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteCategory(@PathVariable Long id) {
-        return ResponseEntity.ok("deleteCategory with id = "+id);
+        categoryService.deleteCategory(id);
+        return ResponseEntity.ok("Delete category successfully");
     }
 }

@@ -12,11 +12,17 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class CategoryService implements ICategoryService {
+    //dependency inject
     private final CategoryRepository categoryRepository;
+
+//    public CategoryService (CategoryRepository categoryRepository){
+//        this.categoryRepository = categoryRepository;
+//    }
+
     @Override
     public Category createCategory(CategoryDTO categoryDTO) {
-        Category newCategory = Category
-                .builder()
+        //builder.build có nghĩa là tạo ra 1 đối tượng rỗng sau đó khởi tạo từng thành phần
+        Category newCategory = Category.builder()
                 .name(categoryDTO.getName())
                 .build();
         return categoryRepository.save(newCategory);
@@ -34,8 +40,7 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
-    public Category updateCategory(long categoryId,
-                                   CategoryDTO categoryDTO) {
+    public Category updateCategory(long categoryId, CategoryDTO categoryDTO) {
         Category existingCategory = getCategoryById(categoryId);
         existingCategory.setName(categoryDTO.getName());
         categoryRepository.save(existingCategory);

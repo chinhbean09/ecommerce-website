@@ -10,7 +10,7 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@Builder //hàm khởi tạo từng thuộc tính
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
