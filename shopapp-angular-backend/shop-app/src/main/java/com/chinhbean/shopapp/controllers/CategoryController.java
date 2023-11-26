@@ -24,6 +24,7 @@ import java.util.stream.Collectors;
 public class CategoryController {
     //Dependency Inj
     private final CategoryService categoryService;
+    @PostMapping("")
 
     public ResponseEntity<?> createCategory(
             //data nằm trong reqbody
@@ -45,6 +46,7 @@ public class CategoryController {
         return ResponseEntity.ok("Insert category successfully");
 
     }
+
     //Hiện tất cả các categories
     @GetMapping("") //http://localhost:8080/api/v1/categories?page=1&limit=10
     public ResponseEntity<List<Category>> getAllCategories(
@@ -57,7 +59,6 @@ public class CategoryController {
     }
     @PostMapping("")
     //Nếu tham số truyền vào là 1 object thì sao ? => Data Transfer Object = Request Object
-
     @PutMapping("/{id}")
     public ResponseEntity<String> updateCategory(@PathVariable Long id,
                                                  @Valid
