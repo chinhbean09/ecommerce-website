@@ -1,6 +1,10 @@
 package com.chinhbean.shopapp.controllers;
 
 import com.chinhbean.shopapp.dtos.*;
+import com.chinhbean.shopapp.models.Product;
+import com.chinhbean.shopapp.models.ProductImage;
+import com.chinhbean.shopapp.services.IProductService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +26,9 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("api/v1/products")
+@RequiredArgsConstructor
 public class ProductController {
+    private final IProductService productService;
     @PostMapping(value = "",  consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     //POST http://localhost:8088/v1/api/products
     public ResponseEntity<?> createProduct(
@@ -37,9 +43,24 @@ public class ProductController {
                         .toList();
                 return ResponseEntity.badRequest().body(errorMessages);
             }
+            Product newProduct = productService.createProduct(productDTO);
+            return ResponseEntity.ok(newProduct);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
 
-            List<MultipartFile> files = productDTO.getFiles();
-            files = files == null ? new ArrayList<MultipartFile>() : files;
+    @PostMapping(value = "uploads/{id}",
+            consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<?> uploadImages(
+            @PathVariable("id") Long productId,
+            @ModelAttribute("files") List<MultipartFile> files
+    ){
+        try {
+
+            Product existingProduct = productService.getProductById(productId);
+            files = files == null ? new ArrayList<MultipartFile >() : files;
+            List<ProductImage> productImages = new ArrayList<>();
             for (MultipartFile file : files) {
                 if(file.getSize() == 0) {
                     continue;
@@ -57,15 +78,24 @@ public class ProductController {
                 }
 
                 // Lưu file và cập nhật thumbnail trong DTO
-                String filename = storeFile(file); // Thay thế hàm này với code của bạn để lưu file
+                String filename = storeFile(file);
                 //lưu vào đối tượng product trong DB => sẽ làm sau
+                ProductImage productImage = productService.createProductImage(
+                        existingProduct.getId(),
+                        ProductImageDTO.builder()
+                                .imageUrl(filename)
+                                .build()
+                );
+
                 //lưu vào bảng product_images
+                productImages.add(productImage);
             }
-            return ResponseEntity.ok("Product created successfully");
+            return ResponseEntity.ok().body(productImages);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
     private String storeFile(MultipartFile file) throws IOException {
         String filename = StringUtils.cleanPath(file.getOriginalFilename());
         // Thêm UUID vào trước tên file để đảm bảo tên file là duy nhất
@@ -91,7 +121,7 @@ public class ProductController {
     ) {
         return ResponseEntity.ok("getProducts here");
     }
-    //http://localhost:8088/api/v1/products/6
+
     @GetMapping("/{id}")
     public ResponseEntity<String> getProductById(
             @PathVariable("id") String productId

@@ -20,6 +20,7 @@ import java.util.List;
 @RequestMapping("api/v1/users")
 @RequiredArgsConstructor
 public class UserController {
+
     private final IUserService userService;
     @PostMapping("/register")
     public ResponseEntity<?> createUser(
