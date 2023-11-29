@@ -10,6 +10,7 @@
     import com.chinhbean.shopapp.repositories.CategoryRepository;
     import com.chinhbean.shopapp.repositories.ProductImageRepository;
     import com.chinhbean.shopapp.repositories.ProductRepository;
+    import com.chinhbean.shopapp.responses.ProductResponse;
     import lombok.RequiredArgsConstructor;
     import org.springframework.data.domain.Page;
     import org.springframework.data.domain.PageRequest;
@@ -46,10 +47,12 @@
                             "Cannot find product with id ="+productId));
         }
 
+
         @Override
-        public Page<Product> getAllProducts(PageRequest pageRequest) {
+        public Page<ProductResponse> getAllProducts(PageRequest pageRequest) {
             // Lấy danh sách sản phẩm theo trang(page) và giới hạn(limit)
-            return productRepository.findAll(pageRequest);
+            return productRepository.findAll(pageRequest)
+                    .map(ProductResponse::fromProduct);
         }
 
         @Override

@@ -23,6 +23,7 @@ public class UserController {
 
     private final IUserService userService;
     @PostMapping("/register")
+
     public ResponseEntity<?> createUser(
             @Valid @RequestBody UserDTO userDTO,
             BindingResult result)
@@ -44,6 +45,7 @@ public class UserController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
     @PostMapping("/login")
     public ResponseEntity<String> login(
             @Valid @RequestBody UserLoginDTO userLoginDTO) {
