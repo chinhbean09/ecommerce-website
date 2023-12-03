@@ -13,11 +13,13 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CategoryService implements ICategoryService {
     //dependency inject
+    //injection thông qua constructor là một cách để cung cấp đối tượng CategoryRepository cho CategoryService mà không cần phải tạo nó trong CategoryService.
     private final CategoryRepository categoryRepository;
 
 //    public CategoryService (CategoryRepository categoryRepository){
 //        this.categoryRepository = categoryRepository;
 //    }
+
 
     @Override
     public Category createCategory(CategoryDTO categoryDTO) {

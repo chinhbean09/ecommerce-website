@@ -35,6 +35,7 @@
                     .name(productDTO.getName())
                     .price(productDTO.getPrice())
                     .thumbnail(productDTO.getThumbnail())
+                    .description(productDTO.getDescription())
                     .category(existingCategory)
                     .build();
             return productRepository.save(newProduct);
@@ -51,7 +52,9 @@
         @Override
         public Page<ProductResponse> getAllProducts(PageRequest pageRequest) {
             // Lấy danh sách sản phẩm theo trang(page) và giới hạn(limit)
-            return productRepository.findAll(pageRequest)
+            return productRepository
+                    .findAll(pageRequest)
+                    //.map(product -> { ProductResponse.fromProduct(product) }
                     .map(ProductResponse::fromProduct);
         }
 
@@ -65,7 +68,7 @@
                 Category existingCategory = categoryRepository
                         .findById(productDTO.getCategoryId())
                         .orElseThrow(() -> new DataNotFoundException(
-                                "Cannot find category with id: "+productDTO.getCategoryId()));
+                                "Cannot find category with id: "+ productDTO.getCategoryId()));
                 existingProduct.setName(productDTO.getName());
                 existingProduct.setCategory(existingCategory);
                 existingProduct.setPrice(productDTO.getPrice());
@@ -74,11 +77,11 @@
                 return productRepository.save(existingProduct);
             }
             return null;
-
         }
 
         @Override
         public void deleteProduct(long id) {
+            //optional đại diện cho có hoặc không có giá trị.
             Optional<Product> optionalProduct = productRepository.findById(id);
             optionalProduct.ifPresent(productRepository::delete);
         }
