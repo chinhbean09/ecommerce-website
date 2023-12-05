@@ -18,7 +18,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class User extends BaseEntity implements UserDetails {
+public class    User extends BaseEntity implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -35,6 +35,7 @@ public class User extends BaseEntity implements UserDetails {
     @Column(name = "password", length = 200, nullable = false)
     private String password;
 
+    @Column(name = "is_active")
     private boolean active;
 
     @Column(name = "date_of_birth")

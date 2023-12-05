@@ -27,13 +27,13 @@ public class SecurityConfig {
                 .findByPhoneNumber(phoneNumber)
                 .orElseThrow(() ->
                         new UsernameNotFoundException(
-                                "Cannot find user with phone number = "+phoneNumber));
+                                "Cannot find user with phone number = "+ phoneNumber));
     }
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-    @Bean
+    @Bean //created by 2 method user detail and password encoder
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(userDetailsService());
