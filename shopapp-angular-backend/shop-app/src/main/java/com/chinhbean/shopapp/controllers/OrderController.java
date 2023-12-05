@@ -30,13 +30,12 @@ public class OrderController {
                 return ResponseEntity.badRequest().body(errorMessages);
             }
             Order orderResponse = orderService.createOrder(orderDTO);
-            return ResponseEntity.ok("createOrder successfully");
+            return ResponseEntity.ok(orderResponse);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
     @GetMapping("/user/{user_id}") // Thêm biến đường dẫn "user_id"
-    //GET http://localhost:8088/api/v1/orders/4
     public ResponseEntity<?> getOrders(@Valid @PathVariable("user_id") Long userId) {
         try {
             List<Order> orders = orderService.findByUserId(userId);

@@ -23,13 +23,17 @@ public class OrderDetailController {
     public ResponseEntity<?> createOrderDetail(
             @Valid  @RequestBody OrderDetailDTO orderDetailDTO) {
         try {
+            //map tu dto sang model
             OrderDetail newOrderDetail = orderDetailService.createOrderDetail(orderDetailDTO);
+            //format lai data cua model
             return ResponseEntity.ok().body(OrderDetailResponse.fromOrderDetail(newOrderDetail));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
 
     }
+
+    //lay ra
     @GetMapping("/{id}")
     public ResponseEntity<?> getOrderDetail(
             @Valid @PathVariable("id") Long id) throws DataNotFoundException {
@@ -46,7 +50,7 @@ public class OrderDetailController {
         List<OrderDetailResponse> orderDetailResponses = orderDetails
                 .stream()
                 .map(OrderDetailResponse::fromOrderDetail)
-                .toList();
+                .toList(); //quay về value cũ thì to list ***
         return ResponseEntity.ok(orderDetailResponses);
     }
     @PutMapping("/{id}")
