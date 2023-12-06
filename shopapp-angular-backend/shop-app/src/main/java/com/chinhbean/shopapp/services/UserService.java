@@ -33,7 +33,6 @@ public class UserService implements IUserService{
         if(userRepository.existsByPhoneNumber(phoneNumber)) {
             throw new DataIntegrityViolationException("Phone number already exists");
         }
-
         //convert from userDTO => user
         User newUser = User.
                 builder()
@@ -66,17 +65,19 @@ public class UserService implements IUserService{
         //return optionalUser.get();//muốn trả JWT token?
         User existingUser = optionalUser.get();
         //check password
-        if (existingUser.getFacebookAccountId() == 0 && existingUser.getGoogleAccountId() == 0) {
+        if (existingUser.getFacebookAccountId() == 0
+                && existingUser.getGoogleAccountId() == 0) {
             if(!passwordEncoder.matches(password, existingUser.getPassword())) {
                 throw new BadCredentialsException("Wrong phone number or password");
             }
         }
+        //là một lớp triển khai của Authentication được sử dụng trong trường hợp xác thực bằng tên người dùng và mật khẩu.
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
-                phoneNumber, password,
-                existingUser.getAuthorities()
+                phoneNumber, password, existingUser.getAuthorities()
         );
 
         //authenticate with Java Spring security, xac thuc lai voi security
+        //tiến hành xác thực bằng cách so sánh thông tin đăng nhập với thông tin trong hệ thống.
         authenticationManager.authenticate(authenticationToken);
         return jwtTokenUtil.generateToken(existingUser);
     }

@@ -47,7 +47,7 @@ public class JwtTokenUtil {
             //return null;
         }
     }
-
+//key được sử dụng để ký và giải mã token được tạo ra từ chuỗi base64 được cung cấp trong secretKey.
     private Key getSignInKey() {
         byte[] bytes = Decoders.BASE64.decode(secretKey);
         //Keys.hmacShaKeyFor(Decoders.BASE64.decode("TaqlmGv1iEDMRiFp/pHuID1+T84IABfuA0xXh4GhiUI="));
@@ -61,15 +61,16 @@ public class JwtTokenUtil {
         String secretKey = Encoders.BASE64.encode(keyBytes);
         return secretKey;
     }
+    //xây dựng một đối tượng xử lý token JWT. (JwtParserBuilder)
     private Claims extractAllClaims(String token) {
         return Jwts.parserBuilder()
-                .setSigningKey(getSignInKey())
+                .setSigningKey(getSignInKey()) //giải mã token
                 .build()
-                .parseClaimsJws(token) //truyen signin key vao trong token => lay ra duoc claim  nam trong body
-                .getBody();
+                .parseClaimsJws(token) //Parse chuỗi token để lấy ra tất cả các claims
+                .getBody(); //Lấy phần payload của token, nơi chứa các claims
     }
 
-    //extract riêng claim mà mình muốn
+    //extract riêng claim mà mình muốn,
     public  <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
         final Claims claims = this.extractAllClaims(token);
         return claimsResolver.apply(claims);

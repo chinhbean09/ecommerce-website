@@ -57,7 +57,7 @@ public class CategoryController {
         List<Category> categories = categoryService.getAllCategories();
         return ResponseEntity.ok(categories);
     }
-    @PostMapping("")
+
     //Nếu tham số truyền vào là 1 object thì sao ? => Data Transfer Object = Request Object
     @PutMapping("/{id}")
     public ResponseEntity<String> updateCategory(@PathVariable Long id,

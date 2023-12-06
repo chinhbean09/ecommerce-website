@@ -33,35 +33,39 @@ public class JwtTokenFilter extends OncePerRequestFilter{
     protected void doFilterInternal(@NonNull  HttpServletRequest request,
                                     @NonNull HttpServletResponse response,
                                     @NonNull FilterChain filterChain)
-            throws ServletException, IOException {
+                                    throws ServletException, IOException {
         try {
             if(isBypassToken(request)) {
                 filterChain.doFilter(request, response); //enable bypass
                 return;
             }
             final String authHeader = request.getHeader("Authorization");
+
             if (authHeader == null || !authHeader.startsWith("Bearer ")) {
                 response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
                 return;
             }
+
             final String token = authHeader.substring(7);
             final String phoneNumber = jwtTokenUtil.extractPhoneNumber(token);
-            if (phoneNumber != null
-                    && SecurityContextHolder.getContext().getAuthentication() == null) {
+
+            if (phoneNumber != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                 User userDetails = (User) userDetailsService.loadUserByUsername(phoneNumber);
                 if(jwtTokenUtil.validateToken(token, userDetails)) {
+                    //authenticate voi he thong java spring
                     UsernamePasswordAuthenticationToken authenticationToken =
                             new UsernamePasswordAuthenticationToken(
                                     userDetails,
                                     null,
                                     userDetails.getAuthorities()
                             );
+                    //get authentication token of java spring
                     authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                     SecurityContextHolder.getContext().setAuthentication(authenticationToken);
                 }
             }
             filterChain.doFilter(request, response); //enable bypass
-        }catch (Exception e) {
+        } catch (Exception e) {
             response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
         }
 
