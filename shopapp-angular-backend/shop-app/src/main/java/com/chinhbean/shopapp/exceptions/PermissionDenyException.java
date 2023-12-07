@@ -1,4 +1,4 @@
-package com.project.shopapp.exceptions;
+package com.chinhbean.shopapp.exceptions;
 public class PermissionDenyException extends Exception{
     public PermissionDenyException(String message) {
         super(message);
