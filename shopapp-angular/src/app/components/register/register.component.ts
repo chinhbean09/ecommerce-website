@@ -3,7 +3,7 @@ import {NgForm} from '@angular/forms'
 import {HttpClient,HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
 import { UserService } from '../../services/user.service';
-import { RegisterDTO } from 'src/dtos/user/register.dto';
+import { RegisterDTO } from '../../dtos/user/register.dto';
 
 @Component({
   selector: 'app-register',

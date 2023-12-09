@@ -1,10 +1,12 @@
-import { Component, ViewChild } from '@angular/core';
 import { LoginDTO } from '../../dtos/user/login.dto';
+import { Component, ViewChild } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { TokenService } from '../../services/token.service';
 import { RoleService } from '../../services/role.service'; // Import RoleService
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { LoginResponse } from '../../responses/user/login.response';
+import { Role } from 'src/app/models/role';
 
 @Component({
   selector: 'app-login',
@@ -13,9 +15,8 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
   @ViewChild('loginForm') loginForm!: NgForm;
-
-  phoneNumber: string = '33445566';
-  password: string = '123456';
+  phoneNumber: string = '0856444000';
+  password: string = '12345';
 
   roles: Role[] = []; // Mảng roles
   rememberMe: boolean = true;
@@ -25,11 +26,13 @@ export class LoginComponent {
     console.log(`Phone typed: ${this.phoneNumber}`);
     //how to validate ? phone must be at least 6 characters
   }
+
   constructor(
     private router: Router,
-    private userService: UserService,
+    private userService: UserService, 
     private tokenService: TokenService,
     private roleService: RoleService
+
   ) { }
 
   ngOnInit() {
@@ -49,20 +52,24 @@ export class LoginComponent {
   }
 
   login() {
-    const message = `phone: ${this.phoneNumber}` +
-      `password: ${this.password}`;
-    //alert(message);
+    // const message = `phone: ${this.phoneNumber}` +
+    //   `password: ${this.password}`;
+    // alert(message);
     debugger
-
     const loginDTO: LoginDTO = {
       phone_number: this.phoneNumber,
       password: this.password,
       role_id: this.selectedRole?.id ?? 1
     };
+
     this.userService.login(loginDTO).subscribe({
       next: (response: LoginResponse) => {
+        //muốn sử dụng token này trong các API request thì ta gắn vào các header, tức là trên đường truyền dữ liệu thì ta
+        //gắn thêm vào header giá trị token, và quá trình xen ngang này được gọi là interceptor
         debugger;
+        console.log(response)
         const { token } = response;
+        // let token = response.token
         if (this.rememberMe) {
           this.tokenService.setToken(token);
         }                

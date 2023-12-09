@@ -41,7 +41,7 @@ public class CategoryController {
             @Valid @RequestBody CategoryDTO categoryDTO,
             BindingResult result)
     {
-        CategoryResponse categoryResponse = new Categor yResponse();
+        CategoryResponse categoryResponse = new CategoryResponse();
         if(result.hasErrors()) {
             List<String> errorMessages = result.getFieldErrors()
                     //java8, biến field lỗi thành 1 đối tượng stream, trong đó ta có thể duyệt qua danh sách lỗi, và
