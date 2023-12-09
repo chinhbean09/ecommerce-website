@@ -1,10 +1,12 @@
 package com.chinhbean.shopapp.controllers;
 
+import com.chinhbean.shopapp.components.LocalizationUtils;
 import com.chinhbean.shopapp.dtos.*;
 import com.chinhbean.shopapp.exceptions.DataNotFoundException;
 import com.chinhbean.shopapp.models.OrderDetail;
 import com.chinhbean.shopapp.responses.OrderDetailResponse  ;
 import com.chinhbean.shopapp.services.OrderDetailService;
+import com.chinhbean.shopapp.utils.MessageKeys;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +20,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderDetailController {
     private final OrderDetailService orderDetailService;
+    private final LocalizationUtils localizationUtils;
+
     //Thêm mới 1 order detail
     @PostMapping("")
     public ResponseEntity<?> createOrderDetail(
@@ -68,7 +72,8 @@ public class OrderDetailController {
     public ResponseEntity<?> deleteOrderDetail(
             @Valid @PathVariable("id") Long id) {
         orderDetailService.deleteById(id);
-        return ResponseEntity.ok().body("Delete Order detail with id : "+id+" successfully");
+        return ResponseEntity.ok().body(localizationUtils
+                .getLocalizedMessage(MessageKeys.DELETE_ORDER_DETAIL_SUCCESSFULLY));
         //return ResponseEntity.noContent().build();
     }
 }

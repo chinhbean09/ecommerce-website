@@ -1,7 +1,6 @@
 package com.chinhbean.shopapp.components;
 
 import com.chinhbean.shopapp.exceptions.InvalidParamException;
-import com.chinhbean.shopapp.models.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -22,7 +21,7 @@ import java.util.function.Function;
 @RequiredArgsConstructor
 
 
-public class JwtTokenUtil {
+public class JwtTokenUtils {
     @Value("${jwt.expiration}")
     private int expiration; //save to an environment variable
     @Value("${jwt.secretKey}")

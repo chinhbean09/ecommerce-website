@@ -8,14 +8,14 @@
                 <div class="form-group">
                     <label for="phone">Phone</label>
                     <input type="text" class="form-control" 
-                    [(ngModel)]="phone"
+                    [(ngModel)]="phoneNumber"
                     (input)="onPhoneChange()"
                     name="phone"
                     (focus)="registerForm.form.markAsTouched();"
                     required
                     id="phone">
                     <div class="divider-nospace"></div>
-                    <p class="text-danger" *ngIf="phone.length < 6 && registerForm.form.touched">Phone phải có ít nhất 6 ký tự</p>
+                    <p class="text-danger" *ngIf="phoneNumber.length < 6 && registerForm.form.touched">Phone phải có ít nhất 6 ký tự</p>
                 </div>
                 <div class="mt-3"></div>
                 <div class="form-group password-field">
