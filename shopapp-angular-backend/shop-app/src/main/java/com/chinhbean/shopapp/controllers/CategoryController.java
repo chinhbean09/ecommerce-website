@@ -35,7 +35,6 @@ public class CategoryController {
     private final LocalizationUtils localizationUtils;
 
     @PostMapping("")
-
     public ResponseEntity<CategoryResponse> createCategory(
             //data nằm trong reqbody
             @Valid @RequestBody CategoryDTO categoryDTO,

@@ -9,6 +9,7 @@ import com.chinhbean.shopapp.responses.ProductResponse;
 import com.chinhbean.shopapp.services.IProductService;
 import com.chinhbean.shopapp.utils.MessageKeys;
 import com.github.javafaker.Faker;
+import org.springframework.core.io.UrlResource;
 import org.springframework.data.domain.Page;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
@@ -34,18 +35,14 @@ import java.util.Objects;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("api/v1/products")
+    @RequestMapping("api/v1/products")
 @RequiredArgsConstructor
 public class ProductController {
     private final IProductService productService;
     private final LocalizationUtils localizationUtils;
 
     @PostMapping(value = "")
-    //POST http://localhost:8088/v1/api/products
-    public ResponseEntity<?> createProduct(
-            @Valid @RequestBody ProductDTO productDTO,
-            BindingResult result
-    ) {
+    public ResponseEntity<?> createProduct( @Valid @RequestBody ProductDTO productDTO, BindingResult result) {
         try {
             if (result.hasErrors()) {
                 List<String> errorMessages = result.getFieldErrors()
@@ -107,6 +104,31 @@ public class ProductController {
         }
     }
 
+    @GetMapping("/images/{imageName}")
+    public ResponseEntity<?> viewImage(@PathVariable String imageName) {
+        try {
+            //mở một tệp hình ảnh từ đường dẫn được xây dựng từ tham số imageName.
+            //Tạo đối tượng java.nio.file.Path từ đường dẫn "uploads/" nối với imageName.
+            java.nio.file.Path imagePath = Paths.get("uploads/"+ imageName);
+
+            //Tạo đối tượng UrlResource từ đối tượng java.nio.file.Path.
+            //UrlResource là một đối tượng từ Spring Framework được sử dụng để đại diện cho tài nguyên từ một URL.
+            UrlResource resource = new UrlResource(imagePath.toUri());
+
+            //kiểm tra xem tài nguyên có tồn tại hay không ?
+            if (resource.exists()) {
+                // Trả về hình ảnh nếu tài nguyên tồn tại
+                return ResponseEntity.ok()
+                        .contentType(MediaType.IMAGE_JPEG)
+                        .body(resource);
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     private String storeFile(MultipartFile file) throws IOException {
 
         if (!isImageFile(file) || file.getOriginalFilename() == null) {
@@ -137,14 +159,16 @@ public class ProductController {
 
     @GetMapping("")
     public ResponseEntity<ProductListResponse> getProducts(
-            @RequestParam("page") int page,
-            @RequestParam("limit") int limit
-    ) {
+            @RequestParam(defaultValue = "") String keyword,
+            @RequestParam(defaultValue = "0", name = "category_id") Long categoryId,
+            @RequestParam(defaultValue = "0") int page ,
+            @RequestParam(defaultValue = "10") int limit
+            ) {
         // Tạo Pageable từ thông tin trang và giới hạn
         PageRequest pageRequest = PageRequest.of(
                 page, limit,
-                Sort.by("createdAt").descending());
-        Page<ProductResponse> productPage = productService.getAllProducts(pageRequest);
+                Sort.by("id").ascending());
+        Page<ProductResponse> productPage = productService.getAllProducts(keyword,categoryId,pageRequest);
         // Lấy tổng số trang
         int totalPages = productPage.getTotalPages();
         List<ProductResponse> products = productPage.getContent();
@@ -177,17 +201,17 @@ public class ProductController {
         }
     }
 
-//    @PostMapping("/generateFakeProducts")
+    @PostMapping("/generateFakeProducts")
     private ResponseEntity<String> generateFakeProducts() {
         Faker faker = new Faker();
-        for (int i = 0; i < 1_000_000; i++) {
+        for (int i = 0; i < 10; i++) {
             String productName = faker.commerce().productName();
             if(productService.existsByName(productName)) {
                 continue;
             }
             ProductDTO productDTO = ProductDTO.builder()
                     .name(productName)
-                    .price((float)faker.number().numberBetween(10, 90_000_000))
+                    .price((float)faker.number().numberBetween(10, 9000))
                     .description(faker.lorem().sentence())
                     .thumbnail("")
                     .categoryId((long)faker.number().numberBetween(2, 5))
@@ -200,7 +224,18 @@ public class ProductController {
         }
         return ResponseEntity.ok("Fake Products created successfully");
     }
-
+    //update a product
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateProduct(
+            @PathVariable long id,
+            @RequestBody ProductDTO productDTO) {
+        try {
+            Product updatedProduct = productService.updateProduct(id, productDTO);
+            return ResponseEntity.ok(updatedProduct);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
 
 }
 
