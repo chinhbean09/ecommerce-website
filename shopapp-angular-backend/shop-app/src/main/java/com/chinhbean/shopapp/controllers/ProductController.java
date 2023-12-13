@@ -35,7 +35,7 @@ import java.util.Objects;
 import java.util.UUID;
 
 @RestController
-    @RequestMapping("api/v1/products")
+@RequestMapping("api/v1/products")
 @RequiredArgsConstructor
 public class ProductController {
     private final IProductService productService;
@@ -122,7 +122,9 @@ public class ProductController {
                         .contentType(MediaType.IMAGE_JPEG)
                         .body(resource);
             } else {
-                return ResponseEntity.notFound().build();
+                return ResponseEntity.ok()
+                        .contentType(MediaType.IMAGE_JPEG)
+                        .body(new UrlResource(Paths.get("uploads/notfound.jpg").toUri()));
             }
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
@@ -180,11 +182,12 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getProductById(
-            @PathVariable("id") Long productId) {
+    public ResponseEntity<?> getProductById( @PathVariable("id") Long productId) {
         try {
             Product existingProduct = productService.getProductById(productId);
-            return ResponseEntity.ok(ProductResponse.fromProduct(existingProduct));
+            ProductResponse response = ProductResponse.fromProduct(existingProduct);
+            System.out.println(response); // In ra để kiểm tra
+            return ResponseEntity.ok(response);
 
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());

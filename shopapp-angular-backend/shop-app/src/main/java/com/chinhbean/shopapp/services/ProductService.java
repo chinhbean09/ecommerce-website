@@ -17,6 +17,7 @@
     import org.springframework.data.domain.PageRequest;
     import org.springframework.stereotype.Service;
 
+    import java.util.List;
     import java.util.Optional;
 
     @Service
@@ -45,11 +46,17 @@
 
         @Override
         public Product getProductById(long productId) throws Exception {
-            return productRepository.findById(productId).
-                    orElseThrow(()-> new DataNotFoundException(
-                            "Cannot find product with id ="+productId));
+            Optional<Product> optionalProduct = productRepository.getDetailProduct(productId);
+            if(optionalProduct.isPresent()){
+                return optionalProduct.get();
+            }
+            throw new DataNotFoundException(
+                            "Cannot find product with id ="+productId);
         }
-
+        @Override
+        public List<Product> findProductByIds(List<Long> productIds){
+            return productRepository.findProductsByIds(productIds);
+        }
 
 
         public Page<ProductResponse> getAllProducts(String keyword,Long categoryId, PageRequest pageRequest) {

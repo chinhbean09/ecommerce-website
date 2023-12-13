@@ -1,6 +1,8 @@
+import { CategoryService } from './../../services/category.service';
 import { ProductService } from './../../services/product.service';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/app/environments/environment';
+import { Category } from 'src/app/models/category';
 import { Product } from 'src/app/models/product';
 
 @Component({
@@ -10,21 +12,41 @@ import { Product } from 'src/app/models/product';
 })
 export class HomeComponent implements OnInit {
   products: Product[] = [];
+  categories: Category[] = []; //data từ category Service
   currentPage: number = 1;
-  itemsPerPage: number = 10;
+  itemsPerPage: number = 9;
   pages: number[] = [];
   totalPages: number = 0;
   visiblePages: number[] = [];
-
-  constructor(private ProductService: ProductService){}
+  keyword:string ="";
+  selectedCategoryId: number = 0;
+  constructor(private ProductService: ProductService, private categoryService: CategoryService){}
 
   ngOnInit() {
     // Gọi API lấy danh sách roles và lưu vào biến roles
-    this.getProducts(this.currentPage, this.itemsPerPage)
+    this.getProducts(this.keyword, this.selectedCategoryId, this.currentPage, this.itemsPerPage)
+    this.getCategories(1,100);
+ 
   }
 
-  getProducts(page: number, limit: number) {
-    this.ProductService.getProducts(page, limit).subscribe({
+  getCategories(page:number,limit:number){
+    this.categoryService.getCategories(page,limit).subscribe({
+      next:(categories: Category[]) =>{
+        this.categories = categories;
+      },
+      complete: () => {
+
+      },
+      error:(error: any) => {
+        console.error(error); 
+      }
+
+    })
+
+
+  }
+  getProducts(keyword:string,selectedCategoryId: number, page: number, limit: number) {
+    this.ProductService.getProducts(keyword, selectedCategoryId, page, limit).subscribe({
       next:(response:any) => {
         response.products.forEach((product: Product ) => {
           product.url = `${environment.apiBaseUrl}/products/images/${product.thumbnail}`
@@ -44,7 +66,7 @@ export class HomeComponent implements OnInit {
 
   onPageChange(page:number){
     this.currentPage = page;
-    this.getProducts(this.currentPage, this.itemsPerPage);
+    this.getProducts(this.keyword, this.selectedCategoryId, this.currentPage, this.itemsPerPage);
   }
 
   generateVisiblePageArray(currentPage: number, totalPages:number ){
@@ -61,7 +83,10 @@ export class HomeComponent implements OnInit {
     return new Array(endPage - startPage + 1).fill(0).map((_,index) => startPage + index);
 
   }
-  
+  searchProducts(){
+    this.currentPage = 1;
+    this.itemsPerPage = 9;
+    this.getProducts(this.keyword, this.selectedCategoryId, this.currentPage, this.itemsPerPage);
   }
 
-
+}

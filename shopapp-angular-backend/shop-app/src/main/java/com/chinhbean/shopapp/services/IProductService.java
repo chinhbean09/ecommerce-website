@@ -8,6 +8,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import com.chinhbean.shopapp.models.*;
 
+import java.util.List;
+
 public interface IProductService {
     Product createProduct(ProductDTO productDTO) throws Exception;
     Product getProductById(long id) throws Exception;
@@ -17,5 +19,6 @@ public interface IProductService {
     boolean existsByName(String name);
     ProductImage createProductImage(
             Long productId, ProductImageDTO productImageDTO) throws Exception;
+    List<Product> findProductByIds(List<Long> productIds);
 
 }
