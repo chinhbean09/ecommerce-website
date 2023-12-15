@@ -2,7 +2,6 @@
 <div class="container">
     <div class="intro-section">
         <h1>Đây là trang Order</h1>
-        <p>Sử dụng Bootstrap</p>
     </div>    
     <div class="row">
         <div class="col-md-6">
@@ -10,15 +9,47 @@
             <form>
                 <div class="mb-3">
                     <label for="name" class="form-label">Họ và tên</label>
-                    <input type="text" class="form-control" id="name">
+                    <input type="text"
+                    placeholder="Họ và Tên"
+                    [(ngModel)]="orderData.fullname"
+                    class="form-control" id="fullname">
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email">
+                    <input type="email"  placeholder="Email"
+                    [(ngModel)]="orderData.email" class="form-control" id="email">
                 </div>
                 <div class="mb-3">
                     <label for="phone" class="form-label">Số điện thoại</label>
-                    <input type="text" class="form-control" id="phone">
+                    <input type="number"
+                    placeholder="Số điện thoại"
+                    [(ngModel)]="orderData.phone_number" required class="form-control" id="phone">
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Địa Chỉ</label>
+                    <input type="text"
+                    placeholder="Địa Chỉ"
+                    [(ngModel)]="orderData.address" class="form-control" id="address">
+                </div>
+                <div class="mb-3">
+                    <label for="note" class="form-label">Ghi Chú</label>
+                    <input type="text"
+                    placeholder="Ghi Chú"
+                    [(ngModel)]="orderData.note" class="form-control" id="note">
+                </div>
+                <div class="form-group">
+                    <label for="shippingMethod" class="form-label">Phương Thức Vận Chuyển</label>
+                 <select class="form-control" id="shippingMethod" [(ngModel)]="orderData.shipping_method">
+                    <option value="express">Nhanh</option>
+                    <option value="normal">Thường</option>
+                 </select>
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod" class="form-label">Phương thức thanh toán</label>
+                 <select class="form-control" id="paymentMethod" [(ngModel)]="orderData.payment_method">
+                    <option value="cod">Thanh toán khi nhận hàng</option>
+                    <option value="other">Thanh toán khác</option>
+                 </select>
                 </div>
             </form>
         </div>
@@ -31,49 +62,43 @@
                         <th scope="col">Số lượng</th>
                         <th scope="col">Đơn giá</th>
                         <th scope="col">Tổng giá</th>
-                    </tr>
+                      </tr>
                 </thead>
                 <tbody>
+                    <!-- //để lặp qua mảng cartItems và hiển thị thông tin về từng sản phẩm trong giỏ hàng. -->
+                    <ng-container *ngFor="let item of cartItems " >
                     <tr>
                         <td>
                             <div class="product-info">
-                                <img src="https://images.pexels.com/photos/389819/pexels-photo-389819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                    alt="Product Image" class="product-image">
-                                <span class="product-name">Tên sản phẩm</span>
+                                <img 
+                                [src]="item.product.thumbnail"
+                                alt="Product Image" class="product-image">
+                                <span class="product-name">{{item.product.name}}</span>
                             </div>
                         </td>
-                        <td>2</td>
-                        <td>100,000 đ</td>
-                        <td>200,000 đ</td>
+                        <td>{{item.quantity}}</td>
+                        <td>{{item.product.price | number: '1.2-2'}}</td>
+                        <td>{{ (item.product.price * item.quantity) | number: '1.2-2'}} </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <div class="product-info">
-                                <img src="https://images.pexels.com/photos/389819/pexels-photo-389819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                    alt="Product Image" class="product-image">
-                                <span class="product-name">Tên sản phẩm</span>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>150,000 đ</td>
-                        <td>150,000 đ</td>
-                    </tr>
+                    
+                </ng-container>
                 </tbody>
-            </table>
-            <div class="text-start mt-3">
-                <h4 class="header-text text-end ">Tổng giá: 350,000 đ</h4>
-            </div>
-            <div class="mt-3">
-                <h4 class="product-header">Nhập coupon</h4>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Nhập coupon">
-                    <button class="btn btn-gradient" type="button">Áp dụng</button>
-                </div>
-            </div>
-            <div class="text-start mt-3">
-                <button class="btn btn-gradient" type="button">Đặt hàng</button>
-            </div>
-        </div>
-    </div>    
+            </table> 
+            
+         
+    <div class="text-start mt-3">
+        <h4 class="header-text text-end">Tổng tiền:{{totalAmount | number: '1.2-2'}} </h4>
+    </div>
+    <div class="mt-3">
+        <div class="input-group"> 
+        <input type="text" class="form-control" placeholder="Nhập Coupon">
+        <button class="btn btn-gradient"  type="button">Áp dụng</button>
+    </div>
+    
+    </div>
+            <div class="text-center mt-3">
+               <button class="btn btn-gradient" (click)="placeOrder()" type="button">Thanh Toán </button>
+            </div> 
+        </div>    
 </div>
 <app-footer></app-footer>

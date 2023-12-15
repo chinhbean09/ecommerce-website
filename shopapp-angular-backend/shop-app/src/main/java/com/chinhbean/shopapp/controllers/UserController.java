@@ -4,6 +4,7 @@ import com.chinhbean.shopapp.components.LocalizationUtils;
 import com.chinhbean.shopapp.dtos.UserDTO;
 import com.chinhbean.shopapp.dtos.UserLoginDTO;
 import com.chinhbean.shopapp.dtos.*;
+import com.chinhbean.shopapp.models.Role;
 import com.chinhbean.shopapp.models.User;
 import com.chinhbean.shopapp.responses.LoginResponse;
 import com.chinhbean.shopapp.responses.RegisterResponse;
@@ -90,7 +91,8 @@ public ResponseEntity<RegisterResponse> createUser(
             @Valid @RequestBody UserLoginDTO userLoginDTO) {
         // Kiểm tra thông tin đăng nhập và sinh token
         try {
-            String token = userService.login(userLoginDTO.getPhoneNumber(), userLoginDTO.getPassword(),userLoginDTO.getRoleId());
+            String token = userService.login(userLoginDTO.getPhoneNumber(), userLoginDTO.getPassword(),
+                    userLoginDTO.getRoleId() == null ? 1 : userLoginDTO.getRoleId());
             // Trả về token trong response
             return ResponseEntity.ok(LoginResponse.builder()
                     .message(localizationUtils.getLocalizedMessage(MessageKeys.LOGIN_SUCCESSFULLY))
