@@ -29,13 +29,15 @@ public class OrderService implements IOrderService{
     @Override
     @Transactional
     public Order createOrder(OrderDTO orderDTO) throws Exception {
-        //tìm xem user'id có tồn tại ko
+        //tìm xem user'id có tồn tại ko, vay lay id ntn ?
         User user = userRepository
                 .findById(orderDTO.getUserId())
                 .orElseThrow(() -> new DataNotFoundException("Cannot find user with id: "+ orderDTO.getUserId()));
-        //convert orderDTO => Order
+
+        //convert orderDTO => Order ánh xạ thuộc tính từ đối tượng OrderDTO sang Order.
         //dùng thư viện Model Mapper
         // Tạo một luồng bảng ánh xạ riêng để kiểm soát việc ánh xạ
+        // setId được bỏ qua để tránh ghi đè trên id của Order đã tồn tại.
         modelMapper.typeMap(OrderDTO.class, Order.class)
                 .addMappings(mapper -> mapper.skip(Order::setId));
         // Cập nhật các trường của đơn hàng từ orderDTO
@@ -51,45 +53,52 @@ public class OrderService implements IOrderService{
             throw new DataNotFoundException("Date must be at least today !");
         }
         order.setShippingDate(shippingDate);
+
         order.setActive(true);
         order.setTotalMoney(orderDTO.getTotalMoney());
 
+        //Lưu Order vào cơ sở dữ liệu thông qua orderRepository:
         orderRepository.save(order);
 
-        //Tạo danh sách các đối tượng OrderDetail từ cartItems
+        //===================================================================
+        //OrderDetails bắt đầu từ đây, chỉ cần
+        //Tạo danh sách các đối tượng OrderDetails để chứa các đối tượng OrderDetail.
         List<OrderDetail> orderDetails  = new ArrayList<>();
-        for(CartItemDTO cartItemDTO: orderDTO.getCartItems()){
 
-            //tạo orderdetail từ cartitems
+        //Duyệt qua từng CartItemDTO trong danh sách cartItems của orderDTO.
+        //Đối với mỗi CartItemDTO, một OrderDetail mới được tạo và liên kết với Order hiện tại.
+        for(CartItemDTO cartItemDTO: orderDTO.getCartItems()){ //CartItems: 1,2,3, lặp 1,2,3 lần để chi tiết product trong CartItems
+            //tạo orderDetail
             OrderDetail orderDetail = new OrderDetail();
-
-            //order detail bắt nnguồn từ order này, 1 order nhiều order detail
+            //order detail bắt nnguồn từ Order hiện tại này, 1 order nhiều order detail
             orderDetail.setOrder(order);
 
-        //Lấy thông tin sản phẩm từ cartItemDTO
-
+            //Lấy thông tin sản phẩm từ cartItemDTO  và sử dụng để đặt thông tin cho OrderDetail.
             Long productId = cartItemDTO.getProductId();
             int quantity = cartItemDTO.getQuantity();
 
             // Tìm thông tin sản phẩm từ database
             Product product = productRepository.findById(productId)
                     .orElseThrow(() -> new DataNotFoundException("Product not found with id " + productId));
-            //Đặt thông tin cho OrderDetail
 
+            //Đặt thông tin cho OrderDetail
             orderDetail.setProduct(product);
             orderDetail.setNumberOfProducts(quantity);
             orderDetail.setPrice(product.getPrice());
 
-            //Thêm order detail vào list
+            //OrderDetail được thêm vào danh sách orderDetails.
             orderDetails.add(orderDetail);
         }
+        //orderDetails được lưu vào cơ sở dữ liệu
         orderDetailRepository.saveAll(orderDetails);
         return order;
     }
 
     @Override
     public Order getOrder(Long id) {
-        return orderRepository.findById(id).orElse(null);
+        //có một dòng mã có nhiệm vụ tìm kiếm một đối tượng Order trong orderRepository
+        Order selectedOrder = orderRepository.findById(id).orElse(null);
+        return selectedOrder;
     }
 
     @Override

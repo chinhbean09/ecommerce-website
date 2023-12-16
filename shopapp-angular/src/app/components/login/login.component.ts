@@ -1,3 +1,4 @@
+import { RegisterDTO } from './../../dtos/user/register.dto';
 import { LoginDTO } from '../../dtos/user/login.dto';
 import { Component, ViewChild } from '@angular/core';
 import { UserService } from '../../services/user.service';
@@ -7,6 +8,7 @@ import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { LoginResponse } from '../../responses/user/login.response';
 import { Role } from 'src/app/models/role';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -50,7 +52,11 @@ export class LoginComponent {
       }
     });
   }
+  // register(registerDTO: RegisterDTO): Observable<any>{
 
+  
+  
+  
   login() {
     // const message = `phone: ${this.phoneNumber}` +
     //   `password: ${this.password}`;
@@ -73,7 +79,7 @@ export class LoginComponent {
         if (this.rememberMe) {
           this.tokenService.setToken(token);
         }                
-        //this.router.navigate(['/login']);
+        this.router.navigate(['/login']);
       },
       complete: () => {
         debugger;

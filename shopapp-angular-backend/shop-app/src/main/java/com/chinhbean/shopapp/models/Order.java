@@ -1,11 +1,14 @@
 package com.chinhbean.shopapp.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "orders")
@@ -21,6 +24,7 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
+    //không cần thực hiện một truy vấn riêng biệt.
     private User user;
 
     @Column(name = "fullname", length = 100)
@@ -65,4 +69,10 @@ public class Order {
     @Column(name = "active")
     private Boolean active; //thuộc về admin
 
+    //để hiện ra thông tin của order và order details, sẽ dc sử dụng ở order confirm
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    //nếu không có thì trong bảng Order lấy ra thông tin chi tiết của OrderDetail, nhưng mà trong OrderDetail lại có
+    //Order cho nên nó lại vào Order và lấy ra OrderDetail
+    @JsonManagedReference
+    private List<OrderDetail> orderDetails;
 }

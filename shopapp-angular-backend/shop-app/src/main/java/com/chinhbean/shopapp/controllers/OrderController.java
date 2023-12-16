@@ -3,6 +3,7 @@ package com.chinhbean.shopapp.controllers;
 import com.chinhbean.shopapp.components.LocalizationUtils;
 import com.chinhbean.shopapp.dtos.*;
 import com.chinhbean.shopapp.models.Order;
+import com.chinhbean.shopapp.responses.OrderResponse;
 import com.chinhbean.shopapp.services.IOrderService;
 import com.chinhbean.shopapp.utils.MessageKeys;
 import jakarta.validation.Valid;
@@ -54,7 +55,9 @@ public class OrderController {
     public ResponseEntity<?> getOrder(@Valid @PathVariable("id") Long orderId) {
         try {
             Order existingOrder = orderService.getOrder(orderId);
-            return ResponseEntity.ok(existingOrder);
+//            return ResponseEntity.ok(existingOrder);
+            OrderResponse orderResponse = OrderResponse.fromOrder(existingOrder);
+            return ResponseEntity.ok(orderResponse);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }

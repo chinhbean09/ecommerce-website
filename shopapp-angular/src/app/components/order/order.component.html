@@ -3,16 +3,23 @@
     <div class="intro-section">
         <h1>Đây là trang Order</h1>
     </div>    
+    <form [formGroup]="orderForm"> 
     <div class="row">
         <div class="col-md-6">
             <h2 class="product-header">Thông tin người nhận</h2>
             <form>
                 <div class="mb-3">
-                    <label for="name" class="form-label">Họ và tên</label>
+                    <label for="fullname" class="form-label">Họ và tên</label>
                     <input type="text"
-                    placeholder="Họ và Tên"
-                    [(ngModel)]="orderData.fullname"
-                    class="form-control" id="fullname">
+                    formControlName="fullname"
+                    class="form-control" id="fullname"
+                    [class.is-invalid]="orderForm.get('fullname')!.invalid && orderForm.get('fullname')!.touched">
+                      <!-- <!> bỏ qua cảnh báo "Object is possibly 'null' or 'undefined'"  -->
+                    <div
+                    *ngIf="orderForm.get('fullname')!.invalid && orderForm.get('fullname')!.touched"
+                    class="invalid-feedback">
+                    Họ tên là trường bắt buộc.
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
@@ -28,7 +35,7 @@
                 <div class="mb-3">
                     <label for="address" class="form-label">Địa Chỉ</label>
                     <input type="text"
-                    placeholder="Địa Chỉ"
+                    formControlName="address"
                     [(ngModel)]="orderData.address" class="form-control" id="address">
                 </div>
                 <div class="mb-3">
@@ -101,4 +108,5 @@
             </div> 
         </div>    
 </div>
+</form>
 <app-footer></app-footer>

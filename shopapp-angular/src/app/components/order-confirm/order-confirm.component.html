@@ -1,52 +1,68 @@
 <app-header></app-header>
 <div class="container">
-    <div class="confirmation-container">
-        <h1>Xác nhận đơn hàng</h1>
-        <p>Cảm ơn bạn đã đặt hàng! Dưới đây là thông tin chi tiết về đơn hàng của bạn</p>     
-    </div>
-    <div class="row">
-        <table>
-            <thead>
-                <tr>
-                    <th scope="col" class="text-start">Sản phẩm</th>
-                    <th scope="col">Số lượng</th>
-                    <th scope="col">Đơn giá</th>
-                    <th scope="col">Tổng giá</th>
-                  </tr>
-            </thead>
-            <tbody>
-                <!-- //để lặp qua mảng cartItems và hiển thị thông tin về từng sản phẩm trong giỏ hàng. -->
-                <ng-container *ngFor="let item of cartItems " >
-                <tr>
-                    <td>
-                        <div class="product-info">
-                            <img 
-                            [src]="item.product.thumbnail"
-                            alt="Product Image" class="product-image">
-                            <span class="product-name">{{item.product.name}}</span>
-                        </div>
-                    </td>
-                    <td>{{item.quantity}}</td>
-                    <td>{{item.product.price | currency:'VND':'symbol':'1.0-0'}}</td>
-                    <td>{{ (item.product.price * item.quantity) | currency:'VND':'symbol':'1.0-0'}} </td>
-                </tr>
-                
-            </ng-container>
-            </tbody>
-        </table>   
-
-        <div class="input-group mb-3 mt-3 col-6">
-            <input type="text" class="form-control"
-            [(ngModel)]="couponCode" placeholder="Mã giảm giá">
-            <div class="input-group-append" style="margin-left: 10px;">
-                <button class="btn btn-outline-secondary" type="button" (click)="applyCoupon()"> Áp dụng mã</button>
-            </div>
-        </div>
-
-        <P class="mb-0">Tổng tiền:{{totalAmount | currency:'VND':'symbol':'1.0-0'}}</P>
-        <div class="text-center mt-3">
-           <button class="btn btn-gradient" type="button">Thanh Toán </button>
-        </div> 
+    <div class="intro-section">
+        <h1>Chi tiết đơn hàng</h1>
+        <p>Xem Thông tin chi tiết đơn hàng</p>
     </div>    
+  
+    <div *ngIf="orderResponse" class="row">
+        <div class="col-md-6">
+            <h2 class="product-header">Thông tin người nhận</h2>
+                <div class="mb-3">
+                    <p class="form-label">Họ và tên: {{orderResponse.fullname}}</p>
+                </div>
+                <div class="mb-3">
+                    <p  class="form-label">Email: {{orderResponse.email}}</p>
+                </div>
+                <div class="mb-3">
+                    <p class="form-label">Số điện thoại:  {{orderResponse.phone_number}}</p>
+                </div>
+                <div class="mb-3">
+                    <p  class="form-label">Địa Chỉ:  {{orderResponse.address}}</p>
+                </div>
+                <div class="mb-3">
+                    <p class="form-label">Ghi Chú:  {{orderResponse.note}}</p>
+                </div>
+                <div class="form-group">
+                    <p class="form-label">Phương Thức Vận Chuyển:  {{orderResponse.shipping_method}}</p>
+                </div>
+                <div class="form-group">
+                    <p class="form-label">Phương thức thanh toán:  {{orderResponse.payment_method}}</p>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h2 class="product-order">Sản phẩm đã đặt hàng</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-start">Sản phẩm</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Đơn giá</th>
+                        <th scope="col">Tổng giá</th>
+                      </tr>
+                </thead>
+                <tbody>
+                    <!-- //để lặp qua mảng cartItems và hiển thị thông tin về từng sản phẩm trong giỏ hàng. -->
+                    <tr *ngFor="let item of orderResponse.order_details " >
+                        <td>
+                            <div class="product-info">
+                                <img 
+                                [src]="item.product.thumbnail"
+                                alt="Product Image" class="product-image">
+                                <span class="product-name">{{item.product.name}}</span>
+                            </div>
+                        </td>
+                        <td>{{item.number_of_products}}</td>
+                        <td>{{item.price | number: '1.2-2'}}</td>
+                        <td>{{ item.total_money | number: '1.2-2'}} </td>
+                </tr>
+                </tbody>
+            </table> 
+            
+         
+    <div class="text-start mt-3">
+        <h4 class="header-text text-end">Tổng tiền:{{orderResponse.total_money | number: '1.2-2'}} </h4>
+    </div>   
 </div>
 <app-footer></app-footer>

@@ -89,4 +89,8 @@ export class HomeComponent implements OnInit {
     this.getProducts(this.keyword, this.selectedCategoryId, this.currentPage, this.itemsPerPage);
   }
 
+
+  onProductClick(productId:number){
+    this.router.navigate(['/product', productId]);
+  }
 }

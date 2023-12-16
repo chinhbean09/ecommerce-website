@@ -11,9 +11,16 @@ import { LoginDTO } from '../../app/dtos/user/login.dto';
 export class UserService {
   private apiRegister = `${environment.apiBaseUrl}/users/register`;
   private apiLogin = `${environment.apiBaseUrl}/users/login`;
+  private apiUserDetail = `${environment.apiBaseUrl}/users/details`;
 
   private apiConfig = {
     headers: this.httpUtilService.createHeaders(),
+    /*
+     createHeaders(): HttpHeaders {
+     return new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Accept-Language': 'vi'});
+    */
   }
 
   constructor(
@@ -24,8 +31,18 @@ export class UserService {
 //Phương thức trả về một Observable để quản lý bất đồng bộ và theo dõi kết quả của request.
   register(registerDTO: RegisterDTO):Observable<any> {
     return this.http.post(this.apiRegister, registerDTO, this.apiConfig);
+    return this.http.post(this.apiRegister, registerDTO, this.apiConfig);
   }
   login(loginDTO: LoginDTO): Observable<any> {    
     return this.http.post(this.apiLogin, loginDTO, this.apiConfig);
   }
+
+  getUserDetail(token: string){
+    return this.http.post(this.apiUserDetail, {
+        headers: new HttpHeaders({
+         'Content-Type': 'application/json',
+         Authorization: `Bearer ${token}`}) 
+        })
+  }
+
 }

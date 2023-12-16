@@ -10,64 +10,79 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./order-confirm.component.scss']
 })
 export class OrderConfirmComponent implements OnInit {
-cartItems: {product: Product, quantity: number }[] = [];
-couponCode: String = '';
-totalAmount: number = 0;
+orderResponse: OrderResponse = {
+id:0,
+user_id: 0,
+fullname:'',
+email:'',
+    phone_number:'',
+    address:'',
+    note:'',
+    order_date: new Date(),
+    status: '',
+    total_money:0,
+    shipping_method:'',
+    shipping_address:'',
+    shipping_date: new Date(),
+    payment_method: '',
+    order_details:[]
+
+}
 
 constructor(
-  private cartService: CartService,
-  private productService: ProductService
+  private orderService: OrderService,
 ){}
 
 ngOnInit(): void {
-  //Lấy thông tin giỏ hàng từ cartService:
-    const cart = this.cartService.getCart();
-    //lấy key từ trong cart (id của products )
-    const productIds = Array.from(cart.keys());
-
-    // Lấy Các Mục trong Giỏ Hàng và Chi Tiết Sản Phẩm:
-    this.productService.getProductsByIds(productIds).subscribe({
-      next: (products) => {
-        //map() để tạo một mảng mới(this.cartItems) dựa trên mảng productIds.
-        //mỗi phần tử trong mảng mới là một đối tượng có hai thuộc tính: product và quantity.
-        this.cartItems = productIds.map((productId) => {
-        //hàm find sẽ lọc ra những product có id tương ứng
-          const product=  products.find(
-            (p) => p.id === productId);
-          if(product) {
-            product.thumbnail = `${environment.apiBaseUrl}/products/images/${product.thumbnail}`;
-          }
-          return { //mỗi vòng lặp trả về đối tượng chứa product và quantity
-            // '!' thông báo rằng TypeScript nên xem xét những giá trị này như là không bao giờ null hoặc undefined.
-            product: product!,
-            quantity: cart.get(productId)!
-          };
-        });
-        console.log('DONEEEEEEEEE')
-      },
-      complete: () =>{
-
-      },
-      error: (error:any) => {
-        console.log(error);
-      }
-        });
-      
+  this.getOrderDetails();      
     }
 
+    getOrderDetails():void {
+
+      const orderId = 1;
+      this.orderService.getOrderById(orderId).subscribe({
+        next: (response: any) => {
+          
+           this.orderResponse.id = response.id;
+           this.orderResponse.user_id = response.user_id;
+           this.orderResponse.fullname = response.fullname;
+           this.orderResponse.email = response.email;
+           this.orderResponse.phone_number = response.phone_number;
+           this.orderResponse.address = response.address;
+           this.orderResponse.note = response.note;
+           this.orderResponse.order_date = new Date(
+            response.order_date[0],
+            response.order_date[1] - 1,
+            response.order_date[2]
+           );
+           this.orderResponse.order_details = response.order_details;
+           .map(order_detail: OrderDetail) => {
+            order_detail.product.thumbnail = `${environment.apiBaseUrl}/products/images/${order_detail.product.thumbnail}`;
+            return order_detail;
+           };
+
+           this.orderResponse.paymend_method = response.paymend_method;
+           this.orderResponse.shipping_date = new Date(
+            response.order_date[0],
+            response.order_date[1] - 1,
+            response.order_date[2]
+           );
+
+           this.orderResponse.shipping_method = response.shipping_method;
+           this.orderResponse.status = response.status;
+           this.orderResponse.total_money = response.total_money;
+           
+        },
+        complete: () =>{
+           
+        },
+        error: (error:any) => {
+          console.log(error);
+        }
+          });
+        
+      }
     
 
-    calculateTotal():void{
-
-      //reduce giúp tổng hợp các phần tử ở trong cartItems và lấy
-      this.totalAmount = this.cartItems.reduce(
-        (total,item) => total + item.product.price * item.quantity,0
-      )
-    }
-
-    applyCoupon():void{
-      
-    }
-
-  }
-
+    
+}
