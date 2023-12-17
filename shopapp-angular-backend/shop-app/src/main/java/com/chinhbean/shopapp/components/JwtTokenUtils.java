@@ -33,6 +33,7 @@ public class JwtTokenUtils {
         Map<String, Object> claims = new HashMap<>();
         //this.generateSecretKey();
         claims.put("phoneNumber", user.getPhoneNumber());
+        //thêm claims Id để đưa vào bên trong token
         claims.put("userId",user.getId());
         try {
             String token = Jwts.builder()
@@ -84,6 +85,7 @@ public class JwtTokenUtils {
         return extractClaim(token, Claims::getSubject);
     }
     public boolean validateToken(String token, UserDetails userDetails) {
+        //trích xuất thôn tin(phoneNumber) từ token và thông tin userDetails(Username = phoneNumber) từ spring security
         String phoneNumber = extractPhoneNumber(token);
         return (phoneNumber.equals(userDetails.getUsername()))
                 && !isTokenExpired(token);

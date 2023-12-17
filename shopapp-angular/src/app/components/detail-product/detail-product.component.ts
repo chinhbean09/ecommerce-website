@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { environment } from 'src/app/environments/environment';
 import { ProductImage } from 'src/app/models/product.image';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail-product',
@@ -21,16 +22,18 @@ export class DetailProductComponent implements OnInit{
   constructor (
     private productService: ProductService,
     private categoryService: CategoryService,
-    private cartService: CartService
-    // private router: Router,
+    private cartService: CartService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+
     ){}
 
     ngOnInit(){
       //lấy product ID từ URL 
-      //const idParam = this.activatedRoute.snapshot.paramMap.get('id');
+      const idParam = this.activatedRoute.snapshot.paramMap.get('id');
       
       // this.cartService.clearCart();
-      const idParam = 5;
+      // const idParam = 5;
       if(idParam !== null){
         this.productId =+ idParam;
       }
@@ -86,7 +89,7 @@ export class DetailProductComponent implements OnInit{
     }
 
     addToCart() :void{
-      
+
       if(this.product){
         this.cartService.addToCart(this.product.id, this.quantity);
       }else{
@@ -103,5 +106,7 @@ export class DetailProductComponent implements OnInit{
         this.quantity--;
       }
     }
-    buyNow():void{}
+    buyNow(): void {      
+      this.router.navigate(['/orders']);
+    }   
 }

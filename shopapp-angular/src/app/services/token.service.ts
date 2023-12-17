@@ -20,7 +20,9 @@ export class TokenService {
     }
 
     getUserId(): number {
+        //lấy ra token 
         let userObject = this.jwtHelperService.decodeToken(this.getToken() ?? '');
+        //kiểm tra xem trong token có trường userId hay không   
         return 'userId' in userObject ? parseInt(userObject['userId']) : 0;
     }
 

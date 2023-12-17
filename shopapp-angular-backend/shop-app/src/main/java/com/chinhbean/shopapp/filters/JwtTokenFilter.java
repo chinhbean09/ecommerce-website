@@ -46,10 +46,13 @@ public class JwtTokenFilter extends OncePerRequestFilter{
             }
 
             final String token = authHeader.substring(7);
+            //trích xuất phoneNumber từ token
             final String phoneNumber = jwtTokenUtils.extractPhoneNumber(token);
 
             if (phoneNumber != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+                //lấy user details bằng phoneNumber để lấy ra thông tin user, hien tai userdetails có username là phoneNumber(Subject)
                 User userDetails = (User) userDetailsService.loadUserByUsername(phoneNumber);
+                //check claim của token(phoneNumeber của User) với UserName của userDetails
                 if(jwtTokenUtils.validateToken(token, userDetails)) {
                     //authenticate voi he thong java spring
                     UsernamePasswordAuthenticationToken authenticationToken =

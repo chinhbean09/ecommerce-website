@@ -1,9 +1,12 @@
+@import '../../styles/share-styles.scss';
+
+
 .container {
     color: white;
     height: 100vh;
 }
 .login-form {
-    background-color: rgb(12, 12, 55);
+    background-color: $shopapp-bg-color;
     border-radius: 10px;
     padding: 20px;
     max-width: 500px;
@@ -17,12 +20,12 @@
     margin-bottom: 20px;
 }
 .form-control {
-    background-color: transparent;
+    background-color: $shopapp-bg-color;
     border: none;
     color: white;
 }
 .form-control:focus {
-    color: white;
+    color: black;
     background-color: transparent;
     outline: none;
     border-color: transparent;    
@@ -53,11 +56,12 @@
 /* Màu checkbox khi được chọn */
 .checkbox-text input[type="checkbox"]:checked {
     border-color: white;
-    background-color: rgb(233, 66, 178);
+    background-color: $shopapp-color;
 }
 
 .form-check-input {
     margin-right: 5px;
+    
 }
 
 .register-link {
@@ -68,11 +72,11 @@
     margin-top: 20px;
     width: 200px;
     color: white;
-    border: 1px solid rgb(225, 64, 180);
+    border: 1px solid $shopapp-tint-color;
 }
 
 .access-right:focus {
-    border: 1px solid rgb(225, 64, 180);
+    border: 1px solid $shopapp-tint-color;
 }
 
 .form-control::placeholder {
@@ -93,7 +97,7 @@
 }
 
 .login-button {
-    background: linear-gradient(to right, rgb(225, 64, 180), rgb(126, 43, 237));
+    background: linear-gradient(to right, $shopapp-color, $shopapp-color);
     color: white;
     border-radius: 30px;
     width: 100%;

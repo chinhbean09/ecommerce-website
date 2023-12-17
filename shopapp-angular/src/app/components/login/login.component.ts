@@ -82,7 +82,9 @@ export class LoginComponent {
         const { token } = response;
         // let token = response.token
         if (this.rememberMe) {
+          //lưu token vào trong localStorage
           this.tokenService.setToken(token);
+
           this.userService.getUserDetail(token).subscribe({
             next: (response: any) => {
                   this.userResponse  = {
@@ -98,7 +100,7 @@ export class LoginComponent {
                     date_of_birth: new Date(response.date_of_birth),
                   };
                   this.userService.saveUserResponseToLocalStorage(this.userResponse);
-                  this.router.navigate(['/login']);
+                  this.router.navigate(['/']);
 
             },
             complete: () => {

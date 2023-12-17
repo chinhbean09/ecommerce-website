@@ -93,8 +93,9 @@ export class HomeComponent implements OnInit {
     this.getProducts(this.keyword, this.selectedCategoryId, this.currentPage, this.itemsPerPage);
   }
 
+    // Điều hướng đến trang detail-product với productId là tham số
 
   onProductClick(productId:number){
-    this.router.navigate(['/product', productId]);
+    this.router.navigate(['/products', productId]);
   }
 }

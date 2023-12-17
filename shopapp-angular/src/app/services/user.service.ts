@@ -37,20 +37,25 @@ export class UserService {
   login(loginDTO: LoginDTO): Observable<any> {    
     return this.http.post(this.apiLogin, loginDTO, this.apiConfig);
   }
-
+//khi gọi phương thức http nó sẽ gửi header và cả api lên cho server ? để author và cả kiểu gửi đi
   getUserDetail(token: string){
     return this.http.post(this.apiUserDetail, {
         headers: new HttpHeaders({
+          //gửi data post lên server với định dạng json 
          'Content-Type': 'application/json',
          Authorization: `Bearer ${token}`}) 
         })
   }
+  //lưu dối9 tượng vào local storage
   saveUserResponseToLocalStorage(userResponse?: UserResponse){
     try{
+      //chuyển thành optional cho nên phải if else validate
       if(userResponse == null || !userResponse){
         return;
       }
+      //để lưu 1 đối tượng vào trong local storage thì biến nó sang dạng string
       const userResponseJSON = JSON.stringify(userResponse);
+      //localStorage.setItem('user', '{"id":1,"username":"exampleUser","role":"user"}');
       localStorage.setItem('user', userResponseJSON);
       console.log('User response saved to local storage')
     }catch (error){
@@ -58,13 +63,16 @@ export class UserService {
     }
   }
 
-  getUserResponseFromLocalStorage():UserResponse | null{
+    //dùng ở màn hình user, order thì phải lấy ra được user, nếu không có thì redirect sang màn hình khác
+  getUserResponseFromLocalStorage(): UserResponse | null{
     try{
       
       const userResponseJSON = localStorage.getItem('user');
+      //chuyển thành optional cho nên phải if else validate
       if(userResponseJSON == null || !userResponseJSON == undefined){
         return null;
-      }
+      }//
+      //
       const userResponse = JSON.parse(userResponseJSON!);
       console.log('User response retrieved from local storage')
       return userResponse;

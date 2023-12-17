@@ -98,9 +98,11 @@ public class UserService implements IUserService{
 
     @Override
     public User getUserDetailsFromToken(String token) throws Exception {
+        //inject jwtTokenUtils để check token còn hạn sử dụng hay không
         if(jwtTokenUtils.isTokenExpired(token)){
             throw new Exception("Token is expried");
         }
+        //trích xuất các claims bên trong token
         String phoneNumber = jwtTokenUtils.extractPhoneNumber(token);
         Optional<User> user = userRepository.findByPhoneNumber(phoneNumber);
 

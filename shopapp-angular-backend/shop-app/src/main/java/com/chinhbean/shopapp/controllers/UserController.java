@@ -107,6 +107,8 @@ public ResponseEntity<RegisterResponse> createUser(
         }
     }
 
+    //lấy thông tin chi tiết của user thông qua token, sd trong trường hợp đã login rồi và vào trang thông tin
+    //người dùng và lấy ra thông tin chi tiết thông qua token đó
     @PostMapping("/details")
     public ResponseEntity<UserResponse> getUserDetails(@RequestHeader("Authorization") String token){
         try{
