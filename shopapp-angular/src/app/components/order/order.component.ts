@@ -1,3 +1,4 @@
+import { TokenService } from './../../services/token.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { OrderDTO } from 'src/app/dtos/order/order.dto';
@@ -34,7 +35,7 @@ export class OrderComponent implements OnInit {
   constructor(
     private cartService: CartService,
     private productService: ProductService,
-    // private orderService: OrderService, //2
+    private tokenService: TokenService, //2
     private fb: FormBuilder
   ){
 //Tạo FormGroup và các FormControl tương ứng 
@@ -52,6 +53,9 @@ export class OrderComponent implements OnInit {
   
   
   ngOnInit(): void {
+
+    this.orderData.user_id = this.tokenService.getUserId();
+
     //Lấy thông tin giỏ hàng từ cartService:
       const cart = this.cartService.getCart();
       //lấy key từ trong cart (id của products)
@@ -91,7 +95,6 @@ export class OrderComponent implements OnInit {
       placeOrder(){ 
 
         if(this.orderForm.valid){
-
           //sao chép, nhân bản  giá trị từ form vào orderData 
           //this.orderData.fullname = this.orderForm.get('fullname')!.value;
           this.orderData = {

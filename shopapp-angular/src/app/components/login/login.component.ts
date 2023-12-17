@@ -1,3 +1,4 @@
+import { UserResponse } from './../../responses/user/user.response';
 import { RegisterDTO } from './../../dtos/user/register.dto';
 import { LoginDTO } from '../../dtos/user/login.dto';
 import { Component, ViewChild } from '@angular/core';
@@ -23,7 +24,7 @@ export class LoginComponent {
   roles: Role[] = []; // Mảng roles
   rememberMe: boolean = true;
   selectedRole: Role | undefined; // Biến để lưu giá trị được chọn từ dropdown
-
+  userResponse?: UserResponse; 
   onPhoneNumberChange() {
     console.log(`Phone typed: ${this.phoneNumber}`);
     //how to validate ? phone must be at least 6 characters
@@ -78,8 +79,33 @@ export class LoginComponent {
         // let token = response.token
         if (this.rememberMe) {
           this.tokenService.setToken(token);
+          this.userService.getUserDetail(token).subscribe({
+            next: (response: any) => {
+                  this.userResponse  = {
+                    // id: response.id,
+                    // phone_number:response.phone_number,
+                    // fullname: response.fullname,
+                    // address: response.address,
+                    // is_active: response.is_active,
+                    // facebook_account_id: response.facebook_account_id,
+                    // google_account_id: response.google_account_id,
+                    // role: response.role,
+                    ...response,
+                    date_of_birth: new Date(response.date_of_birth),
+                  };
+                  this.userService.saveUserResponseToLocalStorage(this.userResponse);
+                  this.router.navigate(['/login']);
+
+            },
+            complete: () => {
+              debugger;
+            },
+            error: (error: any) => {
+              debugger;
+              alert(error.error.message);
+            }
+          })
         }                
-        this.router.navigate(['/login']);
       },
       complete: () => {
         debugger;
