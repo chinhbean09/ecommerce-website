@@ -55,7 +55,11 @@ export class LoginComponent {
   }
   // register(registerDTO: RegisterDTO): Observable<any>{
 
-  
+  createAccount() {
+    debugger
+    // Chuyển hướng người dùng đến trang đăng ký (hoặc trang tạo tài khoản)
+    this.router.navigate(['/register']); 
+  }
   
   
   login() {

@@ -1,6 +1,7 @@
 import { CategoryService } from './../../services/category.service';
 import { ProductService } from './../../services/product.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/app/environments/environment';
 import { Category } from 'src/app/models/category';
 import { Product } from 'src/app/models/product';
@@ -20,7 +21,10 @@ export class HomeComponent implements OnInit {
   visiblePages: number[] = [];
   keyword:string ="";
   selectedCategoryId: number = 0;
-  constructor(private ProductService: ProductService, private categoryService: CategoryService){}
+  constructor(private ProductService: ProductService, 
+    private categoryService: CategoryService,
+    private router: Router,
+    ){}
 
   ngOnInit() {
     // Gọi API lấy danh sách roles và lưu vào biến roles

@@ -1,3 +1,4 @@
+import { OrderService } from 'src/app/services/order.service';
 import { TokenService } from './../../services/token.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -35,6 +36,7 @@ export class OrderComponent implements OnInit {
   constructor(
     private cartService: CartService,
     private productService: ProductService,
+    private orderService: OrderService,
     private tokenService: TokenService, //2
     private fb: FormBuilder
   ){

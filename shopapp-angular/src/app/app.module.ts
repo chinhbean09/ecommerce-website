@@ -14,6 +14,7 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app/app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [    
@@ -25,14 +26,16 @@ import { AppRoutingModule } from './app-routing.module';
     OrderConfirmComponent,
     LoginComponent,
     RegisterComponent,
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
+
   ],
   providers: [
     //cho thêm đối tượng http_interceptors và nó sử dụng class TokenInterceptor mới tạo
