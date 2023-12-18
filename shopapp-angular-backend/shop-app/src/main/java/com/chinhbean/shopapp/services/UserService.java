@@ -2,6 +2,7 @@ package com.chinhbean.shopapp.services;
 
 import com.chinhbean.shopapp.components.JwtTokenUtils;
 import com.chinhbean.shopapp.components.LocalizationUtils;
+import com.chinhbean.shopapp.dtos.UpdateUserDTO;
 import com.chinhbean.shopapp.dtos.UserDTO;
 import com.chinhbean.shopapp.exceptions.DataNotFoundException;
 import com.chinhbean.shopapp.exceptions.PermissionDenyException;
@@ -10,6 +11,7 @@ import com.chinhbean.shopapp.models.User;
 import com.chinhbean.shopapp.repositories.RoleRepository;
 import com.chinhbean.shopapp.repositories.UserRepository;
 import com.chinhbean.shopapp.utils.MessageKeys;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -111,5 +113,52 @@ public class UserService implements IUserService{
         } else {
             throw new Exception("User not found");
         }
+    }
+
+    @Transactional //hỗ trợ rollback về trạng thái cũ nếu bị lỗi
+    @Override
+    public User updateUser(Long userId, UpdateUserDTO updatedUserDTO) throws Exception {
+        // Find the existing user by userId
+        User existingUser = userRepository.findById(userId)
+                .orElseThrow(() -> new DataNotFoundException("User not found"));
+
+        //nếu cho đổi phone thì nếu trùng phone thì sẽ dẫn tới tất cả các đơn hàng của
+        //thằng mới sẽ trùng sang thằng cũ
+        String newPhoneNumber = updatedUserDTO.getPhoneNumber();
+        if (!existingUser.getPhoneNumber().equals(newPhoneNumber) &&
+                userRepository.existsByPhoneNumber(newPhoneNumber)) {
+            throw new DataIntegrityViolationException("Phone number already exists");
+        }
+
+        // Update user information based on the DTO
+        if (updatedUserDTO.getFullName() != null) {
+            existingUser.setFullName(updatedUserDTO.getFullName());
+        }
+        if (newPhoneNumber != null) {
+            existingUser.setPhoneNumber(newPhoneNumber);
+        }
+        if (updatedUserDTO.getAddress() != null) {
+            existingUser.setAddress(updatedUserDTO.getAddress());
+        }
+        if (updatedUserDTO.getDateOfBirth() != null) {
+            existingUser.setDateOfBirth(updatedUserDTO.getDateOfBirth());
+        }
+        if (updatedUserDTO.getFacebookAccountId() > 0) {
+            existingUser.setFacebookAccountId(updatedUserDTO.getFacebookAccountId());
+        }
+        if (updatedUserDTO.getGoogleAccountId() > 0) {
+            existingUser.setGoogleAccountId(updatedUserDTO.getGoogleAccountId());
+        }
+
+        // Update the password if it is provided in the DTO
+        if (updatedUserDTO.getPassword() != null
+                && !updatedUserDTO.getPassword().isEmpty()) {
+            String newPassword = updatedUserDTO.getPassword();
+            String encodedPassword = passwordEncoder.encode(newPassword);
+            existingUser.setPassword(encodedPassword);
+        }
+        //existingUser.setRole(updatedRole);
+        // Save the updated user
+        return userRepository.save(existingUser);
     }
 }

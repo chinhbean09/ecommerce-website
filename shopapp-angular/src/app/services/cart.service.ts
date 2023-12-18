@@ -24,7 +24,7 @@ export class CartService {
         */ 
     }
   }
-  //Thêm vào 
+  //Thêm vào cart với productId là key, quantity là value, để thay đổi biến cart 
   addToCart(productId: number, quantity: number = 1): void {
 
     if(this.cart.has(productId)){
@@ -34,7 +34,7 @@ export class CartService {
       //nếu sản phẩm chưa có trong giỏ, với số lượng là quantity 
         this.cart.set(productId, quantity)
     }
-    //sau khi thay đổi giỏ hàng, lưu trữ nó vào trong localStorage 
+    //sau khi thay đổi cart, lưu trữ nó vào trong localStorage 
     this.saveCartToLocalStorage();
   }
 

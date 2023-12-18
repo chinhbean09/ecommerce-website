@@ -13,6 +13,7 @@ import com.chinhbean.shopapp.services.IUserService;
 import com.chinhbean.shopapp.utils.MessageKeys;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -110,15 +111,41 @@ public ResponseEntity<RegisterResponse> createUser(
     //lấy thông tin chi tiết của user thông qua token, sd trong trường hợp đã login rồi và vào trang thông tin
     //người dùng và lấy ra thông tin chi tiết thông qua token đó
     @PostMapping("/details")
-    public ResponseEntity<UserResponse> getUserDetails(@RequestHeader("Authorization") String token){
-        try{
-            String extractedToken = token.substring(7);
-            User user = userService.getUserDetailsFromToken(extractedToken);
-            return ResponseEntity.ok(UserResponse.fromUser(user));
+    public ResponseEntity<UserResponse> getUserDetails(
+            //truyền header
+            @RequestHeader("Authorization") String token)
+    {try{
+        // Trích xuất giá trị token từ header Authorization
+        String extractedToken = token.substring(7);
+
+        //UserService để lấy thông tin User dựa trên token
+        User user = userService.getUserDetailsFromToken(extractedToken);
+
+        // Trả về một ResponseEntity chứa thông tin người dùng dưới dạng UserResponse
+        return ResponseEntity.ok(UserResponse.fromUser(user));
         }catch(Exception e){
             return ResponseEntity.badRequest().build();
 
         }
-
+    }
+    @PutMapping("/details/{userId}")
+    public ResponseEntity<UserResponse> updateUserDetails(
+            @PathVariable Long userId,
+            @RequestBody UpdateUserDTO updatedUserDTO,
+            //truyền header để lấy token trong Authorization
+            @RequestHeader("Authorization") String authorizationHeader
+    ) {
+        try {
+            String extractedToken = authorizationHeader.substring(7);
+            User user = userService.getUserDetailsFromToken(extractedToken);
+            //Toi đang cập nhật chính mình
+            if (user.getId() != userId) {
+                return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+            }
+            User updatedUser = userService.updateUser(userId, updatedUserDTO);
+            return ResponseEntity.ok(UserResponse.fromUser(updatedUser));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
     }
 }

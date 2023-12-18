@@ -62,17 +62,19 @@ export class OrderComponent implements OnInit{
     // Lấy danh sách sản phẩm từ giỏ hàng
     debugger
     const cart = this.cartService.getCart();
-    const productIds = Array.from(cart.keys()); // Chuyển danh sách ID từ Map giỏ hàng    
+    //sử dụng Array.from() để chuyển đổi iterator thành một mảng,lặp qua từng cặp [key, value] trong iterator và đưa chúng vào một mảng mới.
+    const productIds = Array.from(cart.keys()); // Chuyển danh sách ID từ cart<Map>    
 
-    // Gọi service để lấy thông tin sản phẩm dựa trên danh sách ID
+    // Gọi service để lấy thông tin sản phẩm dựa trên danh sách ID productIds và truyền vào hàm api
     debugger    
     if(productIds.length === 0) {
       return;
     }    
     this.productService.getProductsByIds(productIds).subscribe({
       next: (products) => {            
-        debugger
-        // Lấy thông tin sản phẩm và số lượng từ danh sách sản phẩm và giỏ hàng
+        debugger  
+        // Lấy danh sách product từ productIds(id:1,2,3,...) và số lượng product là tổng 
+        //cartItems = [productIds:product - ]
         this.cartItems = productIds.map((productId) => {
           debugger
           const product = products.find((p) => p.id === productId);
@@ -81,6 +83,7 @@ export class OrderComponent implements OnInit{
           }          
           return {
             product: product!,
+            //lấy value của cart {5:2 => 2 sản phẩm}
             quantity: cart.get(productId)!
           };
         });
@@ -96,6 +99,7 @@ export class OrderComponent implements OnInit{
       }
     });        
   }
+  
   placeOrder() {
     debugger
     if (this.orderForm.valid) {
@@ -114,10 +118,13 @@ export class OrderComponent implements OnInit{
         ...this.orderData,
         ...this.orderForm.value
       };
+
+      //cart items phải được gán bằng cart<Map> trong local
       this.orderData.cart_items = this.cartItems.map(cartItem => ({
         product_id: cartItem.product.id,
         quantity: cartItem.quantity
       }));
+      
       this.orderData.total_money =  this.totalAmount;
       // Dữ liệu hợp lệ, bạn có thể gửi đơn hàng đi
       this.orderService.placeOrder(this.orderData).subscribe({
@@ -136,6 +143,8 @@ export class OrderComponent implements OnInit{
           alert(`Lỗi khi đặt hàng: ${error}`);
         },
       });
+
+
     } else {
       // Hiển thị thông báo lỗi hoặc xử lý khác
       alert('Dữ liệu không hợp lệ. Vui lòng kiểm tra lại.');

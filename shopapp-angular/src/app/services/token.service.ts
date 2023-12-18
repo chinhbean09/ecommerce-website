@@ -22,7 +22,7 @@ export class TokenService {
     getUserId(): number {
         //lấy ra token 
         let userObject = this.jwtHelperService.decodeToken(this.getToken() ?? '');
-        //kiểm tra xem trong token có trường userId hay không   
+        //kiểm tra xem trong token có trường userId hay không trong claims của token 
         return 'userId' in userObject ? parseInt(userObject['userId']) : 0;
     }
 
@@ -30,6 +30,7 @@ export class TokenService {
         localStorage.removeItem(this.TOKEN_KEY);
     }
 
+        //check token còn hạng không bằng jwt  
     isTokenExpired(): boolean {
         if(this.getToken() == null){
             return false;

@@ -10,7 +10,6 @@ import { OrderDTO } from '../dtos/order/order.dto';
 })
 export class OrderService {
   private apiUrl = `${environment.apiBaseUrl}/orders`;
-
   constructor(private http: HttpClient) {}
 
   placeOrder(orderData: OrderDTO): Observable<any> {    
