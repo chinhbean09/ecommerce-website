@@ -1,3 +1,4 @@
+import { UpdateUserDTO } from 'src/app/dtos/user/update.user.dto';
 import { UserResponse } from './../responses/user/user.response';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -32,7 +33,6 @@ export class UserService {
 //Phương thức trả về một Observable để quản lý bất đồng bộ và theo dõi kết quả của request.
   register(registerDTO: RegisterDTO):Observable<any> {
     return this.http.post(this.apiRegister, registerDTO, this.apiConfig);
-    return this.http.post(this.apiRegister, registerDTO, this.apiConfig);
   }
   login(loginDTO: LoginDTO): Observable<any> {    
     return this.http.post(this.apiLogin, loginDTO, this.apiConfig);
@@ -45,6 +45,16 @@ export class UserService {
          'Content-Type': 'application/json',
          Authorization: `Bearer ${token}`}) 
         })
+  }
+  updateUserDetail(token: string, updateUserDTO: UpdateUserDTO) {
+    debugger
+    let userResponse = this.getUserResponseFromLocalStorage();        
+    return this.http.put(`${this.apiUserDetail}/${userResponse?.id}`,updateUserDTO,{
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
+      })
+    })
   }
   //lưu dối9 tượng vào local storage
   saveUserResponseToLocalStorage(userResponse?: UserResponse){

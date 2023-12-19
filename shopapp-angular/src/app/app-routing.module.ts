@@ -8,6 +8,7 @@ import { OrderConfirmComponent } from "./components/detail-order/order.detail.co
 import { NgModel } from "@angular/forms";
 import { NgModule } from "@angular/core";
 import { AuthGuardFn } from "./guards/auth.guard";
+import { UserProfileComponent } from "./components/user-profile/user.profile.component";
 
 
 const routes: Routes = [
@@ -15,8 +16,10 @@ const routes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
     {path: 'products/:id', component: DetailProductComponent},
-    { path: 'orders', component: OrderComponent, canActivate:[AuthGuardFn] },
+    {path: 'orders', component: OrderComponent, canActivate:[AuthGuardFn] },
     {path: 'orders/:id', component: OrderConfirmComponent},
+    {path: 'user-profile', component: UserProfileComponent, canActivate:[AuthGuardFn] },
+
 
 ];
 @NgModule({

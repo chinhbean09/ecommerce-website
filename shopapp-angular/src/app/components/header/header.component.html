@@ -45,7 +45,6 @@
                             >
                               <a
                                 class="nav-link"
-                                routerLink="/profile"
                                 [ngbPopover]="popoverContent"
                                 (click)="togglePopover($event)"
                               >
@@ -53,11 +52,11 @@
                             </a>
                             <ng-template #popoverContent>
                               <div class="popover-list">
-                                <a href="#" class="popover-item" 
+                                <a  class="popover-item" 
                                     (click)="handleItemClick(0)">Tài khoản của tôi</a>
-                                <a href="#" class="popover-item" 
+                                <a  class="popover-item" 
                                     (click)="handleItemClick(1)">Đơn mua</a>
-                                <a href="#" class="popover-item" 
+                                <a  class="popover-item" 
                                     (click)="handleItemClick(2)">Đăng xuất</a>
                               </div>
                             </ng-template>
