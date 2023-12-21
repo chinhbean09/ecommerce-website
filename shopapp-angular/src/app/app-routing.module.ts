@@ -16,14 +16,17 @@ import { AdminGuardFn } from "./guards/admin.guard";
 const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'admin', component: AdminComponent, canActivate:[AdminGuardFn] },
     {path: 'register', component: RegisterComponent},
     {path: 'products/:id', component: DetailProductComponent},
     {path: 'orders', component: OrderComponent, canActivate:[AuthGuardFn] },
     {path: 'orders/:id', component: OrderConfirmComponent},
     {path: 'user-profile', component: UserProfileComponent, canActivate:[AuthGuardFn] },
 
-
+    { 
+        path: 'admin', 
+        component: AdminComponent, 
+        canActivate:[AdminGuardFn] 
+      },   
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

@@ -16,6 +16,11 @@ import { AppComponent } from './app/app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserProfileComponent } from './components/user-profile/user.profile.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { OrderAdminComponent } from './components/admin/orders/order.admin.component';
+import { ProductAdminComponent } from './components/admin/product/product.admin.component';
+import { CategoryAdminComponent } from './components/admin/category/category.admin.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [    
@@ -28,9 +33,14 @@ import { UserProfileComponent } from './components/user-profile/user.profile.com
     LoginComponent,
     RegisterComponent,
     AppComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    AdminComponent,
+    OrderAdminComponent,
+    ProductAdminComponent,
+    CategoryAdminComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,

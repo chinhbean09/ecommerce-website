@@ -14,7 +14,7 @@ import { Product } from 'src/app/models/product';
 export class HomeComponent implements OnInit {
   products: Product[] = [];
   categories: Category[] = []; //data từ category Service
-  currentPage: number = 1;
+  currentPage: number = 0 ;
   itemsPerPage: number = 9;
   pages: number[] = [];
   totalPages: number = 0;

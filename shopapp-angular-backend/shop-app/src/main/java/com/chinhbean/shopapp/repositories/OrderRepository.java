@@ -16,7 +16,7 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 
     @Query("SELECT o FROM Order o WHERE " +
             "(:keyword IS NULL OR :keyword = '' OR o.fullName LIKE %:keyword% OR o.address LIKE %:keyword% " +
-            "OR o.note LIKE %:keyword%)")
+            "OR o.note LIKE %:keyword%)" + "OR o.email LIKE %:keyword%")
     Page<Order> findByKeyword(String keyword, Pageable pageable);
 
 }

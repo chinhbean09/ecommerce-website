@@ -24,7 +24,6 @@ import java.util.List;
 import static org.springframework.http.HttpMethod.*;
 
 @Configuration
-//@EnableMethodSecurity
 @EnableWebSecurity(debug = true)
 @EnableWebMvc
 @EnableGlobalMethodSecurity(prePostEnabled = true)
