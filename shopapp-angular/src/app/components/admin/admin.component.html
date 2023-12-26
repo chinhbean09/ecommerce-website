@@ -30,11 +30,13 @@
             </div>
           </nav>
           <div class="col-md-10 col-lg-10 overflow-auto">
-            <ng-container [ngSwitch]="adminComponent">
+            <!-- <ng-container [ngSwitch]="adminComponent">
               <app-order-admin *ngSwitchCase="'orders'"></app-order-admin>
               <app-product-admin *ngSwitchCase="'products'"></app-product-admin>
               <app-category-admin *ngSwitchCase="'categories'"></app-category-admin>          
-            </ng-container>
+            </ng-container> -->
+            <router-outlet></router-outlet>
+
           </div>
     </div>
 </div>

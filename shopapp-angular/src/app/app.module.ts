@@ -21,6 +21,7 @@ import { OrderAdminComponent } from './components/admin/orders/order.admin.compo
 import { ProductAdminComponent } from './components/admin/product/product.admin.component';
 import { CategoryAdminComponent } from './components/admin/category/category.admin.component';
 import { CommonModule } from '@angular/common';
+import { AdminModule } from './components/admin/admin.module';
 
 @NgModule({
   declarations: [    
@@ -34,10 +35,7 @@ import { CommonModule } from '@angular/common';
     RegisterComponent,
     AppComponent,
     UserProfileComponent,
-    AdminComponent,
-    OrderAdminComponent,
-    ProductAdminComponent,
-    CategoryAdminComponent
+   
   ],
   imports: [
     CommonModule,
@@ -46,8 +44,8 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    NgbModule
-
+    NgbModule,
+    AdminModule,
   ],
   providers: [
     //cho thêm đối tượng http_interceptors và nó sử dụng class TokenInterceptor mới tạo

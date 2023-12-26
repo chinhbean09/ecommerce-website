@@ -84,7 +84,9 @@ public class OrderController {
     public ResponseEntity<String> deleteOrder(@Valid @PathVariable Long id) {
         //xóa mềm => cập nhật trường active = false
         orderService.deleteOrder(id);
-        return ResponseEntity.ok(localizationUtils.getLocalizedMessage(MessageKeys.DELETE_ORDER_SUCCESSFULLY));
+        String result = localizationUtils.getLocalizedMessage(
+                MessageKeys.DELETE_ORDER_SUCCESSFULLY, id);
+        return ResponseEntity.ok().body(result);
     }
 
     @GetMapping("/get-orders-by-keyword")

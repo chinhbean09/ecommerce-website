@@ -9,6 +9,8 @@ import com.chinhbean.shopapp.responses.ProductResponse;
 import com.chinhbean.shopapp.services.IProductService;
 import com.chinhbean.shopapp.utils.MessageKeys;
 import com.github.javafaker.Faker;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.UrlResource;
 import org.springframework.data.domain.Page;
 import lombok.RequiredArgsConstructor;
@@ -36,6 +38,7 @@ import java.util.stream.Collectors;
 @RequestMapping("api/v1/products")
 @RequiredArgsConstructor
 public class ProductController {
+    private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
     private final IProductService productService;
     private final LocalizationUtils localizationUtils;
 
@@ -168,6 +171,9 @@ public class ProductController {
         PageRequest pageRequest = PageRequest.of(
                 page, limit,
                 Sort.by("id").ascending());
+
+        logger.info(String.format("keyword = %s, category_id = %d, page = %d, limit = %d",
+                keyword, categoryId, page, limit));
         Page<ProductResponse> productPage = productService.getAllProducts(keyword,categoryId,pageRequest);
         // Lấy tổng số trang
         int totalPages = productPage.getTotalPages();

@@ -5,6 +5,9 @@
     "ng": "ng",
     "start": "ng serve --port 4300",
     "build": "ng build --port 4300",
+    "build:production": "ng build --configuration=production",
+    "start:dev": "ng serve --port 4300",
+    "build:dev": "ng build --port 4300",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

@@ -1,15 +1,20 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Order } from 'src/app/models/order';
 import { OrderService } from 'src/app/services/order.service';
+import { Observable } from 'rxjs';
 import { OrderResponse } from 'src/app/responses/order/order.response';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-order-admin',
   templateUrl: './order.admin.component.html',
   styleUrls: ['./order.admin.component.scss']
 })
-export class OrderAdminComponent implements OnInit{
+export class OrderAdminComponent implements OnInit{  
   orders: OrderResponse[] = [];
   currentPage: number = 0;
   itemsPerPage: number = 12;
@@ -19,7 +24,10 @@ export class OrderAdminComponent implements OnInit{
   visiblePages: number[] = [];
 
   constructor(
-    private orderService: OrderService
+    private orderService: OrderService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private location: Location
   ) {
 
   }
@@ -27,7 +35,6 @@ export class OrderAdminComponent implements OnInit{
     debugger
     this.getAllOrders(this.keyword, this.currentPage, this.itemsPerPage);
   }
-  
   getAllOrders(keyword: string, page: number, limit: number) {
     debugger
     this.orderService.getAllOrders(keyword, page, limit).subscribe({
@@ -67,7 +74,28 @@ export class OrderAdminComponent implements OnInit{
         .map((_, index) => startPage + index);
   }
   deleteOrder(id:number) {
-    
+    const confirmation = window
+      .confirm('Are you sure you want to delete this order?');
+    if (confirmation) {
+      debugger
+      this.orderService.deleteOrder(id).subscribe({
+        next: (response: any) => {
+          debugger 
+          location.reload();          
+        },
+        complete: () => {
+          debugger;          
+        },
+        error: (error: any) => {
+          debugger;
+          console.error('Error fetching products:', error);
+        }
+      });    
+    }
   }
-
+  viewDetails(order:OrderResponse) {
+    debugger
+    this.router.navigate(['/admin/orders', order.id]);
+  }
+  
 }
