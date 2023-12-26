@@ -35,6 +35,13 @@ export class OrderAdminComponent implements OnInit{
     debugger
     this.getAllOrders(this.keyword, this.currentPage, this.itemsPerPage);
   }
+  searchOrders() {
+    this.currentPage = 0;
+    this.itemsPerPage = 12;
+    //Mediocre Iron Wallet
+    debugger
+    this.getAllOrders(this.keyword.trim(), this.currentPage, this.itemsPerPage);
+  }
   getAllOrders(keyword: string, page: number, limit: number) {
     debugger
     this.orderService.getAllOrders(keyword, page, limit).subscribe({

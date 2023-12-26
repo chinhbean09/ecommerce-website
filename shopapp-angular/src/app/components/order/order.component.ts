@@ -24,6 +24,7 @@ export class OrderComponent implements OnInit{
     user_id: 0, // Thay bằng user_id thích hợp
     fullname: '', // Khởi tạo rỗng, sẽ được điền từ form
     email: '', // Khởi tạo rỗng, sẽ được điền từ form
+    status: 'pending',
     phone_number: '', // Khởi tạo rỗng, sẽ được điền từ form
     address: '', // Khởi tạo rỗng, sẽ được điền từ form
     note: '', // Có thể thêm trường ghi chú nếu cần

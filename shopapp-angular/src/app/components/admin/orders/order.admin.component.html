@@ -1,6 +1,16 @@
 
 <div class="container-fluid">
   <h1>Orders Admin Page</h1>
+  <div class="row mb-3">
+    <div class="col-md-8">
+      <input type="text" 
+        class="form-control search-input" placeholder="Tìm đơn hàng" 
+        [(ngModel)]="keyword">
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary" (click)="searchOrders()">Tìm kiếm</button>
+    </div>
+  </div>
   <table class="table">
       <thead>
         <tr>
@@ -38,11 +48,17 @@
           <td>{{ order.shipping_date | date }}</td>
           <td>{{ order.payment_method }}</td>
           <td>
+            <div style="display: flex; gap: 10px;">
+            <button 
+              (click)="viewDetails(order)"
+                  class="btn btn-primary">
+                  View Details
+            </button>
             <button class="btn btn-danger" 
               (click)="deleteOrder(order.id)"
-              >Delete</button>
-          </td>           
-          
+              >Delete</button>                
+            </div>
+          </td>     
         </tr>
       </tbody>
     </table>
