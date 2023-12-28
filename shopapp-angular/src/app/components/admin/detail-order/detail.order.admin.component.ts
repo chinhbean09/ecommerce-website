@@ -18,7 +18,7 @@ import { OrderDTO } from 'src/app/dtos/order/order.dto';
 })
 
 export class DetailOrderAdminComponent implements OnInit{  
-  orderId:number = 0;  
+  orderId: number = 0;  
   orderResponse: OrderResponse = {
     id: 0, // Hoặc bất kỳ giá trị số nào bạn muốn
     user_id: 0,
