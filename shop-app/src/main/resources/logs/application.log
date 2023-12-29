@@ -23526,3 +23526,2454 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2023-12-28 10:29:29.228 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-12-28 10:29:29.230 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2023-12-28 10:29:29.238 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-12-28 10:29:31.937 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2023-12-28 10:29:31.985 [main] INFO  c.c.shopapp.ShopAppApplication - Starting ShopAppApplication using Java 17.0.9 with PID 14152 (C:\Users\chinh\IdeaProjects\ecommerce-website\shopapp-angular-backend\shop-app\target\classes started by chinh in C:\Users\chinh\IdeaProjects\ecommerce-website\shopapp-angular-backend\shop-app)
+2023-12-28 10:29:31.986 [main] INFO  c.c.shopapp.ShopAppApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-28 10:29:32.603 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-28 10:29:32.673 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 7 JPA repository interfaces.
+2023-12-28 10:29:33.075 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2023-12-28 10:29:33.080 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-28 10:29:33.081 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-28 10:29:33.082 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-28 10:29:33.137 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-28 10:29:33.137 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1106 ms
+2023-12-28 10:29:33.217 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-28 10:29:33.253 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-28 10:29:33.276 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2023-12-28 10:29:33.455 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-28 10:29:33.473 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-12-28 10:29:33.579 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f3c5ecd
+2023-12-28 10:29:33.580 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-12-28 10:29:33.616 [main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-28 10:29:34.365 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-28 10:29:34.367 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-28 10:29:34.628 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-28 10:29:34.699 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-28 10:29:35.328 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1fd18007, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67e3839b, org.springframework.security.web.context.SecurityContextHolderFilter@b7a2b89, org.springframework.security.web.header.HeaderWriterFilter@65354578, org.springframework.web.filter.CorsFilter@7e04af28, org.springframework.security.web.authentication.logout.LogoutFilter@3842ccf9, com.chinhbean.shopapp.filters.JwtTokenFilter@14af57c3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@238bec83, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@79860b25, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b78dcdf, org.springframework.security.web.access.ExceptionTranslationFilter@4528c187, org.springframework.security.web.access.intercept.AuthorizationFilter@211b2a2c]
+2023-12-28 10:29:35.333 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2023-12-28 10:29:35.525 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-28 10:29:35.538 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2023-12-28 10:29:35.546 [main] INFO  c.c.shopapp.ShopAppApplication - Started ShopAppApplication in 3.988 seconds (process running for 5.032)
+2023-12-28 10:36:22.948 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-28 10:36:22.948 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-12-28 10:36:22.949 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-12-28 10:36:22.954 [http-nio-8080-exec-1] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/orders/1':
+
+org.apache.catalina.connector.RequestFacade@22ba0bb3
+
+servletPath:/api/v1/orders/1
+pathInfo:null
+headers: 
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYyMDEyOTd9.kFTES-W2JvZh1KvHm1XO5LZWdXubdvdASIlc3iiuc18
+user-agent: PostmanRuntime/7.36.0
+accept: */*
+postman-token: 3ed680f4-865c-4084-b837-cecae374dfb8
+host: localhost:8080
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 18
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:36:23.220 [http-nio-8080-exec-1] WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/api/v1/orders/1' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-12-28 10:39:59.294 [http-nio-8080-exec-2] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for PUT '/api/v1/orders/1':
+
+org.apache.catalina.connector.RequestFacade@5a01dfce
+
+servletPath:/api/v1/orders/1
+pathInfo:null
+headers: 
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYyMDEyOTd9.kFTES-W2JvZh1KvHm1XO5LZWdXubdvdASIlc3iiuc18
+user-agent: PostmanRuntime/7.36.0
+accept: */*
+postman-token: c545bf4b-bd30-48fe-9866-97a94f24fda0
+host: localhost:8080
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 5942
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:40:12.828 [http-nio-8080-exec-5] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for PUT '/api/v1/orders/1':
+
+org.apache.catalina.connector.RequestFacade@40feaeea
+
+servletPath:/api/v1/orders/1
+pathInfo:null
+headers: 
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYyMDEyOTd9.kFTES-W2JvZh1KvHm1XO5LZWdXubdvdASIlc3iiuc18
+user-agent: PostmanRuntime/7.36.0
+accept: */*
+postman-token: d859ba44-b42c-4b88-97cf-fcf6040d86e8
+host: localhost:8080
+accept-encoding: gzip, deflate, br
+connection: keep-alive
+content-length: 5939
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:15.862 [http-nio-8080-exec-8] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for OPTIONS '/api/v1/products?keyword=&category_id=0&page=0&limit=9':
+
+org.apache.catalina.connector.RequestFacade@32e3fc57
+
+servletPath:/api/v1/products
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+accept: */*
+access-control-request-method: GET
+access-control-request-headers: authorization
+origin: http://localhost:4300
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-fetch-mode: cors
+sec-fetch-site: same-site
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:15.862 [http-nio-8080-exec-9] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for OPTIONS '/api/v1/categories?page=1&limit=100':
+
+org.apache.catalina.connector.RequestFacade@33584218
+
+servletPath:/api/v1/categories
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+accept: */*
+access-control-request-method: GET
+access-control-request-headers: authorization
+origin: http://localhost:4300
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-fetch-mode: cors
+sec-fetch-site: same-site
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:15.870 [http-nio-8080-exec-6] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/categories?page=1&limit=100':
+
+org.apache.catalina.connector.RequestFacade@3cf15e44
+
+servletPath:/api/v1/categories
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDU3NzUxODF9.dSgmhFEVlPtTOw8jAm32J3vWYO3HEyzI1aJuYhh7UhY
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:15.870 [http-nio-8080-exec-4] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products?keyword=&category_id=0&page=0&limit=9':
+
+org.apache.catalina.connector.RequestFacade@6230d70f
+
+servletPath:/api/v1/products
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDU3NzUxODF9.dSgmhFEVlPtTOw8jAm32J3vWYO3HEyzI1aJuYhh7UhY
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:15.885 [http-nio-8080-exec-4] INFO  c.c.s.controllers.ProductController - keyword = , category_id = 0, page = 0, limit = 9
+2023-12-28 10:50:15.951 [http-nio-8080-exec-1] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/e20ae4b5-1d28-4090-b74f-f03ac486cd5a_001.jpg':
+
+org.apache.catalina.connector.RequestFacade@658d8ba7
+
+servletPath:/api/v1/products/images/e20ae4b5-1d28-4090-b74f-f03ac486cd5a_001.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:15.951 [http-nio-8080-exec-5] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/4d0a9196-fda8-4244-a933-1c92076f1336_102.jpg':
+
+org.apache.catalina.connector.RequestFacade@4ffc346
+
+servletPath:/api/v1/products/images/4d0a9196-fda8-4244-a933-1c92076f1336_102.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:15.951 [http-nio-8080-exec-7] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/f9cb5077-44ab-4dec-abe2-afc64a60e6ef_129.jpg':
+
+org.apache.catalina.connector.RequestFacade@2ca5c1e
+
+servletPath:/api/v1/products/images/f9cb5077-44ab-4dec-abe2-afc64a60e6ef_129.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:15.951 [http-nio-8080-exec-2] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/ea0c5dd0-800b-466c-a1ea-676dd8a4a3d6_109.jpg':
+
+org.apache.catalina.connector.RequestFacade@23b07086
+
+servletPath:/api/v1/products/images/ea0c5dd0-800b-466c-a1ea-676dd8a4a3d6_109.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:15.951 [http-nio-8080-exec-10] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/88915c8d-4b75-4dc9-ad89-4afa996c45e3_120.jpg':
+
+org.apache.catalina.connector.RequestFacade@1d781b68
+
+servletPath:/api/v1/products/images/88915c8d-4b75-4dc9-ad89-4afa996c45e3_120.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:15.951 [http-nio-8080-exec-3] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/733d6fa5-3b5e-46f3-8896-e2e90b57fa62_097.jpg':
+
+org.apache.catalina.connector.RequestFacade@1158c3f4
+
+servletPath:/api/v1/products/images/733d6fa5-3b5e-46f3-8896-e2e90b57fa62_097.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:15.968 [http-nio-8080-exec-9] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/89bc9b37-509a-4ff7-876a-2f196e5fcc85_007.jpg':
+
+org.apache.catalina.connector.RequestFacade@5e235ba
+
+servletPath:/api/v1/products/images/89bc9b37-509a-4ff7-876a-2f196e5fcc85_007.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:15.968 [http-nio-8080-exec-8] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/668d326c-31f9-47ed-ba09-ff05d31003aa_081.jpg':
+
+org.apache.catalina.connector.RequestFacade@381b9727
+
+servletPath:/api/v1/products/images/668d326c-31f9-47ed-ba09-ff05d31003aa_081.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:15.968 [http-nio-8080-exec-6] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/c13cbb85-3362-4ff9-84f6-1db273ec124e_038.jpg':
+
+org.apache.catalina.connector.RequestFacade@52923fea
+
+servletPath:/api/v1/products/images/c13cbb85-3362-4ff9-84f6-1db273ec124e_038.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:21.965 [http-nio-8080-exec-8] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for OPTIONS '/api/v1/products?keyword=&category_id=0&page=2&limit=9':
+
+org.apache.catalina.connector.RequestFacade@7d190e40
+
+servletPath:/api/v1/products
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+accept: */*
+access-control-request-method: GET
+access-control-request-headers: authorization
+origin: http://localhost:4300
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-fetch-mode: cors
+sec-fetch-site: same-site
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:21.968 [http-nio-8080-exec-6] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products?keyword=&category_id=0&page=2&limit=9':
+
+org.apache.catalina.connector.RequestFacade@34bfea60
+
+servletPath:/api/v1/products
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDU3NzUxODF9.dSgmhFEVlPtTOw8jAm32J3vWYO3HEyzI1aJuYhh7UhY
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:21.970 [http-nio-8080-exec-6] INFO  c.c.s.controllers.ProductController - keyword = , category_id = 0, page = 2, limit = 9
+2023-12-28 10:50:21.985 [http-nio-8080-exec-3] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/9135ce54-4892-4176-b64a-5039c628c741_007.jpg':
+
+org.apache.catalina.connector.RequestFacade@5ea23594
+
+servletPath:/api/v1/products/images/9135ce54-4892-4176-b64a-5039c628c741_007.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:21.985 [http-nio-8080-exec-4] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/0e43e7ca-6497-4209-a9f2-c11696247ebc_007.jpg':
+
+org.apache.catalina.connector.RequestFacade@37d22e53
+
+servletPath:/api/v1/products/images/0e43e7ca-6497-4209-a9f2-c11696247ebc_007.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:21.985 [http-nio-8080-exec-5] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/0f0277b2-a026-4b24-8155-0f324e7a30f0_007.jpg':
+
+org.apache.catalina.connector.RequestFacade@56aff142
+
+servletPath:/api/v1/products/images/0f0277b2-a026-4b24-8155-0f324e7a30f0_007.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:21.985 [http-nio-8080-exec-2] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/d94adccf-892c-405d-bda3-f919130554fc_007.jpg':
+
+org.apache.catalina.connector.RequestFacade@5368960d
+
+servletPath:/api/v1/products/images/d94adccf-892c-405d-bda3-f919130554fc_007.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:21.985 [http-nio-8080-exec-1] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/18ae1149-e5b4-4ac3-9d07-7e934e42d479_007.jpg':
+
+org.apache.catalina.connector.RequestFacade@64c33a17
+
+servletPath:/api/v1/products/images/18ae1149-e5b4-4ac3-9d07-7e934e42d479_007.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:21.985 [http-nio-8080-exec-7] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/d16b3609-896a-48ba-b94b-2e1a14546678_007.jpg':
+
+org.apache.catalina.connector.RequestFacade@4d30b80c
+
+servletPath:/api/v1/products/images/d16b3609-896a-48ba-b94b-2e1a14546678_007.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:21.998 [http-nio-8080-exec-9] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/9d273315-878f-4547-964e-f417052ecfce_007.jpg':
+
+org.apache.catalina.connector.RequestFacade@7c001273
+
+servletPath:/api/v1/products/images/9d273315-878f-4547-964e-f417052ecfce_007.jpg
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:21.998 [http-nio-8080-exec-10] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/products/images/null':
+
+org.apache.catalina.connector.RequestFacade@5282ec8c
+
+servletPath:/api/v1/products/images/null
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:22.007 [http-nio-8080-exec-10] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/error':
+
+org.apache.catalina.core.ApplicationHttpRequest@f796e80
+
+servletPath:/error
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-fetch-site: same-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:22.050 [http-nio-8080-exec-10] INFO  Spring Security Debugger - 
+
+************************************************************
+
+New HTTP session created: 389F540AA4620F4C4F761F74A6D6B5E5
+
+Call stack: 
+
+	at org.springframework.security.web.debug.Logger.info(Logger.java:46)
+	at org.springframework.security.web.debug.DebugFilter$DebugRequestWrapper.getSession(DebugFilter.java:171)
+	at jakarta.servlet.http.HttpServletRequestWrapper.getSession(HttpServletRequestWrapper.java:229)
+	at jakarta.servlet.http.HttpServletRequestWrapper.getSession(HttpServletRequestWrapper.java:229)
+	at org.springframework.security.web.savedrequest.HttpSessionRequestCache.saveRequest(HttpSessionRequestCache.java:78)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.sendStartAuthentication(ExceptionTranslationFilter.java:218)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.handleAccessDeniedException(ExceptionTranslationFilter.java:197)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.handleSpringSecurityException(ExceptionTranslationFilter.java:178)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:147)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.security.web.debug.DebugFilter.invokeWithWrappedRequest(DebugFilter.java:90)
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:78)
+	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:67)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:410)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:362)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:222)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:151)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+
+************************************************************
+
+
+2023-12-28 10:50:27.803 [http-nio-8080-exec-2] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/roles':
+
+org.apache.catalina.connector.RequestFacade@73fce8a6
+
+servletPath:/api/v1/roles
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:30.029 [http-nio-8080-exec-9] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for OPTIONS '/api/v1/users/login':
+
+org.apache.catalina.connector.RequestFacade@135b29b8
+
+servletPath:/api/v1/users/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+accept: */*
+access-control-request-method: POST
+access-control-request-headers: content-type
+origin: http://localhost:4300
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-fetch-mode: cors
+sec-fetch-site: same-site
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:30.029 [http-nio-8080-exec-10] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for POST '/api/v1/users/login':
+
+org.apache.catalina.connector.RequestFacade@57874656
+
+servletPath:/api/v1/users/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+content-length: 60
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+content-type: application/json
+accept-language: vi
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:34.193 [http-nio-8080-exec-8] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for POST '/api/v1/users/login':
+
+org.apache.catalina.connector.RequestFacade@503554f0
+
+servletPath:/api/v1/users/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+content-length: 62
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+content-type: application/json
+accept-language: vi
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:38.542 [http-nio-8080-exec-6] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for OPTIONS '/api/v1/users/login':
+
+org.apache.catalina.connector.RequestFacade@623355f2
+
+servletPath:/api/v1/users/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+accept: */*
+access-control-request-method: POST
+access-control-request-headers: content-type
+origin: http://localhost:4300
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-fetch-mode: cors
+sec-fetch-site: same-site
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:38.542 [http-nio-8080-exec-3] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for POST '/api/v1/users/login':
+
+org.apache.catalina.connector.RequestFacade@9320ad7
+
+servletPath:/api/v1/users/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+content-length: 61
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+content-type: application/json
+accept-language: vi
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:38.762 [http-nio-8080-exec-1] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for OPTIONS '/api/v1/users/details':
+
+org.apache.catalina.connector.RequestFacade@d6b4284
+
+servletPath:/api/v1/users/details
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+accept: */*
+access-control-request-method: POST
+access-control-request-headers: authorization,content-type
+origin: http://localhost:4300
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-fetch-mode: cors
+sec-fetch-site: same-site
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:38.778 [http-nio-8080-exec-7] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for POST '/api/v1/users/details':
+
+org.apache.catalina.connector.RequestFacade@1dca3718
+
+servletPath:/api/v1/users/details
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+content-length: 52
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+content-type: application/json
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYzMjc0Mzh9.vdHBpTQtUhF6R5-DJN8E3Os9TsHY1qu1o9nhbcShLGA
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:38.802 [http-nio-8080-exec-5] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for OPTIONS '/api/v1/orders/get-orders-by-keyword?keyword=&page=0&limit=12':
+
+org.apache.catalina.connector.RequestFacade@438d61f
+
+servletPath:/api/v1/orders/get-orders-by-keyword
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+accept: */*
+access-control-request-method: GET
+access-control-request-headers: authorization
+origin: http://localhost:4300
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-fetch-mode: cors
+sec-fetch-site: same-site
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:38.810 [http-nio-8080-exec-4] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/orders/get-orders-by-keyword?keyword=&page=0&limit=12':
+
+org.apache.catalina.connector.RequestFacade@4a9c7ad5
+
+servletPath:/api/v1/orders/get-orders-by-keyword
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYzMjc0Mzh9.vdHBpTQtUhF6R5-DJN8E3Os9TsHY1qu1o9nhbcShLGA
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:43.967 [http-nio-8080-exec-2] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for OPTIONS '/api/v1/orders/1':
+
+org.apache.catalina.connector.RequestFacade@7fef6ed2
+
+servletPath:/api/v1/orders/1
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+accept: */*
+access-control-request-method: GET
+access-control-request-headers: authorization
+origin: http://localhost:4300
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-fetch-mode: cors
+sec-fetch-site: same-site
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:43.971 [http-nio-8080-exec-9] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/orders/1':
+
+org.apache.catalina.connector.RequestFacade@2ae893a8
+
+servletPath:/api/v1/orders/1
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYzMjc0Mzh9.vdHBpTQtUhF6R5-DJN8E3Os9TsHY1qu1o9nhbcShLGA
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:47.398 [http-nio-8080-exec-10] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for OPTIONS '/api/v1/orders/1':
+
+org.apache.catalina.connector.RequestFacade@763a975a
+
+servletPath:/api/v1/orders/1
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+accept: */*
+access-control-request-method: PUT
+access-control-request-headers: authorization,content-type
+origin: http://localhost:4300
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-fetch-mode: cors
+sec-fetch-site: same-site
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:47.398 [http-nio-8080-exec-8] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for PUT '/api/v1/orders/1':
+
+org.apache.catalina.connector.RequestFacade@c9f64bf
+
+servletPath:/api/v1/orders/1
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+content-length: 250
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+content-type: application/json
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYzMjc0Mzh9.vdHBpTQtUhF6R5-DJN8E3Os9TsHY1qu1o9nhbcShLGA
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:47.439 [http-nio-8080-exec-6] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for OPTIONS '/api/v1/orders/get-orders-by-keyword?keyword=&page=0&limit=12':
+
+org.apache.catalina.connector.RequestFacade@73836ad0
+
+servletPath:/api/v1/orders/get-orders-by-keyword
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+accept: */*
+access-control-request-method: GET
+access-control-request-headers: authorization
+origin: http://localhost:4300
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-fetch-mode: cors
+sec-fetch-site: same-site
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:47.443 [http-nio-8080-exec-3] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/orders/get-orders-by-keyword?keyword=&page=0&limit=12':
+
+org.apache.catalina.connector.RequestFacade@3ecd7e24
+
+servletPath:/api/v1/orders/get-orders-by-keyword
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYzMjc0Mzh9.vdHBpTQtUhF6R5-DJN8E3Os9TsHY1qu1o9nhbcShLGA
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:51.955 [http-nio-8080-exec-1] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/orders/1':
+
+org.apache.catalina.connector.RequestFacade@55f68c3f
+
+servletPath:/api/v1/orders/1
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYzMjc0Mzh9.vdHBpTQtUhF6R5-DJN8E3Os9TsHY1qu1o9nhbcShLGA
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:55.116 [http-nio-8080-exec-7] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for OPTIONS '/api/v1/orders/1':
+
+org.apache.catalina.connector.RequestFacade@c5db912
+
+servletPath:/api/v1/orders/1
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+accept: */*
+access-control-request-method: PUT
+access-control-request-headers: authorization,content-type
+origin: http://localhost:4300
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-fetch-mode: cors
+sec-fetch-site: same-site
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:55.117 [http-nio-8080-exec-5] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for PUT '/api/v1/orders/1':
+
+org.apache.catalina.connector.RequestFacade@6ebb01c2
+
+servletPath:/api/v1/orders/1
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+content-length: 247
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+content-type: application/json
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYzMjc0Mzh9.vdHBpTQtUhF6R5-DJN8E3Os9TsHY1qu1o9nhbcShLGA
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:55.149 [http-nio-8080-exec-4] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for OPTIONS '/api/v1/orders/get-orders-by-keyword?keyword=&page=0&limit=12':
+
+org.apache.catalina.connector.RequestFacade@45b96deb
+
+servletPath:/api/v1/orders/get-orders-by-keyword
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+accept: */*
+access-control-request-method: GET
+access-control-request-headers: authorization
+origin: http://localhost:4300
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-fetch-mode: cors
+sec-fetch-site: same-site
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:55.152 [http-nio-8080-exec-2] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/orders/get-orders-by-keyword?keyword=&page=0&limit=12':
+
+org.apache.catalina.connector.RequestFacade@1d21806
+
+servletPath:/api/v1/orders/get-orders-by-keyword
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYzMjc0Mzh9.vdHBpTQtUhF6R5-DJN8E3Os9TsHY1qu1o9nhbcShLGA
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:57.101 [http-nio-8080-exec-9] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/orders/1':
+
+org.apache.catalina.connector.RequestFacade@75f8c763
+
+servletPath:/api/v1/orders/1
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYzMjc0Mzh9.vdHBpTQtUhF6R5-DJN8E3Os9TsHY1qu1o9nhbcShLGA
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:50:59.996 [http-nio-8080-exec-10] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for PUT '/api/v1/orders/1':
+
+org.apache.catalina.connector.RequestFacade@2032a906
+
+servletPath:/api/v1/orders/1
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+content-length: 249
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+content-type: application/json
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYzMjc0Mzh9.vdHBpTQtUhF6R5-DJN8E3Os9TsHY1qu1o9nhbcShLGA
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:51:00.029 [http-nio-8080-exec-8] INFO  Spring Security Debugger - 
+
+************************************************************
+
+Request received for GET '/api/v1/orders/get-orders-by-keyword?keyword=&page=0&limit=12':
+
+org.apache.catalina.connector.RequestFacade@2af822e0
+
+servletPath:/api/v1/orders/get-orders-by-keyword
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: "Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"
+accept: application/json, text/plain, */*
+sec-ch-ua-mobile: ?0
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA4NTY0NDQwMDAiLCJ1c2VySWQiOjIsInN1YiI6IjA4NTY0NDQwMDAiLCJleHAiOjE3MDYzMjc0Mzh9.vdHBpTQtUhF6R5-DJN8E3Os9TsHY1qu1o9nhbcShLGA
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+sec-ch-ua-platform: "Windows"
+origin: http://localhost:4300
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4300/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+
+
+Security filter chain: [
+  DisableEncodeUrlFilter
+  WebAsyncManagerIntegrationFilter
+  SecurityContextHolderFilter
+  HeaderWriterFilter
+  CorsFilter
+  LogoutFilter
+  JwtTokenFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  ExceptionTranslationFilter
+  AuthorizationFilter
+]
+
+
+************************************************************
+
+
+2023-12-28 10:53:50.740 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-28 10:53:50.740 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-12-28 10:53:50.745 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
