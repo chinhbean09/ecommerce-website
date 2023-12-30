@@ -64,13 +64,13 @@ services:
       dockerfile: DockerfileJavaSpring      
       #docker tag <image_id> shopapp-spring:1.0.0    
     ports:
-      - 8099:8080
+      - 8081:8080
     environment:
       #SPRING_DATASOURCE_URL: jdbc:mysql://mysql8-container:3306/ShopApp?serverTimezone=UTC&allowPublicKeyRetrieval=true
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql8-container:3306/ShopApp?serverTimezone=UTC&allowPublicKeyRetrieval=true
       MYSQL_ROOT_PASSWORD: Abc123456789@
-      REDIS_HOST: redis-container
-      REDIS_PORT: 6379
+      # REDIS_HOST: redis-container
+      # REDIS_PORT: 6379
     #depends_on only waits for the container to start, not for the service inside the container to be fully operational
     depends_on:      
       - mysql8-container
@@ -78,7 +78,7 @@ services:
       - shopapp-network    
     healthcheck:
       #test: ["CMD-SHELL", "curl --fail http://localhost:8088/healthcheck/health || exit 1"]
-      test: ["CMD-SHELL", "curl --fail http://localhost:8088/api/v1/actuator/health || exit 1"]
+      test: ["CMD-SHELL", "curl --fail http://localhost:8080/api/v1/actuator/health || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
