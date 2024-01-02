@@ -22,6 +22,10 @@ spring:
       basename: i18n/messages
       encoding: UTF-8
       default-locale: en
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
 api:
   prefix: api/v1
 jwt:

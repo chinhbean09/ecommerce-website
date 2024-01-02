@@ -71,18 +71,30 @@
         public Product updateProduct(long id, ProductDTO productDTO) throws Exception {
 
             Product existingProduct = getProductById(id);
-            if(existingProduct != null) {
+            if (existingProduct != null) {
                 //copy các thuộc tính từ DTO -> Product
                 //Có thể sử dụng ModelMapper
                 Category existingCategory = categoryRepository
                         .findById(productDTO.getCategoryId())
-                        .orElseThrow(() -> new DataNotFoundException(
-                                "Cannot find category with id: "+ productDTO.getCategoryId()));
-                existingProduct.setName(productDTO.getName());
+                        .orElseThrow(() ->
+                                new DataNotFoundException(
+                                        "Cannot find category with id: " + productDTO.getCategoryId()));
+                if (productDTO.getName() != null && !productDTO.getName().isEmpty()) {
+                    existingProduct.setName(productDTO.getName());
+                }
+
                 existingProduct.setCategory(existingCategory);
-                existingProduct.setPrice(productDTO.getPrice());
-                existingProduct.setDescription(productDTO.getDescription());
-                existingProduct.setThumbnail(productDTO.getThumbnail());
+                if (productDTO.getPrice() >= 0) {
+                    existingProduct.setPrice(productDTO.getPrice());
+                }
+                if (productDTO.getDescription() != null &&
+                        !productDTO.getDescription().isEmpty()) {
+                    existingProduct.setDescription(productDTO.getDescription());
+                }
+                if (productDTO.getThumbnail() != null &&
+                        !productDTO.getThumbnail().isEmpty()) {
+                    existingProduct.setDescription(productDTO.getThumbnail());
+                }
                 return productRepository.save(existingProduct);
             }
             return null;
