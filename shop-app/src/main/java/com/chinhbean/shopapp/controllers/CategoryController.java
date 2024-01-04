@@ -12,6 +12,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
@@ -35,13 +36,13 @@ public class CategoryController {
     private final LocalizationUtils localizationUtils;
 
     @PostMapping("")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<CategoryResponse> createCategory(
             //data nằm trong reqbody
             @Valid @RequestBody CategoryDTO categoryDTO,
-            BindingResult result)
-    {
+            BindingResult result) {
         CategoryResponse categoryResponse = new CategoryResponse();
-        if(result.hasErrors()) {
+        if (result.hasErrors()) {
             List<String> errorMessages = result.getFieldErrors()
                     //java8, biến field lỗi thành 1 đối tượng stream, trong đó ta có thể duyệt qua danh sách lỗi, và
                     //chỉ lấy 1 lỗi nào đó và ánh xạ sang 1 mảng khác
@@ -61,8 +62,8 @@ public class CategoryController {
     //Hiện tất cả các categories
     @GetMapping("") //http://localhost:8080/api/v1/categories?page=1&limit=10
     public ResponseEntity<List<Category>> getAllCategories(
-            @RequestParam("page")     int page,
-            @RequestParam("limit")    int limit
+            @RequestParam("page") int page,
+            @RequestParam("limit") int limit
     ) {
 
         List<Category> categories = categoryService.getAllCategories();
@@ -71,17 +72,25 @@ public class CategoryController {
 
     //Nếu tham số truyền vào là 1 object thì sao ? => Data Transfer Object = Request Object
     @PutMapping("/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+
     public ResponseEntity<UpdateCategoryResponse> updateCategory(@PathVariable Long id,
-                                                 @Valid
-                                                 @RequestBody CategoryDTO categoryDTO) {
+                                                                 @Valid
+                                                                 @RequestBody CategoryDTO categoryDTO) {
         UpdateCategoryResponse updateCategoryResponse = new UpdateCategoryResponse();
         categoryService.updateCategory(id, categoryDTO);
         updateCategoryResponse.setMessage(localizationUtils.getLocalizedMessage(MessageKeys.UPDATE_CATEGORY_SUCCESSFULLY));
         return ResponseEntity.ok(updateCategoryResponse);
     }
+
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<String> deleteCategory(@PathVariable Long id) {
-        categoryService.deleteCategory(id);
-        return ResponseEntity.ok(localizationUtils.getLocalizedMessage(MessageKeys.DELETE_CATEGORY_SUCCESSFULLY));
+        try {
+            categoryService.deleteCategory(id);
+            return ResponseEntity.ok("");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 }

@@ -27,6 +27,7 @@ public class OrderController {
     private final LocalizationUtils localizationUtils;
 
     @PostMapping("")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
     public ResponseEntity<?> createOrder(
             @Valid @RequestBody OrderDTO orderDTO,
             BindingResult result
@@ -68,7 +69,7 @@ public class OrderController {
         }
     }
     @PutMapping("/{id}")
-    //PUT http://localhost:8088/api/v1/orders/2
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     //công việc của admin
     public ResponseEntity<?> updateOrder(
             @Valid @PathVariable long id,
@@ -81,6 +82,8 @@ public class OrderController {
         }
     }
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+
     public ResponseEntity<String> deleteOrder(@Valid @PathVariable Long id) {
         //xóa mềm => cập nhật trường active = false
         orderService.deleteOrder(id);

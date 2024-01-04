@@ -11,6 +11,7 @@ public class CustomHealthCheck implements HealthIndicator {
     @Override
     public Health health() {
         // Implement your custom health check logic here
+        //
         try {
             String computerName = InetAddress.getLocalHost().getHostName();
             return Health.up().withDetail("computerName", computerName).build();//code: 200

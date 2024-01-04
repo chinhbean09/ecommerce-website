@@ -10,6 +10,7 @@ import com.chinhbean.shopapp.utils.MessageKeys;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,7 @@ public class OrderDetailController {
 
     //Thêm mới 1 order detail
     @PostMapping("")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
     public ResponseEntity<?> createOrderDetail(
             @Valid  @RequestBody OrderDetailDTO orderDetailDTO) {
         try {
@@ -58,6 +60,8 @@ public class OrderDetailController {
         return ResponseEntity.ok(orderDetailResponses);
     }
     @PutMapping("/{id}")
+    @Operation(security = { @SecurityRequirement(name = "bearer-key") })
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
     public ResponseEntity<?> updateOrderDetail(
             @Valid @PathVariable("id") Long id,
             @RequestBody OrderDetailDTO orderDetailDTO) {
@@ -69,6 +73,9 @@ public class OrderDetailController {
         }
     }
     @DeleteMapping("/{id}")
+    @Operation(security = { @SecurityRequirement(name = "bearer-key") })
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
+
     public ResponseEntity<?> deleteOrderDetail(
             @Valid @PathVariable("id") Long id) {
         orderDetailService.deleteById(id);

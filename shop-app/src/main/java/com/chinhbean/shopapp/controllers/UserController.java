@@ -11,10 +11,13 @@ import com.chinhbean.shopapp.responses.RegisterResponse;
 import com.chinhbean.shopapp.responses.UserResponse;
 import com.chinhbean.shopapp.services.IUserService;
 import com.chinhbean.shopapp.utils.MessageKeys;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
@@ -107,10 +110,15 @@ public ResponseEntity<RegisterResponse> createUser(
             );
         }
     }
-
+    private boolean isMobileDevice(String userAgent) {
+        // Kiểm tra User-Agent header để xác định thiết bị di động
+        // Ví dụ đơn giản:
+        return userAgent.toLowerCase().contains("mobile");
+    }
     //lấy thông tin chi tiết của user thông qua token, sd trong trường hợp đã login rồi và vào trang thông tin
     //người dùng và lấy ra thông tin chi tiết thông qua token đó
     @PostMapping("/details")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
     public ResponseEntity<UserResponse> getUserDetails(
             //truyền header
             @RequestHeader("Authorization") String token)
@@ -129,6 +137,9 @@ public ResponseEntity<RegisterResponse> createUser(
         }
     }
     @PutMapping("/details/{userId}")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
+    @Operation(security = { @SecurityRequirement(name = "bearer-key") })
+
     public ResponseEntity<UserResponse> updateUserDetails(
             @PathVariable Long userId,
             @RequestBody UpdateUserDTO updatedUserDTO,
