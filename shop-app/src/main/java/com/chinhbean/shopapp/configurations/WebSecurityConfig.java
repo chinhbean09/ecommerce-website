@@ -44,7 +44,22 @@ public class WebSecurityConfig {
                     requests
                             .requestMatchers(
                                     String.format("%s/users/register", apiPrefix),
-                                    String.format("%s/users/login", apiPrefix)
+                                    String.format("%s/users/login", apiPrefix),
+                                    String.format("%s/healthcheck/**", apiPrefix),
+
+                                    //swagger
+                                    //"/v3/api-docs",
+                                    //"/v3/api-docs/**",
+                                    "/api-docs",
+                                    "/api-docs/**",
+                                    "/swagger-resources",
+                                    "/swagger-resources/**",
+                                    "/configuration/ui",
+                                    "/configuration/security",
+                                    "/swagger-ui/**",
+                                    "/swagger-ui.html",
+                                    "/webjars/swagger-ui/**",
+                                    "/swagger-ui/index.html"
                             ).permitAll()
 
                             .requestMatchers(GET,
@@ -100,8 +115,7 @@ public class WebSecurityConfig {
 
                             .requestMatchers(DELETE,
                                     String.format("%s/order_details/**", apiPrefix)).hasRole(Role.ADMIN)
-                            .requestMatchers(GET,
-                                    String.format("%s/healthcheck/**", apiPrefix)).permitAll()
+
 
                             .anyRequest().authenticated();
 

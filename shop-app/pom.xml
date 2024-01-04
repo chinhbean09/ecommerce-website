@@ -29,10 +29,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
+			<version>8.2.0</version>
 			<scope>runtime</scope>
 		</dependency>
 
@@ -92,13 +92,12 @@
 			<artifactId>spring-data-redis</artifactId>
 			<version>3.1.5</version>
 		</dependency>
-
+<!--	lưu dự liệu tạm thời, những kết quả tìm kiếm phía client gui lên với số lượng lớn, để hạn chế yêu cầu gửi từ phía mysql  -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
-
-
+<!--ObjectMapper(redisObjectMapper) để chuyển đối tượng thành một chuỗi JSON (json)-->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -106,6 +105,12 @@
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
+		</dependency>
+
+<!--		thư viện giúp kiểm tra các request đã oke chưa thông qua 1 request duy nhất -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
 	</dependencies>
