@@ -5,10 +5,13 @@ import com.chinhbean.shopapp.components.LocalizationUtils;
 import com.chinhbean.shopapp.dtos.UpdateUserDTO;
 import com.chinhbean.shopapp.dtos.UserDTO;
 import com.chinhbean.shopapp.exceptions.DataNotFoundException;
+import com.chinhbean.shopapp.exceptions.ExpiredTokenException;
 import com.chinhbean.shopapp.exceptions.PermissionDenyException;
 import com.chinhbean.shopapp.models.Role;
+import com.chinhbean.shopapp.models.Token;
 import com.chinhbean.shopapp.models.User;
 import com.chinhbean.shopapp.repositories.RoleRepository;
+import com.chinhbean.shopapp.repositories.TokenRepository;
 import com.chinhbean.shopapp.repositories.UserRepository;
 import com.chinhbean.shopapp.utils.MessageKeys;
 import jakarta.transaction.Transactional;
@@ -31,6 +34,7 @@ public class UserService implements IUserService {
     private final JwtTokenUtils jwtTokenUtils;
     private final AuthenticationManager authenticationManager;
     private final LocalizationUtils localizationUtils;
+    private final TokenRepository tokenRepository;
 
     @Override
     public User createUser(UserDTO userDTO) throws Exception {
@@ -163,5 +167,11 @@ public class UserService implements IUserService {
         //existingUser.setRole(updatedRole);
         // Save the updated user
         return userRepository.save(existingUser);
+    }
+
+    @Override
+    public User getUserDetailsFromRefreshToken(String refreshToken) throws Exception {
+        Token existingToken = tokenRepository.findByRefreshToken(refreshToken);
+        return getUserDetailsFromToken(existingToken.getToken());
     }
 }
