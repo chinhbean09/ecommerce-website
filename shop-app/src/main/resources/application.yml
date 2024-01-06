@@ -37,10 +37,10 @@ jwt:
   expiration: 2592000
   secretKey: TaqlmGv1iEDMRiFp/pHuID1+T84IABfuA0xXh4GhiUI=
 
-#logging:
-#  level:
-#    org:
-#      springframework.security: DEBUG
+logging:
+  level:
+    org:
+      springframework.security: DEBUG
 
 #health check
 management:

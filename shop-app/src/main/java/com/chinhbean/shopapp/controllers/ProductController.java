@@ -7,6 +7,7 @@ import com.chinhbean.shopapp.models.ProductImage;
 import com.chinhbean.shopapp.responses.ProductListResponse;
 import com.chinhbean.shopapp.responses.ProductResponse;
 import com.chinhbean.shopapp.services.product.IProductRedisService;
+import com.chinhbean.shopapp.services.product.IProductService;
 import com.chinhbean.shopapp.utils.MessageKeys;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.github.javafaker.Faker;
@@ -42,9 +43,9 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class ProductController {
     private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
-    private final com.chinhbean.shopapp.services.product.IProductRedisService.IProductService productService;
+    private final IProductService productService;
     private final LocalizationUtils localizationUtils;
-    private final IProductRedisService.IProductRedisService productRedisService;
+    private final IProductRedisService productRedisService;
 
     @PostMapping(value = "")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
@@ -224,7 +225,7 @@ public class ProductController {
             List<Long> productIds = Arrays.stream(ids.split(","))
                     .map(Long::parseLong)
                     .collect(Collectors.toList());
-            List<Product> products = productService.findProductByIds(productIds);
+            List<Product> products = productService.findProductsByIds(productIds);
             return ResponseEntity.ok(products);
         }catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());

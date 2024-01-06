@@ -14,6 +14,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configurers.CorsConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.web.access.channel.ChannelProcessingFilter;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -25,27 +26,25 @@ import java.util.List;
 import static org.springframework.http.HttpMethod.*;
 
 @Configuration
+//@EnableMethodSecurity
 @EnableWebSecurity(debug = true)
-@EnableWebMvc
 @EnableGlobalMethodSecurity(prePostEnabled = true)
+@EnableWebMvc
 @RequiredArgsConstructor
 public class WebSecurityConfig {
-    //inject
     private final JwtTokenFilter jwtTokenFilter;
     @Value("${api.prefix}")
     private String apiPrefix;
     @Bean
-        //Pair.of(String.format("%s/products", apiPrefix), "GET"),
-        //bao ve khi request duoc gui, den va check authorize
     public SecurityFilterChain securityFilterChain(HttpSecurity http)  throws Exception{
-            http
-                .csrf(AbstractHttpConfigurer::disable)
+        http
                 .addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class)
                 .authorizeHttpRequests(requests -> {
                     requests
                             .requestMatchers(
                                     String.format("%s/users/register", apiPrefix),
                                     String.format("%s/users/login", apiPrefix),
+                                    //healthcheck
                                     String.format("%s/healthcheck/**", apiPrefix),
 
                                     //swagger
@@ -61,8 +60,9 @@ public class WebSecurityConfig {
                                     "/swagger-ui.html",
                                     "/webjars/swagger-ui/**",
                                     "/swagger-ui/index.html"
-                            ).permitAll()
 
+                            )
+                            .permitAll()
                             .requestMatchers(GET,
                                     String.format("%s/roles**", apiPrefix)).permitAll()
 
@@ -81,26 +81,28 @@ public class WebSecurityConfig {
                             .requestMatchers(GET,
                                     String.format("%s/order_details/**", apiPrefix)).permitAll()
 
-                            .anyRequest().authenticated();
-
+                            .anyRequest()
+                            .authenticated();
+                    //.anyRequest().permitAll();
                 })
-
-                    .csrf(AbstractHttpConfigurer::disable);
+                .csrf(AbstractHttpConfigurer::disable);
         http.securityMatcher(String.valueOf(EndpointRequest.toAnyEndpoint()));
-//        @Override
-//                    public void customize(CorsConfigurer<HttpSecurity> httpSecurityCorsConfigurer) {
-//                        CorsConfiguration configuration = new CorsConfiguration();
-//                        configuration.setAllowedOrigins(List.of("*"));
-//                        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
-//                        configuration.setAllowedHeaders(Arrays.asList("authorization", "content-type", "x-auth-token"));
-//                        configuration.setExposedHeaders(List.of("x-auth-token"));
-//                        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//                        source.registerCorsConfiguration("/**", configuration);
-//                        httpSecurityCorsConfigurer.configurationSource(source);
-//                    }
-//                })
+        /*
+        http.cors(new Customizer<CorsConfigurer<HttpSecurity>>() {
+            @Override
+            public void customize(CorsConfigurer<HttpSecurity> httpSecurityCorsConfigurer) {
+                CorsConfiguration configuration = new CorsConfiguration();
+                configuration.setAllowedOrigins(List.of("*"));
+                configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
+                configuration.setAllowedHeaders(Arrays.asList("authorization", "content-type", "x-auth-token"));
+                configuration.setExposedHeaders(List.of("x-auth-token"));
+                UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+                source.registerCorsConfiguration("/**", configuration);
+                httpSecurityCorsConfigurer.configurationSource(source);
+            }
+        });
+         */
 
-        ;
         return http.build();
     }
 }
