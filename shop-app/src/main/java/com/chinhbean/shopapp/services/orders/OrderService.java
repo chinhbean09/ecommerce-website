@@ -1,4 +1,4 @@
-package com.chinhbean.shopapp.services;
+package com.chinhbean.shopapp.services.orders;
 
 import com.chinhbean.shopapp.dtos.CartItemDTO;
 import com.chinhbean.shopapp.dtos.OrderDTO;
@@ -22,7 +22,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class OrderService implements IOrderService{
+public class OrderService implements IOrderService {
     private final UserRepository userRepository;
     private final OrderRepository orderRepository;
     private final ProductRepository productRepository;

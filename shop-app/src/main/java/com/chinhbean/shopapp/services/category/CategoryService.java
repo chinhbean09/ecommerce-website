@@ -1,11 +1,10 @@
-package com.chinhbean.shopapp.services;
+package com.chinhbean.shopapp.services.category;
 
 import com.chinhbean.shopapp.dtos.CategoryDTO;
 import com.chinhbean.shopapp.models.Category;
 import com.chinhbean.shopapp.repositories.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 

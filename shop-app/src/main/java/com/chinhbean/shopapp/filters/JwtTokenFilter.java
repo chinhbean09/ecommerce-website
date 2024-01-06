@@ -23,7 +23,6 @@ import java.util.List;
 
 @Component
 @RequiredArgsConstructor
-
 public class JwtTokenFilter extends OncePerRequestFilter{
     @Value("${api.prefix}")
     private String apiPrefix;

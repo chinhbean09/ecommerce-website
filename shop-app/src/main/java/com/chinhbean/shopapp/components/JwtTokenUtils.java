@@ -1,6 +1,8 @@
 package com.chinhbean.shopapp.components;
 
 import com.chinhbean.shopapp.exceptions.InvalidParamException;
+import com.chinhbean.shopapp.models.Token;
+import com.chinhbean.shopapp.repositories.TokenRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -24,6 +26,8 @@ public class JwtTokenUtils {
     private int expiration; //save to an environment variable
     @Value("${jwt.secretKey}")
     private String secretKey;
+    private final TokenRepository tokenRepository;
+
     public String generateToken(com.chinhbean.shopapp.models.User user) throws Exception{
         //properties => claims
         //cac thuộc tính của các đối tượng mà ta đưa vào security (user => security), các thuộc tính đó gọi là claims
@@ -85,6 +89,10 @@ public class JwtTokenUtils {
     public boolean validateToken(String token, UserDetails userDetails) {
         //trích xuất thôn tin(phoneNumber) từ token và thông tin userDetails(Username = phoneNumber) từ spring security
         String phoneNumber = extractPhoneNumber(token);
+        Token existingToken = tokenRepository.findByToken(token);
+        if(existingToken == null || existingToken.isRevoked() == true) {
+            return false;
+        }
         return (phoneNumber.equals(userDetails.getUsername()))
                 && !isTokenExpired(token);
     }

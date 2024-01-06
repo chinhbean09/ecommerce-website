@@ -1,4 +1,4 @@
-package com.chinhbean.shopapp.services;
+package com.chinhbean.shopapp.services.orderdetails;
 
 import com.chinhbean.shopapp.dtos.OrderDetailDTO;
 import com.chinhbean.shopapp.exceptions.DataNotFoundException;
@@ -16,7 +16,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Service
-public class OrderDetailService implements IOrderDetailService{
+public class OrderDetailService implements IOrderDetailService {
     private final OrderRepository orderRepository;
     private final OrderDetailRepository orderDetailRepository;
     private final ProductRepository productRepository;

@@ -5,9 +5,8 @@ import com.chinhbean.shopapp.dtos.CategoryDTO;
 import com.chinhbean.shopapp.models.Category;
 import com.chinhbean.shopapp.responses.CategoryResponse;
 import com.chinhbean.shopapp.responses.UpdateCategoryResponse;
-import com.chinhbean.shopapp.services.CategoryService;
+import com.chinhbean.shopapp.services.category.CategoryService;
 import com.chinhbean.shopapp.utils.MessageKeys;
-import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
@@ -15,12 +14,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.LocaleResolver;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("api/v1/categories")

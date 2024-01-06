@@ -1,6 +1,6 @@
 package com.chinhbean.shopapp.models;
 
-import com.chinhbean.shopapp.services.IProductRedisService;
+import com.chinhbean.shopapp.services.product.IProductRedisService;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProductListener {
-    private IProductRedisService productRedisService;
+    private IProductRedisService.IProductRedisService productRedisService;
     private static final Logger logger = LoggerFactory.getLogger(ProductListener.class);
     @PrePersist
     public void prePersist(Product product) {

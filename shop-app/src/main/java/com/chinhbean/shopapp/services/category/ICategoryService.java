@@ -1,4 +1,4 @@
-package com.chinhbean.shopapp.services;
+package com.chinhbean.shopapp.services.category;
 
 import com.chinhbean.shopapp.dtos.CategoryDTO;
 import com.chinhbean.shopapp.models.Category;

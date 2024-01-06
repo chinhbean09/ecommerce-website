@@ -1,4 +1,4 @@
-package com.chinhbean.shopapp.services;
+package com.chinhbean.shopapp.services.user;
 
 import com.chinhbean.shopapp.dtos.UpdateUserDTO;
 import com.chinhbean.shopapp.dtos.UserDTO;

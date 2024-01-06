@@ -1,18 +1,17 @@
-#scp -pr /Users/hoangnd/Documents/code/udemy/ShopApp/sql root@45.117.179.175:/root/
-
-#scp -pr /Users/hoangnd/Documents/code/udemy/ShopApp/shopapp-backend root@45.117.179.175:/root/
-#scp -pr /Users/hoangnd/Documents/code/udemy/ShopApp/shopapp-backend/src/main/resources/application.yaml root@45.117.179.175:/root/shopapp-backend/src/main/resources/
-#scp -pr /Users/hoangnd/Documents/code/udemy/ShopApp/shopapp-backend/pom.xml root@45.117.179.175:/root/shopapp-backend/pom.xml
-#scp -pr /Users/hoangnd/Documents/code/udemy/ShopApp/deployment.yaml root@45.117.179.175:/root/
-#scp -pr /Users/hoangnd/Documents/code/udemy/ShopApp/DockerfileJavaSpring root@45.117.179.175:/root/
+#scp -pr /Users/chinh/IdeaProjects/ecommerce-website/sql root@172.18.147.204:/root/
+#scp -pr /Users/chinh/IdeaProjects/ecommerce-website/shop-app root@172.18.147.204:/root/
+#scp -pr /Users/chinh/IdeaProjects/ecommerce-website/shop-app/src/main/resources/application.yaml root@172.18.147.204:/root/shop-app/src/main/resources/
+#scp -pr /Users/chinh/IdeaProjects/ecommerce-website/shop-app/pom.xml root@172.18.147.204:/root/shop-app/pom.xml
+#scp -pr /Users/chinh/IdeaProjects/ecommerce-website/deployment.yaml root@172.18.147.204:/root/
+#scp -pr /Users/chinh/IdeaProjects/ecommerce-website/DockerfileJavaSpring root@172.18.147.204/root/
 
 #Deploy angular app
 #copy angular code to server
-#rm -rf /Users/hoangnd/Documents/code/udemy/ShopApp/shopapp-angular/node_modules
-#scp -r /Users/hoangnd/Documents/code/udemy/ShopApp/shopapp-angular root@45.117.179.175:/root/
-#scp -r /Users/hoangnd/Documents/code/udemy/ShopApp/shopapp-angular/src/app/environments/environment.ts root@45.117.179.175:/root/shopapp-angular/src/app/environments/
-#scp -pr /Users/hoangnd/Documents/code/udemy/ShopApp/DockerfileAngular root@45.117.179.175:/root/
-#scp -pr /Users/hoangnd/Documents/code/udemy/ShopApp/deployment.yaml root@45.117.179.175:/root/
+#rm -rf /Users/chinh/IdeaProjects/ecommerce-website/shopapp-angular/node_modules
+#scp -r /Users/chinh/IdeaProjects/ecommerce-website/shopapp-angular root@172.18.147.204/root/
+#scp -r /Users/chinh/IdeaProjects/ecommerce-website/shopapp-angular/src/app/environments/environment.ts root@172.18.147.204/root/shopapp-angular/src/app/environments/
+#scp -pr /Users/chinh/IdeaProjects/ecommerce-website/DockerfileAngular root@172.18.147.204/root/
+#scp -pr /Users/chinh/IdeaProjects/ecommerce-website/deployment.yaml root@172.18.147.204/root/
 
 version: '3.7'
 services:

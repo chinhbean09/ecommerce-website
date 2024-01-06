@@ -1,4 +1,4 @@
-package com.chinhbean.shopapp.services;
+package com.chinhbean.shopapp.services.role;
 
 import com.chinhbean.shopapp.models.Role;
 

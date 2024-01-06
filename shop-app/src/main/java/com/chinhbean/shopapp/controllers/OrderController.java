@@ -5,7 +5,7 @@ import com.chinhbean.shopapp.dtos.*;
 import com.chinhbean.shopapp.models.Order;
 import com.chinhbean.shopapp.responses.OrderListResponse;
 import com.chinhbean.shopapp.responses.OrderResponse;
-import com.chinhbean.shopapp.services.IOrderService;
+import com.chinhbean.shopapp.services.orders.IOrderService;
 import com.chinhbean.shopapp.utils.MessageKeys;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.chinhbean.shopapp.services;
+package com.chinhbean.shopapp.services.orderdetails;
 
 import com.chinhbean.shopapp.dtos.OrderDetailDTO;
 import com.chinhbean.shopapp.exceptions.DataNotFoundException;

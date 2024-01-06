@@ -4,15 +4,16 @@ import com.chinhbean.shopapp.components.LocalizationUtils;
 import com.chinhbean.shopapp.dtos.UserDTO;
 import com.chinhbean.shopapp.dtos.UserLoginDTO;
 import com.chinhbean.shopapp.dtos.*;
-import com.chinhbean.shopapp.models.Role;
 import com.chinhbean.shopapp.models.User;
 import com.chinhbean.shopapp.responses.LoginResponse;
 import com.chinhbean.shopapp.responses.RegisterResponse;
 import com.chinhbean.shopapp.responses.UserResponse;
-import com.chinhbean.shopapp.services.IUserService;
+import com.chinhbean.shopapp.services.token.ITokenService;
+import com.chinhbean.shopapp.services.user.IUserService;
 import com.chinhbean.shopapp.utils.MessageKeys;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -30,7 +31,9 @@ import java.util.List;
 public class UserController {
     private final LocalizationUtils localizationUtils;
     private final IUserService userService;
-//    @PostMapping("/register")
+    private final ITokenService tokenService;
+
+    //    @PostMapping("/register")
 //
 //    public ResponseEntity<?> createUser(
 //            @Valid @RequestBody UserDTO userDTO,
@@ -90,13 +93,20 @@ public ResponseEntity<RegisterResponse> createUser(
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(
-            @Valid @RequestBody UserLoginDTO userLoginDTO) {
+            @Valid @RequestBody UserLoginDTO userLoginDTO,
+            HttpServletRequest request) {
         // Kiểm tra thông tin đăng nhập và sinh token
         try {
             String token = userService.login(
                     userLoginDTO.getPhoneNumber(),
                     userLoginDTO.getPassword(),
                     userLoginDTO.getRoleId() == null ? 1 : userLoginDTO.getRoleId());
+
+            String userAgent = request.getHeader("User-Agent");
+            User user = userService.getUserDetailsFromToken(token);
+            tokenService.addToken(user, token, isMobileDevice(userAgent));
+
+
             // Trả về token trong response
             return ResponseEntity.ok(LoginResponse.builder()
                     .message(localizationUtils.getLocalizedMessage(MessageKeys.LOGIN_SUCCESSFULLY))

@@ -22,6 +22,11 @@ spring:
       basename: i18n/messages
       encoding: UTF-8
       default-locale: en
+  flyway:
+    locations: classpath:/db/migration,classpath:/dev/db/migration
+    #Phiên bản baseline sẽ = 1 và không thực hiện bất kỳ thay đổi nào trong DB
+    baseline-on-migrate: true
+    baseline-version: 0
   data:
     redis:
       host: ${REDIS_HOST:localhost}
@@ -32,10 +37,10 @@ jwt:
   expiration: 2592000
   secretKey: TaqlmGv1iEDMRiFp/pHuID1+T84IABfuA0xXh4GhiUI=
 
-logging:
-  level:
-    org:
-      springframework.security: DEBUG
+#logging:
+#  level:
+#    org:
+#      springframework.security: DEBUG
 
 #health check
 management:

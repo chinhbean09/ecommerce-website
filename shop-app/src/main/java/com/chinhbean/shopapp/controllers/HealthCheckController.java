@@ -1,7 +1,7 @@
 package com.chinhbean.shopapp.controllers;
 
 import com.chinhbean.shopapp.models.Category;
-import com.chinhbean.shopapp.services.CategoryService;
+import com.chinhbean.shopapp.services.category.CategoryService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

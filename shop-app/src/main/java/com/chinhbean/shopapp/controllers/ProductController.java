@@ -6,8 +6,7 @@ import com.chinhbean.shopapp.models.Product;
 import com.chinhbean.shopapp.models.ProductImage;
 import com.chinhbean.shopapp.responses.ProductListResponse;
 import com.chinhbean.shopapp.responses.ProductResponse;
-import com.chinhbean.shopapp.services.IProductRedisService;
-import com.chinhbean.shopapp.services.IProductService;
+import com.chinhbean.shopapp.services.product.IProductRedisService;
 import com.chinhbean.shopapp.utils.MessageKeys;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.github.javafaker.Faker;
@@ -30,7 +29,6 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import jakarta.validation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -44,9 +42,9 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class ProductController {
     private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
-    private final IProductService productService;
+    private final com.chinhbean.shopapp.services.product.IProductRedisService.IProductService productService;
     private final LocalizationUtils localizationUtils;
-    private final IProductRedisService productRedisService;
+    private final IProductRedisService.IProductRedisService productRedisService;
 
     @PostMapping(value = "")
     @PreAuthorize("hasRole('ROLE_ADMIN')")

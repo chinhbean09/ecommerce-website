@@ -1,8 +1,7 @@
 package com.chinhbean.shopapp.controllers;
 
-import com.chinhbean.shopapp.dtos.*;
 import com.chinhbean.shopapp.models.Role;
-import com.chinhbean.shopapp.services.RoleService;
+import com.chinhbean.shopapp.services.role.RoleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
