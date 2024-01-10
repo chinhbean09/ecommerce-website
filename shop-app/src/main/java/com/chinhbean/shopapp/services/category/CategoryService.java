@@ -2,8 +2,12 @@ package com.chinhbean.shopapp.services.category;
 
 import com.chinhbean.shopapp.dtos.CategoryDTO;
 import com.chinhbean.shopapp.models.Category;
+import com.chinhbean.shopapp.models.Product;
 import com.chinhbean.shopapp.repositories.CategoryRepository;
+import com.chinhbean.shopapp.repositories.ProductRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +18,7 @@ public class CategoryService implements ICategoryService {
     //dependency inject
     //injection thông qua constructor là một cách để cung cấp đối tượng CategoryRepository cho CategoryService mà không cần phải tạo nó trong CategoryService.
     private final CategoryRepository categoryRepository;
+    private final ProductRepository productRepository;
 
 //    public CategoryService (CategoryRepository categoryRepository){
 //        this.categoryRepository = categoryRepository;
@@ -21,6 +26,8 @@ public class CategoryService implements ICategoryService {
 
 
     @Override
+    @Transactional
+
     public Category createCategory(CategoryDTO categoryDTO) {
         //builder.build có nghĩa là tạo ra 1 đối tượng rỗng sau đó khởi tạo từng thành phần
         Category newCategory = Category.builder()
@@ -41,6 +48,8 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
+    @Transactional
+
     public Category updateCategory(long categoryId, CategoryDTO categoryDTO) {
         Category existingCategory = getCategoryById(categoryId);
         existingCategory.setName(categoryDTO.getName());
@@ -49,8 +58,17 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
-    public void deleteCategory(long id) {
-        //xóa xong
-        categoryRepository.deleteById(id);
+    @Transactional
+    public Category deleteCategory(long id) throws Exception {
+        Category category = categoryRepository.findById(id)
+                .orElseThrow(() -> new ChangeSetPersister.NotFoundException());
+
+        List<Product> products = productRepository.findByCategory(category);
+        if (!products.isEmpty()) {
+            throw new IllegalStateException("Cannot delete category with associated products");
+        } else {
+            categoryRepository.deleteById(id);
+            return  category;
+        }
     }
 }

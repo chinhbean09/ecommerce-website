@@ -84,7 +84,7 @@ public class OrderController {
     @DeleteMapping("/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
 
-    public ResponseEntity<String> deleteOrder(@Valid @PathVariable Long id) {
+    public ResponseEntity<?> deleteOrder(@Valid @PathVariable Long id) {
         //xóa mềm => cập nhật trường active = false
         orderService.deleteOrder(id);
         String result = localizationUtils.getLocalizedMessage(

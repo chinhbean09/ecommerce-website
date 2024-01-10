@@ -2,6 +2,8 @@ package com.chinhbean.shopapp.services.orders;
 
 import com.chinhbean.shopapp.dtos.CartItemDTO;
 import com.chinhbean.shopapp.dtos.OrderDTO;
+import com.chinhbean.shopapp.dtos.OrderDetailDTO;
+import com.chinhbean.shopapp.dtos.OrderWithDetailsDTO;
 import com.chinhbean.shopapp.exceptions.DataNotFoundException;
 import com.chinhbean.shopapp.models.*;
 import com.chinhbean.shopapp.repositories.OrderDetailRepository;
@@ -130,7 +132,27 @@ public class OrderService implements IOrderService {
             orderRepository.save(order);
         }
     }
+    @Transactional
+    public Order updateOrderWithDetails(OrderWithDetailsDTO orderWithDetailsDTO) {
+        modelMapper.typeMap(OrderWithDetailsDTO.class, Order.class)
+                .addMappings(mapper -> mapper.skip(Order::setId));
+        Order order = new Order();
+        modelMapper.map(orderWithDetailsDTO, order);
+        Order savedOrder = orderRepository.save(order);
 
+        // Set the order for each order detail
+        for (OrderDetailDTO orderDetailDTO : orderWithDetailsDTO.getOrderDetailDTOS()) {
+            //orderDetail.setOrder(OrderDetail);
+        }
+
+        // Save or update the order details
+        List<OrderDetail> savedOrderDetails = orderDetailRepository.saveAll(order.getOrderDetails());
+
+        // Set the updated order details for the order
+        savedOrder.setOrderDetails(savedOrderDetails);
+
+        return savedOrder;
+    }
     @Override
     public List<Order> findByUserId(Long userId) {
         return orderRepository.findByUserId(userId);

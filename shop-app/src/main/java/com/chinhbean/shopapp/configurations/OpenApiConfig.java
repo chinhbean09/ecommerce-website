@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
         ),
         servers = {
                 @Server(url = "http://localhost:8080", description = "Local Development Server"),
-                @Server(url = "http://45.117.179.16:8080", description = "Production Server"),
+                @Server(url = "http://172.18.147.204:8080", description = "Production Server"),
         }
 )
 

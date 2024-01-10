@@ -26,7 +26,7 @@ public class OrderDetailService implements IOrderDetailService {
         //tìm xem orderId có tồn tại ko
         Order order = orderRepository.findById(orderDetailDTO.getOrderId())
                 .orElseThrow(() -> new DataNotFoundException(
-                        "Cannot find Order with id : "+orderDetailDTO.getOrderId()));
+                        "Cannot find Order with id : "+ orderDetailDTO.getOrderId()));
         // Tìm Product theo id
         Product product = productRepository.findById(orderDetailDTO.getProductId())
                 .orElseThrow(() -> new DataNotFoundException(

@@ -14,7 +14,7 @@ import java.io.IOException;
 @Component
 //ưu tiên cao nhất, hơn cả jwtfilter
 //@Order(Ordered.HIGHEST_PRECEDENCE)
-public class CorsFilter extends OncePerRequestFilter{
+    public class CorsFilter extends OncePerRequestFilter{
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         //gắn key Access-Control-Allow-Origin có value là * cho response trả về, và angular sẽ thấy được response

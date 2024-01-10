@@ -25,7 +25,7 @@ import java.util.List;
 //Dependency Inj
 @RequiredArgsConstructor
 
-public class CategoryController {
+public class    CategoryController {
     //Dependency Inj
     private final CategoryService categoryService;
     private final LocaleResolver localeResolver;
@@ -70,7 +70,6 @@ public class CategoryController {
     //Nếu tham số truyền vào là 1 object thì sao ? => Data Transfer Object = Request Object
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-
     public ResponseEntity<UpdateCategoryResponse> updateCategory(@PathVariable Long id,
                                                                  @Valid
                                                                  @RequestBody CategoryDTO categoryDTO) {

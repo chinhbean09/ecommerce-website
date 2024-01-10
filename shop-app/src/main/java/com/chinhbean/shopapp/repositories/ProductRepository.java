@@ -1,5 +1,6 @@
 package com.chinhbean.shopapp.repositories;
 
+import com.chinhbean.shopapp.models.Category;
 import com.chinhbean.shopapp.models.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.domain.*;
@@ -14,6 +15,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     boolean existsByName(String name);
     Page<Product> findAll(Pageable pageable);//phân trang
 
+    List<Product> findByCategory(Category category);
 
     //tức là nếu category không truyền vào thì nó sẽ lấy tất cả
     //nếu keyword truyền vào mà trống thì cũng lấy tất cả
