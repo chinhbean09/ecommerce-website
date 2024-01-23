@@ -1,4 +1,4 @@
-package com.chinhbean.shopapp.responses;
+package com.chinhbean.shopapp.responses.product;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;

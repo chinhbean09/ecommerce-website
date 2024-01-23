@@ -1,6 +1,7 @@
-package com.chinhbean.shopapp.responses;
+package com.chinhbean.shopapp.responses.product;
 
 import com.chinhbean.shopapp.models.ProductImage;
+import com.chinhbean.shopapp.responses.BaseResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.chinhbean.shopapp.models.Product;
 import lombok.*;
@@ -13,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ProductResponse extends BaseResponse{
+public class ProductResponse extends BaseResponse {
     private Long id;
     private String name;
     private Float price;

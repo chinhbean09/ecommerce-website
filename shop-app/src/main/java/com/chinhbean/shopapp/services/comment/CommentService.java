@@ -1,13 +1,14 @@
-package com.project.shopapp.services.comment;
+package com.chinhbean.shopapp.services.comment;
 
-import com.project.shopapp.dtos.CommentDTO;
-import com.project.shopapp.exceptions.DataNotFoundException;
-import com.project.shopapp.models.*;
-import com.project.shopapp.models.Comment;
-import com.project.shopapp.repositories.CommentRepository;
-import com.project.shopapp.repositories.ProductRepository;
-import com.project.shopapp.repositories.UserRepository;
-import com.project.shopapp.responses.comment.CommentResponse;
+import com.chinhbean.shopapp.dtos.CommentDTO;
+import com.chinhbean.shopapp.responses.comment.CommentResponse;
+import com.chinhbean.shopapp.exceptions.DataNotFoundException;
+import com.chinhbean.shopapp.models.*;
+import com.chinhbean.shopapp.models.Comment;
+import com.chinhbean.shopapp.repositories.CommentRepository;
+import com.chinhbean.shopapp.repositories.ProductRepository;
+import com.chinhbean.shopapp.repositories.UserRepository;
+import com.chinhbean.shopapp.responses.comment.CommentResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

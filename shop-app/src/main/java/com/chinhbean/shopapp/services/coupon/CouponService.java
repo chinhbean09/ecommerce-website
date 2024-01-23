@@ -1,14 +1,14 @@
-package com.project.shopapp.services.coupon;
+package com.chinhbean.shopapp.services.coupon;
 
-import com.project.shopapp.models.Coupon;
-import com.project.shopapp.models.CouponCondition;
-import com.project.shopapp.repositories.CouponConditionRepository;
-import com.project.shopapp.repositories.CouponRepository;
+import com.chinhbean.shopapp.models.Coupon;
+import com.chinhbean.shopapp.models.CouponCondition;
+import com.chinhbean.shopapp.repositories.CouponConditionRepository;
+import com.chinhbean.shopapp.repositories.CouponRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.time.LocalDate;
+import java.util.List;
 
 
 @RequiredArgsConstructor

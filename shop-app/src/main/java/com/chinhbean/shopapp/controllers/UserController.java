@@ -8,10 +8,10 @@ import com.chinhbean.shopapp.exceptions.DataNotFoundException;
 import com.chinhbean.shopapp.exceptions.InvalidPasswordException;
 import com.chinhbean.shopapp.models.Token;
 import com.chinhbean.shopapp.models.User;
-import com.chinhbean.shopapp.responses.LoginResponse;
-import com.chinhbean.shopapp.responses.RegisterResponse;
-import com.chinhbean.shopapp.responses.UserListResponse;
-import com.chinhbean.shopapp.responses.UserResponse;
+import com.chinhbean.shopapp.responses.product.LoginResponse;
+import com.chinhbean.shopapp.responses.user.RegisterResponse;
+import com.chinhbean.shopapp.responses.user.UserListResponse;
+import com.chinhbean.shopapp.responses.user.UserResponse;
 import com.chinhbean.shopapp.services.token.ITokenService;
 import com.chinhbean.shopapp.services.user.IUserService;
 import com.chinhbean.shopapp.utils.MessageKeys;
@@ -94,55 +94,55 @@ public class UserController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
-@PostMapping("/register")
-//can we register an "admin" user ?
-public ResponseEntity<RegisterResponse> createUser(
-        @Valid @RequestBody UserDTO userDTO,
-        BindingResult result
-) {
-    RegisterResponse registerResponse = new RegisterResponse();
+    @PostMapping("/register")
+    //can we register an "admin" user ?
+    public ResponseEntity<RegisterResponse> createUser(
+            @Valid @RequestBody UserDTO userDTO,
+            BindingResult result
+    ) {
+        RegisterResponse registerResponse = new RegisterResponse();
 
-    if (result.hasErrors()) {
-        List<String> errorMessages = result.getFieldErrors()
-                .stream()
-                .map(FieldError::getDefaultMessage)
-                .toList();
+        if (result.hasErrors()) {
+            List<String> errorMessages = result.getFieldErrors()
+                    .stream()
+                    .map(FieldError::getDefaultMessage)
+                    .toList();
 
-        registerResponse.setMessage(errorMessages.toString());
-        return ResponseEntity.badRequest().body(registerResponse);
+            registerResponse.setMessage(errorMessages.toString());
+            return ResponseEntity.badRequest().body(registerResponse);
+        }
+
+        if (!userDTO.getPassword().equals(userDTO.getRetypePassword())) {
+            registerResponse.setMessage(localizationUtils.getLocalizedMessage(MessageKeys.PASSWORD_NOT_MATCH));
+            return ResponseEntity.badRequest().body(registerResponse);
+        }
+
+        try {
+            User user = userService.createUser(userDTO);
+            registerResponse.setMessage("Đăng ký tài khoản thành công");
+            registerResponse.setUser(user);
+            return ResponseEntity.ok(registerResponse);
+        } catch (Exception e) {
+            registerResponse.setMessage(e.getMessage());
+            return ResponseEntity.badRequest().body(registerResponse);
+        }
     }
-
-    if (!userDTO.getPassword().equals(userDTO.getRetypePassword())) {
-        registerResponse.setMessage(localizationUtils.getLocalizedMessage(MessageKeys.PASSWORD_NOT_MATCH));
-        return ResponseEntity.badRequest().body(registerResponse);
-    }
-
-    try {
-        User user = userService.createUser(userDTO);
-        registerResponse.setMessage(localizationUtils.getLocalizedMessage(MessageKeys.REGISTER_SUCCESSFULLY));
-        registerResponse.setUser(user);
-        return ResponseEntity.ok(registerResponse);
-    } catch (Exception e) {
-        registerResponse.setMessage(e.getMessage());
-        return ResponseEntity.badRequest().body(registerResponse);
-    }
-}
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(
             @Valid @RequestBody UserLoginDTO userLoginDTO,
-            HttpServletRequest request) {
+            HttpServletRequest request
+    ) {
         // Kiểm tra thông tin đăng nhập và sinh token
         try {
             String token = userService.login(
                     userLoginDTO.getPhoneNumber(),
                     userLoginDTO.getPassword(),
-                    userLoginDTO.getRoleId() == null ? 1 : userLoginDTO.getRoleId());
-
+                    userLoginDTO.getRoleId() == null ? 1 : userLoginDTO.getRoleId()
+            );
             String userAgent = request.getHeader("User-Agent");
             User userDetail = userService.getUserDetailsFromToken(token);
             Token jwtToken = tokenService.addToken(userDetail, token, isMobileDevice(userAgent));
-
 
             // Trả về token trong response
             return ResponseEntity.ok(LoginResponse.builder()
@@ -154,7 +154,7 @@ public ResponseEntity<RegisterResponse> createUser(
                     .roles(userDetail.getAuthorities().stream().map(item -> item.getAuthority()).toList())
                     .id(userDetail.getId())
                     .build());
-        } catch (Exception e){
+        } catch (Exception e) {
             return ResponseEntity.badRequest().body(
                     LoginResponse.builder()
                             .message(localizationUtils.getLocalizedMessage(MessageKeys.LOGIN_FAILED, e.getMessage()))
@@ -191,41 +191,31 @@ public ResponseEntity<RegisterResponse> createUser(
         // Ví dụ đơn giản:
         return userAgent.toLowerCase().contains("mobile");
     }
-    //lấy thông tin chi tiết của user thông qua token, sd trong trường hợp đã login rồi và vào trang thông tin
-    //người dùng và lấy ra thông tin chi tiết thông qua token đó
     @PostMapping("/details")
     @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
     public ResponseEntity<UserResponse> getUserDetails(
-            //truyền header
-            @RequestHeader("Authorization") String token)
-    {try{
-        // Trích xuất giá trị token từ header Authorization
-        String extractedToken = token.substring(7);
-
-        //UserService để lấy thông tin User dựa trên token
-        User user = userService.getUserDetailsFromToken(extractedToken);
-
-        // Trả về một ResponseEntity chứa thông tin người dùng dưới dạng UserResponse
-        return ResponseEntity.ok(UserResponse.fromUser(user));
-        }catch(Exception e){
+            @RequestHeader("Authorization") String authorizationHeader
+    ) {
+        try {
+            String extractedToken = authorizationHeader.substring(7); // Loại bỏ "Bearer " từ chuỗi token
+            User user = userService.getUserDetailsFromToken(extractedToken);
+            return ResponseEntity.ok(UserResponse.fromUser(user));
+        } catch (Exception e) {
             return ResponseEntity.badRequest().build();
-
         }
     }
     @PutMapping("/details/{userId}")
     @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
     @Operation(security = { @SecurityRequirement(name = "bearer-key") })
-
     public ResponseEntity<UserResponse> updateUserDetails(
             @PathVariable Long userId,
             @RequestBody UpdateUserDTO updatedUserDTO,
-            //truyền header để lấy token trong Authorization
             @RequestHeader("Authorization") String authorizationHeader
     ) {
         try {
             String extractedToken = authorizationHeader.substring(7);
             User user = userService.getUserDetailsFromToken(extractedToken);
-            //Toi đang cập nhật chính mình
+            // Ensure that the user making the request matches the user being updated
             if (user.getId() != userId) {
                 return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
             }

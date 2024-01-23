@@ -3,8 +3,8 @@ package com.chinhbean.shopapp.controllers;
 import com.chinhbean.shopapp.components.LocalizationUtils;
 import com.chinhbean.shopapp.dtos.*;
 import com.chinhbean.shopapp.models.Order;
-import com.chinhbean.shopapp.responses.OrderListResponse;
-import com.chinhbean.shopapp.responses.OrderResponse;
+import com.chinhbean.shopapp.responses.order.OrderListResponse;
+import com.chinhbean.shopapp.responses.order.OrderResponse;
 import com.chinhbean.shopapp.services.orders.IOrderService;
 import com.chinhbean.shopapp.utils.MessageKeys;
 import jakarta.validation.Valid;
@@ -83,7 +83,6 @@ public class OrderController {
     }
     @DeleteMapping("/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-
     public ResponseEntity<?> deleteOrder(@Valid @PathVariable Long id) {
         //xóa mềm => cập nhật trường active = false
         orderService.deleteOrder(id);
@@ -101,21 +100,21 @@ public class OrderController {
             @RequestParam(defaultValue = "10") int limit
     ) {
         // Tạo Pageable từ thông tin trang và giới hạn
-        PageRequest pageRequest = PageRequest.of(
-                page, limit,
-                //Sort.by("createdAt").descending()
+        PageRequest pageRequest = PageRequest.of( page, limit,
                 Sort.by("id").ascending()
+                //Sort.by("createdAt").descending()
         );
+        //sử dụng để tạo orderPage:
         Page<OrderResponse> orderPage = orderService
-                .getOrdersByKeyword(keyword, pageRequest)
-                .map(OrderResponse::fromOrder);
+                                        .getOrdersByKeyword(keyword, pageRequest)
+                                        .map(OrderResponse::fromOrder);
         // Lấy tổng số trang
         int totalPages = orderPage.getTotalPages();
         List<OrderResponse> orderResponses = orderPage.getContent();
         return ResponseEntity.ok(OrderListResponse
-                .builder()
-                .orders(orderResponses)
-                .totalPages(totalPages)
-                .build());
+                                    .builder()
+                                    .orders(orderResponses)
+                                    .totalPages(totalPages)
+                                    .build());
     }
 }

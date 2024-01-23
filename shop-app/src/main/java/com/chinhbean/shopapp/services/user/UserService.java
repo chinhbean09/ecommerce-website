@@ -15,7 +15,6 @@ import com.chinhbean.shopapp.repositories.RoleRepository;
 import com.chinhbean.shopapp.repositories.TokenRepository;
 import com.chinhbean.shopapp.repositories.UserRepository;
 import com.chinhbean.shopapp.utils.MessageKeys;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
@@ -25,6 +24,7 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -41,20 +41,22 @@ public class UserService implements IUserService {
     private final TokenRepository tokenRepository;
 
     @Override
+    @org.springframework.transaction.annotation.Transactional
     public User createUser(UserDTO userDTO) throws Exception {
+        //register user
         String phoneNumber = userDTO.getPhoneNumber();
         // Kiểm tra xem số điện thoại đã tồn tại hay chưa
         if(userRepository.existsByPhoneNumber(phoneNumber)) {
-            throw new DataIntegrityViolationException("Phone number already exists");
+            throw new DataIntegrityViolationException("Số điện thoại đã tồn tại");
         }
-        Role role = roleRepository.findById(userDTO.getRoleId())
-                .orElseThrow(() -> new DataNotFoundException("Role not found"));
+        Role role =roleRepository.findById(userDTO.getRoleId())
+                .orElseThrow(() -> new DataNotFoundException(
+                        localizationUtils.getLocalizedMessage(MessageKeys.ROLE_DOES_NOT_EXISTS)));
         if(role.getName().toUpperCase().equals(Role.ADMIN)) {
-            throw new PermissionDenyException("You cannot register an admin account");
+            throw new PermissionDenyException("Không được phép đăng ký tài khoản Admin");
         }
         //convert from userDTO => user
-        User newUser = User.
-                builder()
+        User newUser = User.builder()
                 .fullName(userDTO.getFullName())
                 .phoneNumber(userDTO.getPhoneNumber())
                 .password(userDTO.getPassword())
@@ -62,8 +64,11 @@ public class UserService implements IUserService {
                 .dateOfBirth(userDTO.getDateOfBirth())
                 .facebookAccountId(userDTO.getFacebookAccountId())
                 .googleAccountId(userDTO.getGoogleAccountId())
+                .active(true)
                 .build();
+
         newUser.setRole(role);
+
         // Kiểm tra nếu có accountId, không yêu cầu password
         if (userDTO.getFacebookAccountId() == 0 && userDTO.getGoogleAccountId() == 0) {
             String password = userDTO.getPassword();
@@ -74,12 +79,16 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public String login(String phoneNumber, String password, Long roleId) throws Exception{
+    public String login(
+            String phoneNumber,
+            String password,
+            Long roleId
+    ) throws Exception {
         Optional<User> optionalUser = userRepository.findByPhoneNumber(phoneNumber);
         if(optionalUser.isEmpty()) {
-            throw new DataNotFoundException("Invalid phone number or password");
+            throw new DataNotFoundException(localizationUtils.getLocalizedMessage(MessageKeys.WRONG_PHONE_PASSWORD));
         }
-        //return optionalUser.get();//muốn trả JWT token?
+        //return optionalUser.get();//muốn trả JWT token ?
         User existingUser = optionalUser.get();
         //check password
         if (existingUser.getFacebookAccountId() == 0
@@ -88,49 +97,32 @@ public class UserService implements IUserService {
                 throw new BadCredentialsException(localizationUtils.getLocalizedMessage(MessageKeys.WRONG_PHONE_PASSWORD));
             }
         }
+        /*
         Optional<Role> optionalRole = roleRepository.findById(roleId);
         if(optionalRole.isEmpty() || !roleId.equals(existingUser.getRole().getId())) {
             throw new DataNotFoundException(localizationUtils.getLocalizedMessage(MessageKeys.ROLE_DOES_NOT_EXISTS));
         }
+        */
         if(!optionalUser.get().isActive()) {
             throw new DataNotFoundException(localizationUtils.getLocalizedMessage(MessageKeys.USER_IS_LOCKED));
         }
-        //là một lớp triển khai của Authentication được sử dụng trong trường hợp xác thực bằng tên người dùng và mật khẩu.
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
-                phoneNumber, password, existingUser.getAuthorities()
+                phoneNumber, password,
+                existingUser.getAuthorities()
         );
 
-        //authenticate with Java Spring security, xac thuc lai voi security
-        //tiến hành xác thực bằng cách so sánh thông tin đăng nhập với thông tin trong hệ thống.
+        //authenticate with Java Spring security
         authenticationManager.authenticate(authenticationToken);
         return jwtTokenUtils.generateToken(existingUser);
     }
-
-    @Override
-    public User getUserDetailsFromToken(String token) throws Exception {
-        //inject jwtTokenUtils để check token còn hạn sử dụng hay không
-        if(jwtTokenUtils.isTokenExpired(token)){
-            throw new Exception("Token is expried");
-        }
-        //trích xuất các claims bên trong token
-        String phoneNumber = jwtTokenUtils.extractPhoneNumber(token);
-        Optional<User> user = userRepository.findByPhoneNumber(phoneNumber);
-
-        if(user.isPresent()){
-            return user.get();
-        } else {
-            throw new Exception("User not found");
-        }
-    }
-
-    @Transactional //hỗ trợ rollback về trạng thái cũ nếu bị lỗi
+    @org.springframework.transaction.annotation.Transactional
     @Override
     public User updateUser(Long userId, UpdateUserDTO updatedUserDTO) throws Exception {
         // Find the existing user by userId
         User existingUser = userRepository.findById(userId)
                 .orElseThrow(() -> new DataNotFoundException("User not found"));
 
-        //nếu cho đổi phone thì nếu trùng phone thì sẽ dẫn tới tất cả các đơn hàng của
+//nếu cho đổi phone thì nếu trùng phone thì sẽ dẫn tới tất cả các đơn hàng của
         //thằng mới sẽ trùng sang thằng cũ
         String newPhoneNumber = updatedUserDTO.getPhoneNumber();
         if (!existingUser.getPhoneNumber().equals(newPhoneNumber) &&
@@ -174,10 +166,25 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public User getUserDetailsFromToken(String token) throws Exception {
+        if(jwtTokenUtils.isTokenExpired(token)) {
+            throw new ExpiredTokenException("Token is expired");
+        }
+        String phoneNumber = jwtTokenUtils.extractPhoneNumber(token);
+        Optional<User> user = userRepository.findByPhoneNumber(phoneNumber);
+
+        if (user.isPresent()) {
+            return user.get();
+        } else {
+            throw new Exception("User not found");
+        }
+    }
+    @Override
     public User getUserDetailsFromRefreshToken(String refreshToken) throws Exception {
         Token existingToken = tokenRepository.findByRefreshToken(refreshToken);
         return getUserDetailsFromToken(existingToken.getToken());
     }
+
     @Override
     public Page<User> findAll(String keyword, Pageable pageable) {
         return userRepository.findAll(keyword, pageable);
@@ -200,12 +207,20 @@ public class UserService implements IUserService {
     }
 
     @Override
-    @org.springframework.transaction.annotation.Transactional
+    @Transactional
     public void blockOrEnable(Long userId, Boolean active) throws DataNotFoundException {
         User existingUser = userRepository.findById(userId)
                 .orElseThrow(() -> new DataNotFoundException("User not found"));
         existingUser.setActive(active);
         userRepository.save(existingUser);
     }
-
 }
+
+
+
+
+
+
+
+
+

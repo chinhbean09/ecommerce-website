@@ -10,7 +10,7 @@ import com.chinhbean.shopapp.models.ProductImage;
 import com.chinhbean.shopapp.repositories.CategoryRepository;
 import com.chinhbean.shopapp.repositories.ProductImageRepository;
 import com.chinhbean.shopapp.repositories.ProductRepository;
-import com.chinhbean.shopapp.responses.ProductResponse;
+import com.chinhbean.shopapp.responses.product.ProductResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

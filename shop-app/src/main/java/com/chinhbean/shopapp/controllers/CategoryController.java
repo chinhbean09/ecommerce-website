@@ -3,8 +3,8 @@ package com.chinhbean.shopapp.controllers;
 import com.chinhbean.shopapp.components.LocalizationUtils;
 import com.chinhbean.shopapp.dtos.CategoryDTO;
 import com.chinhbean.shopapp.models.Category;
-import com.chinhbean.shopapp.responses.CategoryResponse;
-import com.chinhbean.shopapp.responses.UpdateCategoryResponse;
+import com.chinhbean.shopapp.responses.category.CategoryResponse;
+import com.chinhbean.shopapp.responses.category.UpdateCategoryResponse;
 import com.chinhbean.shopapp.services.category.CategoryService;
 import com.chinhbean.shopapp.utils.MessageKeys;
 import jakarta.validation.Valid;
@@ -39,6 +39,7 @@ public class    CategoryController {
             @Valid @RequestBody CategoryDTO categoryDTO,
             BindingResult result) {
         CategoryResponse categoryResponse = new CategoryResponse();
+
         if (result.hasErrors()) {
             List<String> errorMessages = result.getFieldErrors()
                     //java8, biến field lỗi thành 1 đối tượng stream, trong đó ta có thể duyệt qua danh sách lỗi, và
@@ -51,9 +52,21 @@ public class    CategoryController {
             categoryResponse.setErrors(errorMessages);
             return ResponseEntity.badRequest().body(categoryResponse);
         }
+
         Category category = categoryService.createCategory(categoryDTO);
         categoryResponse.setCategory(category);
         return ResponseEntity.ok(categoryResponse);
+    }
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getCategoryById(
+            @PathVariable("id") Long categoryId
+    ) {
+        try {
+            Category existingCategory = categoryService.getCategoryById(categoryId);
+            return ResponseEntity.ok(existingCategory);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     //Hiện tất cả các categories

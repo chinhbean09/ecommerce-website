@@ -1,7 +1,7 @@
-package com.project.shopapp.controllers;
+package com.chinhbean.shopapp.controllers;
 
-import com.project.shopapp.responses.coupon.CouponCalculationResponse;
-import com.project.shopapp.services.coupon.CouponService;
+import com.chinhbean.shopapp.responses.coupon.CouponCalculationResponse;
+import com.chinhbean.shopapp.services.coupon.CouponService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

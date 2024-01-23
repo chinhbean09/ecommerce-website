@@ -1,4 +1,4 @@
-package com.chinhbean.shopapp.responses;
+package com.chinhbean.shopapp.responses.user;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

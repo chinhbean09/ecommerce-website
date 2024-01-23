@@ -1,11 +1,8 @@
-package com.chinhbean.shopapp.responses;
+package com.chinhbean.shopapp.responses.user;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.JoinColumn;
 import lombok.*;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 @Getter
 @Setter

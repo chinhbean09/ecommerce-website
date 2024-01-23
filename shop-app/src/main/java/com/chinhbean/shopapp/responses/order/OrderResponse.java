@@ -1,11 +1,8 @@
-package com.chinhbean.shopapp.responses;
+package com.chinhbean.shopapp.responses.order;
 
 import com.chinhbean.shopapp.models.Order;
 import com.chinhbean.shopapp.models.OrderDetail;
-import com.chinhbean.shopapp.models.User;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;

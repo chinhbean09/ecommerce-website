@@ -1,9 +1,9 @@
-package com.project.shopapp.responses.comment;
+package com.chinhbean.shopapp.responses.comment;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.project.shopapp.models.Comment;
-import com.project.shopapp.responses.user.UserResponse;
+import com.chinhbean.shopapp.models.Comment;
+import com.chinhbean.shopapp.responses.user.UserResponse;
 import lombok.*;
 
 import java.time.LocalDateTime;

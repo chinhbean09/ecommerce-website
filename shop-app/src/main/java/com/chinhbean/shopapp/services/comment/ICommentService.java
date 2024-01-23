@@ -1,9 +1,10 @@
-package com.project.shopapp.services.comment;
+package com.chinhbean.shopapp.services.comment;
 
-import com.project.shopapp.dtos.CommentDTO;
-import com.project.shopapp.exceptions.DataNotFoundException;
-import com.project.shopapp.models.Comment;
-import com.project.shopapp.responses.comment.CommentResponse;
+import com.chinhbean.shopapp.responses.comment.CommentResponse;
+import com.chinhbean.shopapp.dtos.CommentDTO;
+import com.chinhbean.shopapp.exceptions.DataNotFoundException;
+import com.chinhbean.shopapp.models.Comment;
+import com.chinhbean.shopapp.responses.comment.CommentResponse;
 
 import java.util.List;
 

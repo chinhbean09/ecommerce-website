@@ -1,5 +1,6 @@
 package com.chinhbean.shopapp.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
@@ -75,4 +76,10 @@ public class Order {
     //Order cho nên nó lại vào Order và lấy ra OrderDetail
     @JsonManagedReference
     private List<OrderDetail> orderDetails;
+
+
+    @ManyToOne
+    @JoinColumn(name = "coupon_id")
+    @JsonBackReference
+    private Coupon coupon;
 }

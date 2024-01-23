@@ -1,8 +1,11 @@
-package com.project.shopapp.controllers;
-import com.project.shopapp.dtos.*;
-import com.project.shopapp.models.User;
-import com.project.shopapp.responses.comment.CommentResponse;
-import com.project.shopapp.services.comment.CommentService;
+package com.chinhbean.shopapp.controllers;
+import com.chinhbean.shopapp.dtos.CommentDTO;
+import com.chinhbean.shopapp.models.User;
+import com.chinhbean.shopapp.services.comment.CommentService;
+import com.chinhbean.shopapp.dtos.*;
+import com.chinhbean.shopapp.models.User;
+import com.chinhbean.shopapp.responses.comment.CommentResponse;
+import com.chinhbean.shopapp.services.comment.CommentService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

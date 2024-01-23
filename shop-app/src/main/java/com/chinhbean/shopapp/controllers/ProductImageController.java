@@ -22,9 +22,7 @@ public class ProductImageController {
     private final ProductService productService;
     @DeleteMapping("/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<?> delete(
-            @PathVariable Long id
-    ) {
+    public ResponseEntity<?> delete( @PathVariable Long id) {
         try {
             ProductImage productImage = productImageService.deleteProductImage(id);
             if(productImage != null){

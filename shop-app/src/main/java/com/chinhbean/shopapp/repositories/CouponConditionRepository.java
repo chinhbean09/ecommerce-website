@@ -1,5 +1,5 @@
-package com.project.shopapp.repositories;
-import com.project.shopapp.models.CouponCondition;
+package com.chinhbean.shopapp.repositories;
+import com.chinhbean.shopapp.models.CouponCondition;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

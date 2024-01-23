@@ -4,7 +4,7 @@ import com.chinhbean.shopapp.components.LocalizationUtils;
 import com.chinhbean.shopapp.dtos.*;
 import com.chinhbean.shopapp.exceptions.DataNotFoundException;
 import com.chinhbean.shopapp.models.OrderDetail;
-import com.chinhbean.shopapp.responses.OrderDetailResponse  ;
+import com.chinhbean.shopapp.responses.order.OrderDetailResponse;
 import com.chinhbean.shopapp.services.orderdetails.OrderDetailService;
 import com.chinhbean.shopapp.utils.MessageKeys;
 
@@ -37,19 +37,17 @@ public class OrderDetailController {
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
-
     }
 
-    //lay ra
+    //lấy thông tin chi tiết về một chi tiết đơn hàng cụ thể dựa trên ID
     @GetMapping("/{id}")
-    public ResponseEntity<?> getOrderDetail(
-            @Valid @PathVariable("id") Long id) throws DataNotFoundException {
+    public ResponseEntity<?> getOrderDetail(@Valid @PathVariable("id") Long id) throws DataNotFoundException {
         OrderDetail orderDetail = orderDetailService.getOrderDetail(id);
         return ResponseEntity.ok().body(OrderDetailResponse.fromOrderDetail(orderDetail));
         //return ResponseEntity.ok(orderDetail);
     }
-    //lấy ra danh sách các order_details của 1 order nào đó
-    @GetMapping("/order/{orderId}")
+//lấy danh sách các chi tiết đơn hàng cho một đơn hàng cụ thể dựa trên ID của đơn hàng
+@GetMapping("/order/{orderId}")
     public ResponseEntity<?> getOrderDetails(
             @Valid @PathVariable("orderId") Long orderId
     ) {

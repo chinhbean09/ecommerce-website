@@ -1,13 +1,7 @@
-package com.project.shopapp.dtos;
+package com.chinhbean.shopapp.dtos;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.project.shopapp.models.Product;
-import com.project.shopapp.models.User;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Data//toString

@@ -1,4 +1,4 @@
-package com.chinhbean.shopapp.responses;
+package com.chinhbean.shopapp.responses.user;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.chinhbean.shopapp.models.User;

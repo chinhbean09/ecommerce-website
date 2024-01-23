@@ -4,8 +4,8 @@ import com.chinhbean.shopapp.components.LocalizationUtils;
 import com.chinhbean.shopapp.dtos.*;
 import com.chinhbean.shopapp.models.Product;
 import com.chinhbean.shopapp.models.ProductImage;
-import com.chinhbean.shopapp.responses.ProductListResponse;
-import com.chinhbean.shopapp.responses.ProductResponse;
+import com.chinhbean.shopapp.responses.product.ProductListResponse;
+import com.chinhbean.shopapp.responses.product.ProductResponse;
 import com.chinhbean.shopapp.services.product.IProductRedisService;
 import com.chinhbean.shopapp.services.product.IProductService;
 import com.chinhbean.shopapp.utils.MessageKeys;
@@ -47,7 +47,7 @@ public class ProductController {
     private final LocalizationUtils localizationUtils;
     private final IProductRedisService productRedisService;
 
-    @PostMapping(value = "")
+        @PostMapping(value = "")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<?> createProduct( @Valid @RequestBody ProductDTO productDTO, BindingResult result) {
         try {
@@ -95,7 +95,6 @@ public class ProductController {
                     return ResponseEntity.status(HttpStatus.UNSUPPORTED_MEDIA_TYPE)
                             .body(localizationUtils.getLocalizedMessage(MessageKeys.UPLOAD_IMAGES_FILE_MUST_BE_IMAGE));
                 }
-
                 String filename = storeFile(file);
                 ProductImage productImage = productService.createProductImage(
                         existingProduct.getId(),
