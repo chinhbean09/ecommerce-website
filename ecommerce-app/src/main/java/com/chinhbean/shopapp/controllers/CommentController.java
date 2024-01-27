@@ -40,7 +40,9 @@ public class CommentController {
     }
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
-    public ResponseEntity<?> updateComment(
+    public ResponseEntity<?> updateComment
+
+            (
             @PathVariable("id") Long commentId,
             @Valid @RequestBody CommentDTO commentDTO
     ) {

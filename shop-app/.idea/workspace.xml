@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="25935620-5295-4980-aaa4-20f76a7d1e4b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/005.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/006.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/012.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/013.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/014.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/016.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/017.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/018" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/019.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/020.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/021.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/023.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/024.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/026.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/027.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/028.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/029.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/030.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/031.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/032.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/033.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/034.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/035.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/036.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/037.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/038.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/039.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/040.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/041.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/042.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/043.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/044.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/045.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/046.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/047.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/048.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/049.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/050.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/051.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/052.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/053.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/054.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/055.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/056.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/057.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/058.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/059.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/060.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/061.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/062.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/063.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/064.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/065.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/066.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/067.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/068.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/069.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/070.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/080.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/081.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/082.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/083.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/084.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/085.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/086.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/087.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/088.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/089.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/090.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/091.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/092.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/093.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/094.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/095.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/096.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/097.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/098.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/099.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/100.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/101.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/102.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/103.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/104.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/105.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/106.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/108.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/109.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/110.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/112.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/114.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/115.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/116.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/117.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/118.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/119.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/121.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/122.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/125.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/126.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/127.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/129.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/130.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/131.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/132.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fakeimages/133.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/ShopAppApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/components/CorsFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/components/CustomHealthCheck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/components/JwtTokenUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/components/LocalizationUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/configurations/FlywayConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/configurations/KafkaProducerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/configurations/LanguageConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/configurations/MapperConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/configurations/OpenApiConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/configurations/RedisConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/configurations/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/configurations/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/CategoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/CommentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/CouponController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/HealthCheckController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/OrderDetailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/ProductImageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/RoleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/dtos/CartItemDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/dtos/CategoryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/dtos/CommentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/dtos/OrderDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/dtos/OrderDetailDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/dtos/OrderWithDetailsDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/dtos/ProductDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/dtos/ProductImageDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/dtos/RefreshTokenDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/dtos/UpdateUserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/dtos/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/dtos/UserLoginDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/exceptions/DataNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/exceptions/ExpiredTokenException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/exceptions/InvalidParamException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/exceptions/InvalidPasswordException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/exceptions/PermissionDenyException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/filters/JwtTokenFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/BaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/Coupon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/CouponCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/OrderDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/OrderStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/ProductImage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/ProductListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/SocialAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/repositories/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/repositories/CommentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/repositories/CouponConditionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/repositories/CouponRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/repositories/OrderDetailRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/repositories/OrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/repositories/ProductImageRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/repositories/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/repositories/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/repositories/TokenRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/repositories/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/BaseResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/category/CategoryResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/category/UpdateCategoryResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/comment/CommentResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/coupon/CouponCalculationResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/order/OrderDetailResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/order/OrderListResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/order/OrderResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/product/LoginResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/product/ProductListResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/product/ProductResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/user/LoginResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/user/RegisterResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/user/UserListResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/user/UserResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/category/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/category/ICategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/comment/CommentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/comment/ICommentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/coupon/CouponService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/coupon/ICouponService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/orderdetails/IOrderDetailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/orderdetails/OrderDetailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/orders/IOrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/orders/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/product/IProductRedisService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/product/IProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/product/ProductRedisService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/product/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/product/image/IProductImageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/product/image/ProductImageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/role/IRoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/role/RoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/token/ITokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/token/TokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/user/CustomOAuth2UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/user/IUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/user/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/utils/MessageKeys.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/utils/WebUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dev/db/migration/V1__alter_some_tables.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dev/db/migration/V2__change_tokens.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dev/db/migration/V3__refresh_tokens.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/i18n/messages_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/i18n/messages_vi.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logs/application.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/chinhbean/shopapp/ShopAppApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/005b2776-5133-407f-a178-35ec2c2d4662_008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/0172df63-6c6c-4565-bf5f-c9ac847e77e9_128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/01bac487-2758-4a55-be45-ae020dbbf65f_098.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/05b3bc62-c8f1-41c3-abd0-3515a1f19ed3_067.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/0661c814-b39c-47ab-958f-9465679eeb9b_017.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/066c0a93-9553-4aa6-9467-867a14dc368d_123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/07175991-c161-48ce-8e66-a0ec093eea50_028.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/07f74ddc-b4c7-489d-95cb-d417d5277938_087.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/09443def-0c28-40e1-b18d-f1cc8be05464_046.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/0954d8c6-0bde-406d-8448-8e7570ddb092_108.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/0c8ec37b-65b3-49c3-8efe-faecf0bfbd4d_009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/0ca19870-50b7-4719-82ae-b6b8272d45cd_062.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/0d83d40d-78e9-4c7d-80ee-3b5b68003104_002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/0db7e33b-0133-48b1-aa3d-210235f78016_110.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/0e32e381-4cb5-4771-a008-1354a612e763_041.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/0e43e7ca-6497-4209-a9f2-c11696247ebc_007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/0f0277b2-a026-4b24-8155-0f324e7a30f0_007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/0f6cc84b-a25d-471a-8b33-7281987968a8_099.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/103ac49b-b236-49f4-ab18-268a1f41d3e2_121.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/113703a7-fcd1-4759-88d2-650987899ad6_097.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1178bd64-484b-4e34-84cf-86881d1f8948_036.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/11ef7881-e7b0-42ea-82b3-6c5d8b05eb20_009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/121db8eb-34dd-4f28-879e-4206ca84410a_090.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/12babe42-6fd2-45e6-81e9-14ca68a5774e_130.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/15212fd9-2ec2-4922-ac25-fe32f2ea2c71_8d477c54b0b7b9702cb77254ac18e01a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/155a14b6-f9a8-4e9d-b2f4-fcc8f5d398af_026.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1575726c-6bec-4e9c-a063-fc3ed7589a32_118.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/18ae1149-e5b4-4ac3-9d07-7e934e42d479_007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/195b50a0-ec76-4b51-8c34-cfe127be1ae3_094.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/19d29ddd-a28b-4cff-bcc6-7e22eafded39_006.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1a384d85-a6a5-47a7-861d-5fb56054829c_057.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1c1a17e3-f993-4d04-b416-a6e1607fa3f2_039.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1d5b57ce-3f73-48f2-ac92-f96d35dba744_124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1e2453c2-77c6-4e05-9e1d-0af2823fcbcc_132.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1e7a822c-54cf-4e1c-9db8-5f264130f008_068.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1f3dfdbc-a925-4539-b2cd-7a831d74c3d2_013 - Copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1fa5467d-4d35-406e-9122-dcc67a326386_084.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/25cefd9a-e306-422e-9fbf-8c98141dc81a_053.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/25de850a-1d1d-44b0-bf47-d755b4cc70e9_103.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/261de876-c3d5-4564-bfa4-d5e66f40df8a_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/26365791-3978-4df8-b6fd-f2f516b1e7e3_063.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/28bb7329-fb63-4e5f-b21c-a66d4a61366d_129.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/29925120-5403-49cc-b85c-922673a0d5ed_039.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/2a7189a1-3fc4-465a-8265-1fc5ff13bef1_067.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/2ad86d1c-2b0a-4817-8fbc-0785f7d74870_091.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/2bf75f92-245b-4943-9f84-0a1111ad9099_007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/2c1bdbf1-c52a-4592-9472-52c31d95417f_133.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/2c531348-a43d-4663-a439-8b14157af25e_010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/2c899f27-f467-4ad2-a52e-6e307d8bdfda_040.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/2cf23264-4685-44d8-a371-41c3e5ad9563_058.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/3035cdf6-41b9-49d9-985a-a3033786f1d9_028.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/3036dff0-72cd-48d4-9efd-7221f41fc61d_022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/3175fef9-b080-4eca-8bc7-e9cc5947c642_039.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/326235eb-015b-4176-8977-fb96df932557_032.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/32bc2560-1f9f-4f34-94e9-fcc3b7be747b_003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/32bfc485-ac0b-4da6-85d5-2501ca32d496_029.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/3399c072-8c9b-4206-94fd-c411ff5339b4_093.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/34823684-2d69-4e22-8ad6-aa2bc1ccbaf6_006.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/356a89f7-ef4d-454d-b2ad-da9f4fdaf6d6_049.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/35dda624-858d-499d-867e-0260c358e591_031.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/36bf6016-4eff-4864-bf27-1de57e7d6589_027.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/390bbdba-c579-4f5a-a455-59d7dbda9c72_038.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/395efb19-034f-47d6-aa9f-8a773b20971e_127.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/3b464501-2770-4e63-a86b-b460f05a980d_013 - Copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/3d3097a5-38dc-45b7-81be-7300816ab4b9_037.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/3e2f6d8b-24ff-4756-a8ba-4e824e1a8d58_033.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/3e810ada-210a-4449-a25c-df0ffcee8bfd_115.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/3fc04a9f-530e-4957-a62d-42055bcd5f20_013 - Copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/3fc83463-bfef-4dac-a79b-d3fe81874d05_130.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/402b6f5c-fd29-406a-97e4-5cb33aa0b9a1_112.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/4253fc5d-899f-4e6d-b45c-c239acbdc5e8_097.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/432df13b-8d3a-47f2-aec5-7707ba9845de_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/4619bde9-9395-4850-a43a-6ed958714e03_015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/47fd027d-4a0e-4f21-bb75-cc45b1994455_023.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/4b687e96-5bdf-4308-acf1-ca3989602442_010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/4bcc87b8-45b8-4e90-8bf1-793b33be346e_022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/4bde7c98-7e06-4e20-9081-8aa2c345da02_131.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/4c63f316-a9c3-4541-afd4-1efabd922fbe_008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/4d0a9196-fda8-4244-a933-1c92076f1336_102.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/4db2c5fd-3593-45bc-b942-ab1f52974b9f_095.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/4e8a2b84-96b2-49c4-bbcf-2805934a8076_034.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/4ea60246-ecdb-4685-9188-c1a97059439c_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/4f11f46d-8f4a-4b2b-ab60-56c06e45860b_016.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/503b5b9c-9bd5-4a0c-8c7c-b4cb69732c84_010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/52f4e6a0-d342-4bf4-b7d9-bc7bcf564014_102.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/53bea9a2-722a-49f4-bd2e-d548bf79792f_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/5431a6dd-2587-4e10-9068-91fe7fb67917_008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/550f78e8-abe5-4176-af92-30e2800edc6b_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/5779a631-f175-48fd-aba0-cff1e90d9614_8ee56519-207c-4657-adb7-90def0439de8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/5815f773-c836-464e-a857-ef03d465390e_007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/5a15584b-0874-4179-8f1a-5ec534c31e5a_003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/5a2b01ef-9b74-47d1-bacb-7d81dc2206d9_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/5ce168d2-f36c-4234-bc94-84bbd19f1464_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/5d84cbea-90da-4753-b273-10db236b2fad_116.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/5d8fd37f-06a5-4906-9252-61ba564723c1_060.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/5e2be4c1-c3cc-4225-98c7-656e7bda9ae5_125.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/5f0bdbc4-64d5-4114-b590-7c85503a9174_012.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/6159f0ca-f3ab-495d-b0fd-afea91dda5b2_082.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/65cf789d-ed86-4fd7-8030-2a79af81a88b_070.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/665a59de-01f1-4a4f-870e-4fc64a43f384_081.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/668d326c-31f9-47ed-ba09-ff05d31003aa_081.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/66a288a8-efa9-479d-a71e-39032e661410_010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/6753590f-2d3e-414b-9ae0-5bb57fd89b71_009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/67b98604-6235-4618-a567-0a908d4e1fda_013 - Copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/67dedbd7-d14a-4db0-801f-3ab18fdca6d3_038.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/68b52bd4-c6b5-41bf-88f2-8471e90b1f14_113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/699080d6-5b3c-4153-b3cb-140ee06f23f9_088.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/6b4e1d1f-1bc2-4f4a-a1a8-567ed652b9bc_104.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/6ba6318c-ed8b-4f6d-9a9b-d8ca1c6e1afc_016.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/6c862fd3-8d8d-43c1-a495-0986640bba13_100.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/7124407c-adda-495c-8f44-f7b519417671_013 - Copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/71bb68f6-6c70-416c-b506-208a96e0a0ef_105.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/72f95fb1-5fdb-4928-894d-cfa0953559aa_101.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/733d6fa5-3b5e-46f3-8896-e2e90b57fa62_097.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/742f6cfb-8fdf-4fdf-9bee-68b31a70a470_099.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/7435fb50-5b74-4d77-b397-b211ab62c26c_117.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/7542f69d-dce5-4806-8b9e-f50526e7d334_013 - Copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/7569bde4-4484-44cb-9338-a14ea927011d_112.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/769e1520-c7dc-418f-b396-962aafaa149b_017.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/76c28739-f10b-4089-b185-b1305e1fe4c5_104.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/77c00c01-9f8e-40cc-882c-a1f8e6d30368_010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/77ed8d53-1d4c-4410-86da-07723aeffd5b_002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/78e70fbf-bb5a-4aec-9c6a-124eba73c2df_064.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/79e8b5ff-8635-4416-8b4a-461f06ea0c03_096.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/7ab15e39-6589-4fe2-9dbe-5ef5ef1775b6_106.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/7b5ebd3f-17d6-4a4b-b604-3b1333c4b4e0_010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/7b6c0a1a-27a9-4200-aef3-4585a78e5f86_124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/7d6b2831-362f-4001-b988-4d0d73ad80c7_011 - Copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/813ad44a-a7bd-432a-bddc-b8f9a32b0039_048.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/817eabd9-4224-44b2-bc7e-53b9c8f3ac78_092.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/82eb28aa-7e04-4efa-8ed4-81c80ebdacf5_002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/845ef2f4-a685-4fb9-84c4-1d61e84dcc17_009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/8573e6f9-84c1-4c21-b711-36e72c85bc77_113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/862e0948-8961-4c2a-b76a-f2322c846a4b_050.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/881d0317-79ab-4196-ab52-de6842729b0e_103.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/88915c8d-4b75-4dc9-ad89-4afa996c45e3_120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/88c8eed3-a9c0-4ed3-a30a-aefc9b501c96_009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/89211fd7-7f7e-46ad-99ba-cc86e6b0c6f8_025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/89bc9b37-509a-4ff7-876a-2f196e5fcc85_007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/8d0db2aa-ca2a-4324-af9d-804d1109493f_110.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/8db6fb15-d24b-4c7f-b61d-c9d3452dd2fe_051.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/8dd9aaa4-8706-4be3-b50b-4621bfd1be93_095.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/8ecbe322-1e99-400c-a11f-faafdf136092_109.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/8fabea03-204c-4e68-a999-94625fa57c98_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/904a9f1c-207c-4df6-bb49-c954656a8c06_059.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/91251751-222f-4b54-8825-dc9af56148f6_0ca19870-50b7-4719-82ae-b6b8272d45cd_062.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/912a1687-201e-4e80-98ab-f7ebddf157f9_100.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/9135ce54-4892-4176-b64a-5039c628c741_007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/918d8bb0-6e8e-4b1a-b711-1402c7d0cbd4_008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/93b29ad3-b5ab-40c1-ace8-ec069cba2db1_065.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/93d3ca3f-2da0-4ae8-9109-72aaea9433a3_008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/95251a5e-7eaa-45e9-9571-04b3247ccfab_035.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/9552cead-d328-4e1b-9eb6-5fd41d6bcd57_123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/95a13b88-919f-49af-b868-e2bfed0bb98e_061.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/95b0aeea-67e3-4682-993d-a8145f7470f1_009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/95f61698-0b26-41cc-9bad-768f6da197af_122.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/9843277f-94cb-4e3f-a626-6436eabf56ba_002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/9a07c79d-e151-4bb9-be62-51d93cfad22d_106.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/9d273315-878f-4547-964e-f417052ecfce_007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/9dd25e0b-b962-4f5c-b798-378998f2c8a8_122.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/9e591a61-f1de-4ccc-a37e-d60b08ad9f7b_094.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/9f87acca-7b85-41aa-88f7-6d43d5959698_015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/9fa9286f-10aa-46ff-8b6d-8ff102b614ac_041.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/9fc08b21-eb95-474e-b9c8-9de7bc6360e0_047.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/a1846d28-2fa2-41a6-bcc3-59585be39d78_009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/a2ac276a-5384-4646-ad52-ad00b731cc9b_080.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/a2d79d7e-bbf3-4cc9-8eef-319bd145bbd3_005.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/a2dc214e-e02d-4b63-bcfd-03926d983833_084.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/a3827fa1-6881-4d2f-b2dc-186439ceef58_098.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/a455fcaf-abfc-4cfe-9eca-1acc2477925c_111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/a49ba444-ad94-4d42-a038-bdbf1142483e_008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/a544ae1e-8cac-4940-9b7e-c7ddd8b40efc_092.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/a8a30554-51c9-4a99-9ff4-e25169edc713_059.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/a8dbe441-3db0-44d5-9b87-baf5b932683e_093.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/a8e2997d-79e5-4d62-a31d-51b0ca93fa76_083.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/a98c6339-a19f-4dfe-a230-9a0ea1236192_083.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/aaa89b16-33c0-4e60-bd07-e89970be7a0a_114.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/ab864e03-25f0-4537-9ca3-1d2bd431a535_054.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/ad55b1f0-0e6c-4ea1-8651-d3ffca2e603e_031.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/ad5a07d2-d798-44cf-9f9a-043afb1e56d8_008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/af47fc82-8b9f-487c-99cf-bbc453f8189e_104.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/b0c66298-0fa2-4431-99b9-77583cefe70d_119.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/b1e67436-9b12-4f32-b6e6-7bd4f3b3229b_021.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/b25303b3-7dd5-4a8a-888e-f460972702c0_013 - Copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/b2f38c0a-4b15-480a-8160-314a216b8586_085.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/b3f3809b-70cc-47c0-8c77-59ac16bee5e3_020.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/b5d21126-2dd3-42bb-80dd-8f79d999d29c_017.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/b83bafb2-81b2-45be-a07f-fe610b7be9b8_014.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/b936ff7b-e94e-47ba-9cee-45017cf143c6_099.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/ba73d7a7-4559-4a29-9c7b-123df6ee2358_065.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/bacbc5df-a20f-46af-9887-160deee4ef4d_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/bb2a67d5-bf73-485e-88be-b4656cc1cb73_131.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/bb36fe37-4ef3-4f9c-8067-825617afbb54_121.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/bf1a235e-c148-4862-ad8c-4ff80d27d087_030.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/bf379bbd-9e69-4cd6-bc03-d6db54b780b7_024.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/c13cbb85-3362-4ff9-84f6-1db273ec124e_038.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/c1bb4b13-d3e5-4543-9517-debacd1ec1c9_101.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/c3f6ed2e-7079-478e-8478-c642dcffc54c_010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/c4bd25e4-620c-44fc-9f69-22edde299a8f_011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/c52e5599-e351-46ea-b6a4-0729a3118972_120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/c69ed25c-c703-49e4-bc5e-f3c94d2ed703_086.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/c7c0d471-67f7-4c8f-a84b-9a4e4f766055_009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/c86bb69d-e5a2-4c93-8f0a-87504a8966ea_064.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/cabba454-5ecb-4ab9-84de-b9b9a67da850_003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/cad35cbc-fd56-4f4c-b2db-77d04f63a149_042.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/cb6259db-e46d-48a5-8b7a-6c46a3b55446_023.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/cbef6f33-b6b7-45e0-ac44-f1a0b5fe1d4c_003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/cc99f118-aa87-4260-8ced-64c10717fdb9_019.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/ccd11465-f64c-444d-90e1-8862ab71a62c_026.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/cd3814e3-0918-440a-bab5-1db67ca4574f_030.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/cdf20c61-d72f-478d-bb32-b62869abce6b_010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/cf00f484-f8a4-4b9a-8a9f-ef74bfd7ebcf_045.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/cfe561b5-86a6-4e12-b8b7-dec4b1271a2e_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/d152fdfd-6c49-440c-a249-8fdc08646333_055.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/d16b3609-896a-48ba-b94b-2e1a14546678_007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/d194e02c-d87c-4ef9-9fe9-5d31e0628b12_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/d1fef884-a4c1-471b-8fc9-400195436564_040.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/d40a5b86-a736-4bec-8b80-78dd33928ddd_126.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/d4fda5e6-889b-48f8-b609-6acb764b4215_008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/d7c317b7-4e8d-47b6-ad89-53f7a9c713c6_004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/d832472c-856a-4243-bc98-531af0b1a1a5_066.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/d86bc6cd-c0cf-4b70-90f5-d025308208fc_108.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/d93fddc9-effb-4945-80f1-d3cc69268de1_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/d94adccf-892c-405d-bda3-f919130554fc_007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/daabf767-4dd8-4e11-9f0a-d472fe0a8aa1_010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/dafed832-a59c-41ad-bc60-011fadaf8020_069.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/dd02eec1-7cbb-4afa-b10e-cad4278aeba5_032.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/e0dc71cb-b492-4aad-a9da-5b864eb9419d_008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/e20ae4b5-1d28-4090-b74f-f03ac486cd5a_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/e21a7434-b10d-412a-996b-be2a0703f8b0_089.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/e2856261-99af-4494-82fe-bccb1befb22b_025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/e29ac0a0-8c1f-493f-a66b-6f170de48f94_056.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/e62d0dcf-0722-49c6-9ae8-0aa2f402fb3a_066.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/e7c5de4c-b197-408c-a8ee-6209e1392299_133.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/e81584ec-0f6c-4f6c-babd-d5275ca64191_132.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/e950378b-a6ff-40c6-a6b5-b469d841b282_033.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/e987ca6e-eb0a-4bcc-9c73-4bdfd053fdff_654d1df29a42e3929f95c353198f60d7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/e9ddefd4-d825-4588-a5df-933274e4c7b6_004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/ea0c5dd0-800b-466c-a1ea-676dd8a4a3d6_109.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/eabaf3dc-e890-4825-95a9-901e94afaadf_040.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/ebdcde8d-c203-4d71-a67a-401a85d79aa9_027.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/ecafbacb-d393-417c-988c-ad65b539749e_096.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/ee6f30dc-68de-4c8a-bfd7-62df2ed20d22_068.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/ef933875-b12e-4c79-931a-4d8998217a2c_034.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/efc17c8a-55e8-47dd-93e7-a061874b1dac_012 - Copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/f139045a-ef18-4aa3-9484-e06721d9150c_013.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/f2f353fa-1e0b-4e24-88f5-7de9a33cc391_014.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/f2fcda26-8304-48bc-9472-ead1c297770f_001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/f3c45546-5b36-403e-b26e-781cb8f2f825_082.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/f622009f-4e3b-411a-b97b-270bb9597f6d_009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/f8a83202-74a6-4386-99db-3ef713a26471_016.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/f92c0523-1b77-4233-bdc9-b8dab47536ed_029.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/f9cb5077-44ab-4dec-abe2-afc64a60e6ef_129.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/fa29af18-1765-4370-955f-4ea0c14ede78_111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/fbf2c23a-a2c3-48fb-ac69-c8ac4913bfb2_052.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2ZRMlJ4FSyXBU8lQXlA0nKTWj1Z" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/chinh/IdeaProjects/ecommerce-website/ecommerce-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "two.files.diff.last.used.folder": "C:/Users/chinh/IdeaProjects/ecommerce-website/shop-app/src/main/resources/db/migration",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\chinh\IdeaProjects\ecommerce-website\shop-app\src\main\java\com\chinhbean\shopapp\services" />
+      <recent name="C:\Users\chinh\IdeaProjects\ecommerce-website\shop-app\src\main\java\com\chinhbean\shopapp\responses" />
+      <recent name="C:\Users\chinh\IdeaProjects\ecommerce-website\shop-app\src\main\java\com\chinhbean\shopapp\repositories" />
+      <recent name="C:\Users\chinh\IdeaProjects\ecommerce-website\shop-app\src\main\java\com\chinhbean\shopapp\models" />
+      <recent name="C:\Users\chinh\IdeaProjects\ecommerce-website\shop-app\src\main\java\com\chinhbean\shopapp\controllers" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.chinhbean.shopapp.dtos" />
+      <recent name="com.chinhbean.shopapp.responses" />
+      <recent name="com.chinhbean.shopapp.responses.comment" />
+      <recent name="com.chinhbean.shopapp.models" />
+      <recent name="com.chinhbean.shopapp.services.user" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="shop-app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chinhbean.shopapp.ShopAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="25935620-5295-4980-aaa4-20f76a7d1e4b" name="Changes" comment="" />
+      <created>1702380589870</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702380589870</updated>
+      <workItem from="1702380592755" duration="4404000" />
+      <workItem from="1702406005012" duration="4425000" />
+      <workItem from="1702457815222" duration="10302000" />
+      <workItem from="1702550428431" duration="10632000" />
+      <workItem from="1702618253041" duration="2026000" />
+      <workItem from="1702621886939" duration="9489000" />
+      <workItem from="1702638674577" duration="1349000" />
+      <workItem from="1702700676190" duration="18139000" />
+      <workItem from="1702785560410" duration="9416000" />
+      <workItem from="1702884177617" duration="5276000" />
+      <workItem from="1702964204169" duration="5050000" />
+      <workItem from="1703004481918" duration="1741000" />
+      <workItem from="1703041593231" duration="9117000" />
+      <workItem from="1703071114873" duration="891000" />
+      <workItem from="1703092588745" duration="1868000" />
+      <workItem from="1703135400430" duration="356000" />
+      <workItem from="1703135841836" duration="2118000" />
+      <workItem from="1703139889548" duration="2564000" />
+      <workItem from="1703182560899" duration="1431000" />
+      <workItem from="1703221359767" duration="1677000" />
+      <workItem from="1703605369734" duration="5246000" />
+      <workItem from="1703733853360" duration="1601000" />
+      <workItem from="1703845979563" duration="2319000" />
+      <workItem from="1703911068931" duration="2868000" />
+      <workItem from="1703915286522" duration="2600000" />
+      <workItem from="1703919567333" duration="301000" />
+      <workItem from="1703923619097" duration="1455000" />
+      <workItem from="1704170981263" duration="18565000" />
+      <workItem from="1704349154470" duration="1217000" />
+      <workItem from="1704380485915" duration="7176000" />
+      <workItem from="1704430391310" duration="216000" />
+      <workItem from="1704430612809" duration="3088000" />
+      <workItem from="1704513606136" duration="8217000" />
+      <workItem from="1704529659460" duration="407000" />
+      <workItem from="1704530565459" duration="1170000" />
+      <workItem from="1704531754740" duration="112000" />
+      <workItem from="1704556193726" duration="2035000" />
+      <workItem from="1704610061585" duration="2152000" />
+      <workItem from="1704877730148" duration="2017000" />
+      <workItem from="1704881942272" duration="4107000" />
+      <workItem from="1704888087658" duration="2284000" />
+      <workItem from="1704940948349" duration="363000" />
+      <workItem from="1704959032484" duration="2607000" />
+      <workItem from="1705121733130" duration="1523000" />
+      <workItem from="1705384326067" duration="1751000" />
+      <workItem from="1705386553801" duration="3483000" />
+      <workItem from="1705482348871" duration="120000" />
+      <workItem from="1705508421824" duration="1906000" />
+      <workItem from="1705544979900" duration="4102000" />
+      <workItem from="1705556065956" duration="250000" />
+      <workItem from="1705561045037" duration="827000" />
+      <workItem from="1705565640900" duration="5156000" />
+      <workItem from="1705649412518" duration="9952000" />
+      <workItem from="1705995805908" duration="5427000" />
+      <workItem from="1706066906901" duration="1399000" />
+      <workItem from="1706104165889" duration="1533000" />
+      <workItem from="1706146201373" duration="411000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/CategoryController.java</url>
+          <line>36</line>
+          <properties class="com.chinhbean.shopapp.controllers.CategoryController" method="createCategory">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/product/ProductResponse.java</url>
+          <line>29</line>
+          <properties class="com.chinhbean.shopapp.responses.product.ProductResponse">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/filters/JwtTokenFilter.java</url>
+          <line>34</line>
+          <properties class="com.chinhbean.shopapp.filters.JwtTokenFilter" method="doFilterInternal">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/OrderController.java</url>
+          <line>30</line>
+          <properties class="com.chinhbean.shopapp.controllers.OrderController" method="createOrder">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/OrderController.java</url>
+          <line>60</line>
+          <properties class="com.chinhbean.shopapp.controllers.OrderController" method="getOrder">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/user/UserService.java</url>
+          <line>116</line>
+          <properties class="com.chinhbean.shopapp.services.user.UserService">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/ProductController.java</url>
+          <line>169</line>
+          <properties class="com.chinhbean.shopapp.controllers.ProductController" method="getProducts">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/OrderController.java</url>
+          <line>96</line>
+          <properties class="com.chinhbean.shopapp.controllers.OrderController" method="getOrdersByKeyword">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/orders/OrderService.java</url>
+          <line>162</line>
+          <properties class="com.chinhbean.shopapp.services.orders.OrderService" method="getOrdersByKeyword">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/OrderController.java</url>
+          <line>73</line>
+          <properties class="com.chinhbean.shopapp.controllers.OrderController" method="updateOrder">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/UserController.java</url>
+          <line>131</line>
+          <properties class="com.chinhbean.shopapp.controllers.UserController" method="login">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/UserController.java</url>
+          <line>98</line>
+          <properties class="com.chinhbean.shopapp.controllers.UserController" method="createUser">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/ProductController.java</url>
+          <line>223</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/orders/OrderService.java</url>
+          <line>79</line>
+          <option name="temporary" value="true" />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/filters/JwtTokenFilter.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/Order.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/Order.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/OrderController.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/responses/order/OrderResponse.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/filters/JwtTokenFilter.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/OrderController.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/ProductController.java</url>
+          <line>211</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/ProductController.java</url>
+          <line>210</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/UserController.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/controllers/UserController.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/services/user/UserService.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinhbean/shopapp/models/Order.java</url>
+          <line>77</line>
+          <properties field="orderDetails" class="com.chinhbean.shopapp.models.Order" />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.chinhbean.shopapp.models.Product" memberName="productImages" />
+        <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
+        <PinnedItemInfo parentTag="org.springframework.data.domain.PageImpl" memberName="total" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="product" />
+        <watch expression="productResponse" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

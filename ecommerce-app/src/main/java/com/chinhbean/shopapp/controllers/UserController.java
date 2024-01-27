@@ -79,7 +79,9 @@ public class UserController {
                     //Sort.by("createdAt").descending()
                     Sort.by("id").ascending()
             );
+            //Đây là khai báo một biến userPage kiểu Page<UserResponse>.
             Page<UserResponse> userPage = userService.findAll(keyword, pageRequest)
+            //kết quả trả về từ userService.findAll được ánh xạ (map) bằng cách chuyển đổi mỗi đối tượng User thành đối tượng UserResponse
                     .map(UserResponse::fromUser);
 
             // Lấy tổng số trang
@@ -230,7 +232,7 @@ public class UserController {
     public ResponseEntity<?> resetPassword(@Valid @PathVariable long userId){
         try {
             String newPassword = UUID.randomUUID().toString().substring(0, 5); // Tạo mật khẩu mới
-            userService.resetPassword(userId, newPassword);
+                userService.resetPassword(userId, newPassword);
             return ResponseEntity.ok(newPassword);
         } catch (InvalidPasswordException e) {
             return ResponseEntity.badRequest().body("Invalid password");
