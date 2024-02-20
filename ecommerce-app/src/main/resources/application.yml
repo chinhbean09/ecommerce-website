@@ -32,6 +32,7 @@ spring:
       host: ${REDIS_HOST:localhost}
       port: ${REDIS_PORT:6379}
 api:
+
   prefix: /api/v1
 jwt:
   expiration: 2592000
